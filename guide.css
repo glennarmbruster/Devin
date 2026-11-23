@@ -3,3 +3,30 @@
 .book-download{display:inline-block;min-height:44px;align-content:center;font-size:.95rem}.worked p{max-width:74ch}
 #thumbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.4rem}.thumb{border:1px solid var(--line);border-radius:.35rem;overflow:hidden;background:#fffdf5;text-decoration:none;display:flex;flex-direction:column;min-width:0}.thumb:hover strong{text-decoration:underline}.thumb img{width:100%;height:10rem;object-fit:contain;background:#e5e6db}.thumb strong{padding:.7rem .8rem .2rem;line-height:1.3}.thumb span{font-size:.85rem;line-height:1.45;color:var(--ink);padding:.2rem .8rem 1rem}
 #body,.chapter-heading{overflow-wrap:anywhere}
+
+/* Show source lines inline without opening a file or losing the current picture. */
+.figure-citations {
+  margin-block-start: .6rem;
+}
+.figure-citations summary {
+  padding-block: .6rem;
+  min-height: 44px;
+  box-sizing: border-box;
+  color: var(--teal);
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.figure-citations summary:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+.figure-citations pre {
+  margin: 0 0 .6rem;
+  padding: .65rem;
+  border-inline-start: 3px solid var(--teal);
+}
+.figure-citations pre,
+.figure-citations code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

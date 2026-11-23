@@ -192,7 +192,7 @@
       },
       {
         "title": "Follow a finding",
-        "do": "If Review flagged a problem, open its finding. Read the exact line it points to. Pick one input that might show the problem.",
+        "do": "If Review flagged a problem, open its finding. Read the exact line it points to. Pick one input that might show the problem. In the pictured badge review, 5 points earns a badge. Open the finding on the changed line. Try 4, 5 and 6. Only 5 gives a different result when >= becomes >.",
         "see": "You have a file, a line and a test idea. If there are no findings, you can still check the planned change.",
         "stuck": "If the finding sounds broad, ask which input would make its claim true."
       },

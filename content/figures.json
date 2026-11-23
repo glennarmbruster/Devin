@@ -990,5 +990,153 @@
         "evidence": "Follow the next link on the empty middle page. Verify A, B, C on the clean run. When page 3 links back to page 2, the run should flag the loop and stop."
       }
     }
+  },
+  {
+    "file": "devin-console-ask-plan.webp",
+    "lesson": "devin-reference-ask",
+    "also": [
+      "lab-devin-01"
+    ],
+    "caption": "Simulated console in Ask mode. Open the file links to check which mailbox types the report keeps. The plan leaves the practice files as they were.",
+    "alt": "An Ask conversation links to the rule in Get-MailboxInventory.ps1 and its test. The source preview shows the names UserMailbox and SharedMailbox.",
+    "source": "https://docs.devin.ai/work-with-devin/ask-devin",
+    "credit": "Original synthetic console mockup, based on official Devin documentation",
+    "placements": {
+      "devin-reference-ask": {
+        "field": "sections.1.paragraphs.4",
+        "evidence": "To try the pictured plan, use the finished sample in an indexed practice repo. Open its file link for Reference/Get-MailboxInventory.ps1 and find UserMailbox and SharedMailbox. Open the link to Test-Inventory.ps1 to check the same two types. Ask can read the code while you plan a change."
+      },
+      "lab-devin-01": {
+        "field": "steps.1.text",
+        "evidence": "The pictured Ask session reads a finished copy of the kit. Its first file link opens the rule in Reference/Get-MailboxInventory.ps1. Its second opens the test for UserMailbox and SharedMailbox. For your own build, use the sample and test files you set aside for the Agent."
+      }
+    },
+    "citations": [
+      {
+        "file": "Reference/Get-MailboxInventory.ps1",
+        "line": 16,
+        "code": "$types = 'UserMailbox', 'SharedMailbox'"
+      },
+      {
+        "file": "Test-Inventory.ps1",
+        "line": 18,
+        "code": "    Confirm (($RecipientTypeDetails | Sort-Object) -join ',' -eq 'SharedMailbox,UserMailbox') 'Unexpected recipient types.'"
+      }
+    ]
+  },
+  {
+    "file": "devin-console-agent-shell.webp",
+    "lesson": "devin-reference-agent",
+    "also": [
+      "lab-devin-05"
+    ],
+    "caption": "Simulated console in Agent mode. Read the command and its latest result in Shell. The repaired test finds a single a1.",
+    "alt": "An Agent session shows a practice branch and Shell output for candidate.py. The first run fails. The same test passes after the repair removes outside spaces, folds case and skips empty IDs.",
+    "source": "https://docs.devin.ai/work-with-devin/devin-session-tools",
+    "credit": "Original synthetic console mockup, based on official Devin documentation",
+    "placements": {
+      "devin-reference-agent": {
+        "field": "sections.1.paragraphs.4",
+        "evidence": "Open Shell to see the test run on the practice branch. Here the test for candidate.py runs with python3 -m unittest -v. Before the fix it fails. After the fix it passes because the result has just one ID, a1. Check that both runs used the same test."
+      },
+      "lab-devin-05": {
+        "field": "steps.2.text",
+        "evidence": "Ask for a small test file for candidate.py that runs with python3 -m unittest -v. Open Shell, select the run, and compare the failure before the fix with the pass after it. Both runs should check the same four inputs."
+      }
+    }
+  },
+  {
+    "file": "devin-console-progress-side-chat.webp",
+    "lesson": "devin-sessions",
+    "also": [
+      "devin-reference-agent",
+      "lab-devin-05"
+    ],
+    "caption": "Simulated console with Progress and Side Chat. Open the file change and its test in the worklog. Ask why the repaired function keeps one a1.",
+    "alt": "Progress traces the edit to candidate.py and its test. A Side Chat about the work explains how trimming spaces and folding case leave one copy of a1.",
+    "source": "https://docs.devin.ai/work-with-devin/devin-session-tools",
+    "credit": "Original synthetic console mockup, based on official Devin documentation",
+    "placements": {
+      "devin-sessions": {
+        "field": "sections.2.paragraphs.1",
+        "evidence": "Try the same check on a list of IDs in candidate.py. In Progress, select the worklog entry for the file change, then the entry for its test. Open Side Chat and ask why the result has just one a1. The fix removes outside spaces, treats A1 and a1 alike, and skips empty IDs. You can ask this while the main session keeps working."
+      },
+      "devin-reference-agent": {
+        "field": "sections.1.paragraphs.5",
+        "evidence": "Progress tells the story of the same repair. Open the worklog entry for the edit to candidate.py and the one for its test. In Side Chat, ask why both forms of A1 now count just once. Compare the answer with the file change."
+      },
+      "lab-devin-05": {
+        "field": "steps.1.text",
+        "evidence": "In Progress, open the worklog entry for the edit, then its test entry. In Side Chat ask why only one a1 remains. Check the answer against the change to candidate.py."
+      }
+    }
+  },
+  {
+    "file": "devin-console-review-diff.webp",
+    "lesson": "devin-reference-review",
+    "also": [
+      "devin-review-first"
+    ],
+    "caption": "Simulated PR review. The rule awards a badge at 5 points. Test 5 itself to see why changing >= to > breaks the rule.",
+    "alt": "A pull request changes an inclusive points test to a strict greater-than test. The review links the finding to that line. Scores of 4 and 6 behave as expected, but 5 loses its badge.",
+    "source": "https://docs.devin.ai/work-with-devin/devin-review",
+    "credit": "Original synthetic console mockup, based on official Devin documentation",
+    "placements": {
+      "devin-reference-review": {
+        "field": "sections.1.paragraphs.4",
+        "evidence": "This practice pull request changes a badge rule. The old line uses >= 5, which includes 5. The new line uses > 5, which leaves 5 out. Open the finding and check 4, 5 and 6 points. Only the check for exactly 5 should fail on the proposed change."
+      },
+      "devin-review-first": {
+        "field": "actions.2.do",
+        "evidence": "In the pictured badge review, 5 points earns a badge. Open the finding on the changed line. Try 4, 5 and 6. Only 5 gives a different result when >= becomes >."
+      }
+    }
+  },
+  {
+    "file": "devin-console-skills-env.webp",
+    "lesson": "devin-reference-skills",
+    "also": [
+      "devin-reference-blueprints",
+      "lab-devin-06"
+    ],
+    "caption": "Simulated console and setup view. The count-ready skill returns 2. Success in Snapshots refers to a separate environment build.",
+    "alt": "The practice skill at .agents/skills/count-ready/SKILL.md counts two ready labels. A separate Snapshots view shows the build result for the prepared environment.",
+    "source": "https://docs.devin.ai/product-guides/skills",
+    "credit": "Original synthetic console mockup, based on official Devin documentation",
+    "placements": {
+      "devin-reference-skills": {
+        "field": "sections.1.paragraphs.4",
+        "evidence": "Open .agents/skills/count-ready/SKILL.md and read its rule. Call @skills:count-ready with ready, waiting, ready. Its answer should be 2. The picture also shows the environment’s Snapshots view. Success there means the setup built. The count shows whether the skill did its job."
+      },
+      "devin-reference-blueprints": {
+        "field": "sections.1.paragraphs.4",
+        "evidence": "A Success entry in Snapshots tells you the environment built. Check its setup separately from the work you run there. In the pictured example, a new session calls @skills:count-ready with ready, waiting, ready. The expected answer is 2. Read that result as a check of the saved skill."
+      },
+      "lab-devin-06": {
+        "field": "steps.3.text",
+        "evidence": "The console picture shows a smaller skill you can read the same way. Open .agents/skills/count-ready/SKILL.md. It counts two ready labels in ready, waiting, ready. The separate Snapshots result checks the environment build. For your count-sheet recipe, test the zero and the missing cell instead."
+      }
+    }
+  },
+  {
+    "file": "devin-console-apps-schedule.webp",
+    "lesson": "devin-reference-apps",
+    "also": [
+      "devin-reference-scheduled"
+    ],
+    "caption": "Simulated App and automation views. Share controls who can open the ticket App. Events links to the session that counted the queue.",
+    "alt": "The ticket App has two open tickets and restricted general access. A separate automation event leads to the run that counted two waiting rows and one ready row.",
+    "source": "https://docs.devin.ai/product-guides/devin-apps",
+    "credit": "Original synthetic console mockup, based on official Devin documentation",
+    "placements": {
+      "devin-reference-apps": {
+        "field": "sections.1.paragraphs.4",
+        "evidence": "In the picture, tickets A and C are open and B is closed. In Share, check Only people with access and read the access list. The other view shows a separate practice job. Open its run from Events in Automations. Its queue has two waiting rows and one ready row. That run tells you what the job counted. Share tells you who can open the App."
+      },
+      "devin-reference-scheduled": {
+        "field": "sections.1.paragraphs.4",
+        "evidence": "In Automations, open Events for the practice job, then follow its session link. Its queue has waiting, ready, waiting. Expect two waiting rows and one ready row. The other view in the picture shows a ticket App with two open tickets. Its Share control sets the audience for that App. The run history belongs to the scheduled job."
+      }
+    }
   }
 ]

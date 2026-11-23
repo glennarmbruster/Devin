@@ -21,7 +21,7 @@
       },
       {
         "title": "Open a practice project",
-        "text": "Save mailboxes.csv and Test-Inventory.ps1 in an approved practice repository on a new branch. Keep the Reference folder on your computer. In Devin choose that project, open Ask and paste the opening prompt. For this run, use mail-report-practice or your own approved practice repo. Check its indexed branch for Ask. Open the inventory kit file there before starting a separate branch for the Agent edit. Ask which mailbox types Get-MailboxInventory.ps1 keeps. Open its source link and check the matching type names in Test-Inventory.ps1.",
+        "text": "Save mailboxes.csv and Test-Inventory.ps1 in an approved practice repository on a new branch. Keep the Reference folder on your computer. In Devin choose that project, open Ask and paste the opening prompt. For this run, use mail-report-practice or your own approved practice repo. Check its indexed branch for Ask. Open the inventory kit file there before starting a separate branch for the Agent edit. Ask which mailbox types Get-MailboxInventory.ps1 keeps. Open its source link and check the matching type names in Test-Inventory.ps1. The pictured Ask session reads a finished copy of the kit. Its first file link opens the rule in Reference/Get-MailboxInventory.ps1. Its second opens the test for UserMailbox and SharedMailbox. For your own build, use the sample and test files you set aside for the Agent.",
         "help": "Ask Devin to name the two files it sees. If you have no Devin access, use the Reference script on your computer starting at the next-but-one step."
       },
       {
@@ -84,6 +84,10 @@
       [
         "Microsoft · install PowerShell",
         "https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell"
+      ],
+      [
+        "Ask Devin",
+        "https://docs.devin.ai/work-with-devin/ask-devin"
       ]
     ],
     "kit": "practice/exchange-inventory.zip",
@@ -283,12 +287,12 @@
       },
       {
         "title": "Ask for a working result",
-        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view. Choose Progress in the Agent session. Open the run for candidate.py. For “ A1 ”, “a1”, an empty entry and one space, the repaired result should contain a1 once.",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view. Choose Progress in the Agent session. Open the run for candidate.py. For “ A1 ”, “a1”, an empty entry and one space, the repaired result should contain a1 once. In Progress, open the worklog entry for the edit, then its test entry. In Side Chat ask why only one a1 remains. Check the answer against the change to candidate.py.",
         "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
       },
       {
         "title": "Check the first result",
-        "text": "Compare the result with this hand check. The supplied list should give just a1. Before the repair extra spaces create extra entries. Run the same ID list against the broken and repaired code. Record what the test expected and what each version produced. Keep the latest output with the proposed change.",
+        "text": "Compare the result with this hand check. The supplied list should give just a1. Before the repair extra spaces create extra entries. Run the same ID list against the broken and repaired code. Record what the test expected and what each version produced. Keep the latest output with the proposed change. Ask for a small test file for candidate.py that runs with python3 -m unittest -v. Open Shell, select the run, and compare the failure before the fix with the pass after it. Both runs should check the same four inputs.",
         "help": "Write each ID surrounded by brackets so you can see the spaces. Clean the labels before using a list of items already seen."
       },
       {
@@ -309,6 +313,10 @@
       [
         "Cognition · test evidence and recordings",
         "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ],
+      [
+        "Devin Session Tools",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
       ]
     ],
     "writeYourOwn": {
@@ -353,7 +361,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Open a fresh session and give it only the recipe and the second sheet with x=-2, y=8 and z=1. The practice guide uses README.md for the file layout and expected counts. To reuse the check as a Devin skill, save its steps in .agents/skills/check-counts/SKILL.md. Test it with both zero and a missing count before asking a teammate to review the recipe.",
+        "text": "Open a fresh session and give it only the recipe and the second sheet with x=-2, y=8 and z=1. The practice guide uses README.md for the file layout and expected counts. To reuse the check as a Devin skill, save its steps in .agents/skills/check-counts/SKILL.md. Test it with both zero and a missing count before asking a teammate to review the recipe. The console picture shows a smaller skill you can read the same way. Open .agents/skills/count-ready/SKILL.md. It counts two ready labels in ready, waiting, ready. The separate Snapshots result checks the environment build. For your count-sheet recipe, test the zero and the missing cell instead.",
         "help": "If b disappears, add a line to the recipe showing that zero is a real count.",
         "code": "ID,Count\nx,-2\ny,8\nz,1"
       }
@@ -370,6 +378,10 @@
       [
         "Cognition · reusable skills",
         "https://docs.devin.ai/product-guides/skills"
+      ],
+      [
+        "Environment Blueprints",
+        "https://docs.devin.ai/onboard-devin/environment/blueprints"
       ]
     ],
     "basis": [

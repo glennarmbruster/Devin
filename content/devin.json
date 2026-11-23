@@ -697,7 +697,8 @@
       {
         "title": "Steer it when a step goes wrong",
         "paragraphs": [
-          "Open Progress and find the first time the actual total differs from six. Ask Side Chat which line made it change. If Devin starts rewriting unrelated files, point back to the three sample events. Ask for the smallest edit that passes the check. Record the file, version and test result."
+          "Open Progress and find the first time the actual total differs from six. Ask Side Chat which line made it change. If Devin starts rewriting unrelated files, point back to the three sample events. Ask for the smallest edit that passes the check. Record the file, version and test result.",
+          "Try the same check on a list of IDs in candidate.py. In Progress, select the worklog entry for the file change, then the entry for its test. Open Side Chat and ask why the result has just one a1. The fix removes outside spaces, treats A1 and a1 alike, and skips empty IDs. You can ask this while the main session keeps working."
         ],
         "sources": [
           [

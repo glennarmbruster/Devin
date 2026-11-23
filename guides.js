@@ -89,6 +89,19 @@ function picture(figure) {
   credit.rel = 'noopener noreferrer';
   if (figure.source.startsWith('#')) caption.append(credit);
   else caption.append(element('span',figure.credit),externalLink('Check source',figure.source,'Check source · ' + figure.credit));
+  if (figure.citations) {
+    const citations = element('div', undefined, 'figure-citations');
+    citations.append(element('strong', 'Read the cited code'));
+    for (const citation of figure.citations) {
+      const details = element('details');
+      const label = citation.file + ' · line ' + citation.line;
+      const snippet = element('pre');
+      snippet.append(element('code', citation.code));
+      details.append(element('summary', label), snippet);
+      citations.append(details);
+    }
+    caption.append(citations);
+  }
   const enlarge = actionButton('',()=>{
     const dialog = element('dialog',undefined,'image-view');
     const close = actionButton('Close picture',()=>dialog.close());

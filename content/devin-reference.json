@@ -61,7 +61,8 @@
           "Open Ask and select the indexed practice repo that contains the Exchange inventory kit. A repo holds the project files and their saved history.",
           "Ask which file limits the report to two mailbox types. Request a link to the rule and a link to the test that calls the report.",
           "Read the rule in the script. Follow the second link to the check in Test-Inventory.ps1. Stay in Ask while you trace the code.",
-          "Use the Exchange inventory kit in an indexed practice repo for this screen. Ask which two mailbox types the report keeps. Open the citation for Get-MailboxInventory.ps1, then check the type names in Test-Inventory.ps1."
+          "Use the Exchange inventory kit in an indexed practice repo for this screen. Ask which two mailbox types the report keeps. Open the citation for Get-MailboxInventory.ps1, then check the type names in Test-Inventory.ps1.",
+          "To try the pictured plan, use the finished sample in an indexed practice repo. Open its file link for Reference/Get-MailboxInventory.ps1 and find UserMailbox and SharedMailbox. Open the link to Test-Inventory.ps1 to check the same two types. Ask can read the code while you plan a change."
         ],
         "sources": [
           [
@@ -237,7 +238,9 @@
           "Open Agent on the practice repo that contains candidate.py from the ID cleanup lab. A few versions of one label should count as a single ID.",
           "Ask Devin to fix the ID cleanup on a practice branch, run the checks and open a draft PR. A draft invites review while the edit stays off the shared branch.",
           "Open the changed file. Look for the rule that trims outside spaces and ignores case. Then compare the actual test output with the expected list.",
-          "The ID cleanup lab uses candidate.py. In the session, choose Progress and open its latest test step. For “ A1 ”, “a1”, an empty string and a single space, the corrected output contains a1 once. Read the actual output before sharing the change."
+          "The ID cleanup lab uses candidate.py. In the session, choose Progress and open its latest test step. For “ A1 ”, “a1”, an empty string and a single space, the corrected output contains a1 once. Read the actual output before sharing the change.",
+          "Open Shell to see the test run on the practice branch. Here the test for candidate.py runs with python3 -m unittest -v. Before the fix it fails. After the fix it passes because the result has just one ID, a1. Check that both runs used the same test.",
+          "Progress tells the story of the same repair. Open the worklog entry for the edit to candidate.py and the one for its test. In Side Chat, ask why both forms of A1 now count just once. Compare the answer with the file change."
         ],
         "sources": [
           [
@@ -583,7 +586,8 @@
           "Open a practice PR in a connected repo. Post /devin review as a new PR comment.",
           "Open the review and find the line linked to a finding. Write down the input that would make it fail.",
           "Run that input on the proposed change. If there is no finding, still try the boundary case yourself.",
-          "Open Bugs in the practice PR review and select the finding about the badge. The rule says a score of 5 qualifies. Read the changed comparison and test 4, 5 and 6."
+          "Open Bugs in the practice PR review and select the finding about the badge. The rule says a score of 5 qualifies. Read the changed comparison and test 4, 5 and 6.",
+          "This practice pull request changes a badge rule. The old line uses >= 5, which includes 5. The new line uses > 5, which leaves 5 out. Open the finding and check 4, 5 and 6 points. Only the check for exactly 5 should fail on the proposed change."
         ],
         "sources": [
           [
@@ -722,7 +726,8 @@
           "In a practice repo, create .agents/skills/count-ready/SKILL.md. Copy the starter file into it and commit it. The header names the skill. The last line gives it a rule.",
           "Once the skill is available, send “@skills:count-ready Labels: ready, waiting, ready.”",
           "Check for a count of two. Change one label and call the same skill again.",
-          "In session chat, call @skills:count-ready with the labels ready, waiting, ready. Compare the two matching labels with the returned count. Change the first label to waiting and run the same skill again."
+          "In session chat, call @skills:count-ready with the labels ready, waiting, ready. Compare the two matching labels with the returned count. Change the first label to waiting and run the same skill again.",
+          "Open .agents/skills/count-ready/SKILL.md and read its rule. Call @skills:count-ready with ready, waiting, ready. Its answer should be 2. The picture also shows the environment’s Snapshots view. Success there means the setup built. The count shows whether the skill did its job."
         ],
         "sources": [
           [
@@ -732,6 +737,10 @@
           [
             "Creating Playbooks",
             "https://docs.devin.ai/product-guides/creating-playbooks"
+          ],
+          [
+            "Environment Blueprints",
+            "https://docs.devin.ai/onboard-devin/environment/blueprints"
           ]
         ],
         "practiceCode": "---\nname: count-ready\ndescription: Count rows marked ready.\n---\nRead the labels in the request. Count only rows marked ready. Give the count and their names."
@@ -862,7 +871,8 @@
           "Open Settings, then Environment for a practice repo. Read the blueprint and find the command that installs the test tool.",
           "After an approved practice build shows Success in Snapshots, start a new session and ask for the tool’s version.",
           "Run a small project test. A printed version checks the install. A passing test checks that the project can use it.",
-          "Open Snapshots in the practice environment. Find the successful build you intend to use. In a fresh session from that snapshot, run the project check and open its output. The pictured practice report expects four output rows."
+          "Open Snapshots in the practice environment. Find the successful build you intend to use. In a fresh session from that snapshot, run the project check and open its output. The pictured practice report expects four output rows.",
+          "A Success entry in Snapshots tells you the environment built. Check its setup separately from the work you run there. In the pictured example, a new session calls @skills:count-ready with ready, waiting, ready. The expected answer is 2. Read that result as a check of the saved skill."
         ],
         "sources": [
           [
@@ -872,6 +882,10 @@
           [
             "Devin environment setup",
             "https://docs.devin.ai/onboard-devin/environment"
+          ],
+          [
+            "Devin Skills",
+            "https://docs.devin.ai/product-guides/skills"
           ]
         ]
       },
@@ -1171,7 +1185,8 @@
           "In a practice session, ask for a Devin App with three sample tickets. A and C are open and B is closed. Ask it to show the open count.",
           "Open the App. Compare the count with the rows. In Share, inspect General access before sending anyone a link.",
           "For a limited trial, choose Only people with access. Check who already has access in that setting.",
-          "Open Share on the practice ticket App. Under General access choose Only people with access. Read the access list and roles. The example includes the App creator, organization admins and one added reviewer."
+          "Open Share on the practice ticket App. Under General access choose Only people with access. Read the access list and roles. The example includes the App creator, organization admins and one added reviewer.",
+          "In the picture, tickets A and C are open and B is closed. In Share, check Only people with access and read the access list. The other view shows a separate practice job. Open its run from Events in Automations. Its queue has two waiting rows and one ready row. That run tells you what the job counted. Share tells you who can open the App."
         ],
         "sources": [
           [
@@ -1310,7 +1325,8 @@
           "In Automations choose Create automation. Add a Schedule trigger and choose Run once for your first practice report.",
           "Pick a future time and check the time zone. Give the job a tiny set of made-up rows and ask it just to report a count.",
           "After the run, open its session and compare the count with the rows. Review the time zone again when setting up a weekly run.",
-          "Open the Schedule trigger and choose Run once. Read the date, local time and time zone together. After it runs, open the resulting session. For this practice run, queue.csv contains waiting, ready, waiting."
+          "Open the Schedule trigger and choose Run once. Read the date, local time and time zone together. After it runs, open the resulting session. For this practice run, queue.csv contains waiting, ready, waiting.",
+          "In Automations, open Events for the practice job, then follow its session link. Its queue has waiting, ready, waiting. Expect two waiting rows and one ready row. The other view in the picture shows a ticket App with two open tickets. Its Share control sets the audience for that App. The run history belongs to the scheduled job."
         ],
         "sources": [
           [
@@ -1320,6 +1336,10 @@
           [
             "Scheduled Sessions",
             "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ],
+          [
+            "Devin Apps",
+            "https://docs.devin.ai/product-guides/devin-apps"
           ]
         ]
       },

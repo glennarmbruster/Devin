@@ -365,6 +365,53 @@ for name, page in devin_screens.items():
             'Place the screen beside its Do this first walkthrough: '+page)
     require(fig['source'].startswith('https://docs.devin.ai/') and 'mockup' in fig['credit'].lower()
             and 'practice screen' in fig['caption'].lower(), 'Label and source the Devin mockup: '+name)
+# Realistic console screens belong to the walkthrough and lab passages that teach the pictured result.
+devin_consoles = {
+    'ask-plan': ('devin-reference-ask', 'lab-devin-01'),
+    'agent-shell': ('devin-reference-agent', 'lab-devin-05'),
+    'progress-side-chat': ('devin-sessions', 'devin-reference-agent', 'lab-devin-05'),
+    'review-diff': ('devin-reference-review', 'devin-review-first'),
+    'skills-env': ('devin-reference-skills', 'devin-reference-blueprints', 'lab-devin-06'),
+    'apps-schedule': ('devin-reference-apps', 'devin-reference-scheduled'),
+}
+expected_consoles = {f'devin-console-{name}.webp' for name in devin_consoles}
+require({name for name in by_picture if name.startswith('devin-console-')} == expected_consoles,
+        'Register all six illustrated Devin console views')
+for short_name, (lesson, *related) in devin_consoles.items():
+    name = f'devin-console-{short_name}.webp'
+    fig = by_picture[name]
+    require(fig['lesson'] == lesson and set(fig.get('also', [])) == set(related),
+            'Check the Devin console walkthroughs for '+name)
+    require(fig['source'].startswith('https://docs.devin.ai/') and 'synthetic' in fig['credit'].lower()
+            and 'mockup' in fig['credit'].lower() and 'simulated' in fig['caption'].lower(),
+            'Credit the simulation and link its official source: '+name)
+    for target in [lesson, *related]:
+        field = fig.get('placements', {}).get(target, {}).get('field', '')
+        if target.startswith('lab-devin-'):
+            pattern = r'steps\.\d+\.text'
+        elif target == 'devin-review-first':
+            pattern = r'actions\.\d+\.do'
+        else:
+            pattern = r'sections\.\d+\.paragraphs\.\d+'
+        require(re.fullmatch(pattern, field), 'Anchor the illustrated console in the walkthrough: '+target)
+# Limit offline source excerpts to the two kit files that the Ask lesson teaches.
+ask_console = 'devin-console-ask-plan.webp'
+require([fig['file'] for fig in figures if 'citations' in fig] == [ask_console],
+        'Only the Ask console should contain offline file citations')
+allowed_citation_files = {'Reference/Get-MailboxInventory.ps1', 'Test-Inventory.ps1'}
+citations = by_picture[ask_console]['citations']
+require(isinstance(citations, list) and len(citations) == len(allowed_citation_files)
+        and all(isinstance(c, dict) and isinstance(c.get('file'), str) for c in citations)
+        and {c['file'] for c in citations} == allowed_citation_files,
+        'Cite both Exchange kit files in the Ask console')
+for citation in citations:
+    filename = citation['file']
+    source_lines = (book/'practice'/'exchange-inventory'/filename).read_text().splitlines()
+    line = citation.get('line')
+    code = citation.get('code')
+    require(type(line) is int and 1 <= line <= len(source_lines)
+            and isinstance(code, str) and code.strip() and code == source_lines[line - 1],
+            'Refresh the quoted kit source line in the Ask console: '+filename)
 for short_name, (owner, *labs) in devin_diagrams.items():
     name = 'diagram-devin-'+short_name+'.svg'
     fig = by_picture.get(name, {})
