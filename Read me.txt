@@ -1,0 +1,21 @@
+ALL ABOUT DEVIN
+
+For a team getting started
+Open the Team Rollout & Quick-Start Map on the contents page. Start with the
+practice desk, choose the right way to run a task, then try the read-only
+Exchange lab with the sample mailbox list.
+
+On an iPad
+Open the published book in Safari while connected. Wait for “Ready offline”.
+You can then reopen the same address, search, and read without a connection.
+To keep a shortcut, use Share and Add to Home Screen. Open the shortcut once
+while connected and wait for its offline copy to finish.
+
+On a computer
+Unzip the download, open the all-about-devin folder, and double-click
+“Read All About Devin.html”. The chapters, pictures, search and Exchange kit
+are inside that one file. You can give the file or the complete ZIP to a
+colleague. Live Devin sessions and official documentation need a connection.
+
+The complete ZIP also contains the editable book. See UPDATING.md to rebuild
+it with Python. The kit uses made-up mailbox data for practice.

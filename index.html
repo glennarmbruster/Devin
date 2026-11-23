@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d40">
+  <title>All About Devin</title>
+  <link rel="stylesheet" href="./reader.css">
+  <script src="./book-pager.js" defer></script>
+  <link rel="stylesheet" href="./guide.css">
+  <script src="./guides.js" defer></script>
+  <script src="./reader.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to book</a>
+  <header class="bar"><div><a class="contents" href="#contents">Contents</a><a href="#start">Start here</a><a href="#labs">Labs</a><a href="#pictures">Pictures</a><span id="offline" role="status"></span></div></header>
+  <main id="main">
+    <section id="index">
+      <div class="front">
+        <img src="./cover.svg" width="180" height="230" alt="All About Devin field guide cover">
+        <div><span class="eyebrow">Engineering &amp; operations</span><h1>All About Devin</h1><p>Give Devin a small job, check its work, and decide when your team is ready to use it on a larger project.</p><div class="review" id="edition"></div><a class="book-download online-reference" href="./All-About-Devin.zip" download>Download the complete book (.zip)</a></div>
+      </div>
+      <section id="guide-door" class="rollout" aria-labelledby="rollout-title">
+        <h2 id="rollout-title">Team Rollout &amp; Quick-Start Map</h2>
+        <ol>
+          <li><strong>First Steps &amp; Quickstarts</strong><p>Start with the <a href="#first-project">offline practice desk</a>. Then <a href="#open-devin">open Devin</a> and try a question about a practice repo.</p></li>
+          <li><strong><a href="#devin-speed">Make Devin Fast</a></strong><p>Use Ask or DeepWiki to read code, the CLI for a local edit, or an Agent session on a saved snapshot to run tests in the cloud.</p></li>
+          <li><strong><a href="#devin-reference-ask">Devin: Full Potential</a></strong><p>Explore the 12 surface guides. Check what each tool can do and which permissions your team needs.</p></li>
+          <li><strong><a href="#labs">30 Hands-On Labs</a> &amp; <a id="kit-link" href="./practice/exchange-inventory.zip" download="exchange-inventory.zip">PowerShell Exchange Kit</a></strong><p>Start with <a href="#lab-devin-01">the read-only mailbox report</a>. Have a teammate reproduce the sample result before trying the workflow on work data.</p></li>
+        </ol>
+      </section>
+      <section class="lab-door" id="lab-door"><div><h2>Hands-on labs</h2><p id="lab-count"></p></div><a class="lab-action" href="#labs">Browse the labs →</a></section>
+      <section id="gallery" class="library" hidden><h2 tabindex="-1" id="gallery-title">Picture index</h2><p>Choose a picture to open its lesson. Inside the lesson, tap the picture to enlarge it.</p><div id="thumbs"></div></section>
+      <section id="catalog" class="library" aria-labelledby="contents-title"><div class="tools"><h2 id="contents-title" tabindex="-1">Contents</h2><label class="search">Find a topic <input type="search" id="query" placeholder="Feature, file or task…" autocomplete="off"></label></div>
+        <p id="guide-note" hidden>Begin with <a href="#first-project">your first practice project</a>, or choose a walkthrough from the list. Each lesson tells you what to do, what you should see and how to get unstuck.</p>
+        <p id="lab-note" hidden>Read the guides and open the practice kit offline. To work in Devin Cloud, connect to the internet and use an account with access.</p>
+        <p id="matches" aria-live="polite"></p><div id="groups"></div>
+      </section>
+    </section>
+    <article id="chapter" hidden>
+      <div id="chapter-top"></div>
+      <header class="chapter-heading"><div class="eyebrow" id="group-name"></div><h1 id="chapter-title" tabindex="-1"></h1><p id="summary"></p><div class="review" id="review-date"></div></header>
+      <div id="body"></div>
+      <book-pager top="#chapter-top"></book-pager>
+    </article>
+    <p id="problem" role="alert" hidden></p>
+    <noscript>Turn on JavaScript to browse and search this edition.</noscript>
+  </main>
+</body>
+</html>

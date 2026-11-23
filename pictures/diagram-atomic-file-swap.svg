@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 386" role="img" aria-labelledby="title desc">
+<title id="title">Keep the last good report</title><desc id="desc">Check both counts, write nine in a nearby temporary file, then replace the old file in one move. A stop before that move leaves seven in the old report.</desc>
+<rect x="2" y="2" width="836" height="382" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="27" y="45" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="29" font-weight="700">Keep the last good report</text>
+<text x="28" y="81" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="400">Practice run: the saved report says 7. Two new counts add up to 9.</text>
+<path d="M28 99H812" fill="none" stroke="#145756" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 328H812" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="28" y="360" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="18" font-weight="700">Pull the plug just before the swap. The saved report should still say 7.</text>
+<rect x="28" y="135" width="235" height="118" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<rect x="28" y="135" width="235" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="40" y="162" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Check the input</text>
+<text x="40" y="204" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Both rows arrived.</text>
+<text x="40" y="233" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">4 + 5 = 9.</text>
+<path d="M268 204h26m-7 -6 7 6 -7 6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="299" y="135" width="236" height="118" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<rect x="299" y="135" width="236" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="311" y="162" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Write a temp file</text>
+<text x="311" y="204" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Save 9 beside 7.</text>
+<text x="311" y="233" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Check the new file.</text>
+<path d="M540 204h26m-7 -6 7 6 -7 6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="572" y="135" width="238" height="118" rx="8" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<rect x="572" y="135" width="238" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="584" y="162" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Swap in one move</text>
+<text x="584" y="204" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Replace old with new.</text>
+<text x="584" y="233" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="19" font-weight="400">Now the report says 9.</text>
+</svg>

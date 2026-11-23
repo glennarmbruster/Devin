@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
+  <title id="title">Ask on the side while work keeps moving</title>
+  <desc id="description">The main timeline runs from reading a file through editing to a test. A side branch at the edit opens a read-only question. The main line keeps going.</desc>
+  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
+  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">Ask on the side while work keeps moving</text>
+  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">A Side Chat lets you inspect the work up to one point in a session.</text>
+  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="34" y="155" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start">Main session</text>
+  <path d="M75 202H828" fill="none" stroke="#145756" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M91 202a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" fill="#145756" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="100" y="245" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Read file</text>
+  <path d="M429 202a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" fill="#145756" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="438" y="245" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Make edit</text>
+  <path d="M784 202a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" fill="#145756" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="793" y="245" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Run test</text>
+  <path d="M438 212V222 M438 255V285H272" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M273 284L273 297" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M267.6 288.6L273 297L278.4 288.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="56" y="306" width="793" height="53" rx="9" fill="#faf6ea" stroke="#8b571b" stroke-width="2" />
+  <text x="74" y="341" fill="#8b571b" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start">Side Chat</text>
+  <text x="242" y="340" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">“Which rule did the edit change?” Read the answer here.</text>
+  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">The side question can read the code. The main session keeps working on its task.</text>
+</svg>

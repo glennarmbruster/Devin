@@ -1,0 +1,1889 @@
+[
+  {
+    "id": "devin-reference-ask",
+    "title": "Ask Devin · Trace code before making a change",
+    "summary": "Find the file that makes a decision. Follow its caller before you plan an edit.",
+    "tags": [
+      "devin",
+      "limits",
+      "code",
+      "research"
+    ],
+    "firstGuide": "open-devin",
+    "relatedLabs": [
+      "lab-devin-05"
+    ],
+    "intro": {
+      "what": "Ask reads an index, a map of the files in a project. You can ask how two files fit together without starting a cloud coding machine.",
+      "features": "Ask for a file link beside each claim. In Plan mode, ask which files a change would touch and which test would prove it.",
+      "exchange": "Trace a mail report from a row count to the rule that skips empty rows.",
+      "m365": "Find the file that picks the columns in a team roster.",
+      "developer": "Follow a game button from the click to the score rule.",
+      "sources": [
+        [
+          "Ask Devin",
+          "https://docs.devin.ai/work-with-devin/ask-devin"
+        ],
+        [
+          "Index a Repository",
+          "https://docs.devin.ai/onboard-devin/index-repo"
+        ],
+        [
+          "DeepWiki repository wikis",
+          "https://docs.devin.ai/work-with-devin/deepwiki"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "Ask for a file link beside each claim. In Plan mode, ask which files a change would touch and which test would prove it."
+        ],
+        "sources": [
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Choose Ask and select an indexed practice project. A repository, or repo, is a project stored with its change history.",
+          "Ask “Which file decides the score? Link to the rule and to one place that calls it.”",
+          "Open both links. Read the named rule and check that the other file really calls it. Stay in Ask while you plan."
+        ],
+        "sources": [
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "An answer in Ask does not edit a file or run the test for you. Start an Agent session when you want the plan carried out."
+        ],
+        "sources": [
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-ask.availability}}"
+        ],
+        "sources": [
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ],
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "An old index can describe an earlier rule. Check the branch and the lines in the link before you rely on the answer."
+        ],
+        "sources": [
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read Ask Devin for planning and handoff. Read Index a Repository if the project is missing."
+        ],
+        "sources": [
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ]
+        ]
+      }
+    ],
+    "surface": "ask",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "id": "devin-reference-agent",
+    "title": "Agent Sessions · Make a change and test it",
+    "summary": "Give a cloud session one small job and a test you can check yourself.",
+    "tags": [
+      "devin",
+      "limits",
+      "sessions",
+      "code"
+    ],
+    "firstGuide": "devin-follow-session",
+    "relatedLabs": [
+      "lab-devin-05"
+    ],
+    "intro": {
+      "what": "An agent is a helper that can act. A cloud session gives it a separate computer to read files, edit code and run tests.",
+      "features": "Devin can show its work and open a pull request, or PR. A PR is a proposed change that someone can inspect before it joins the main code.",
+      "exchange": "Test a report with a pretend mailbox that has no owner.",
+      "m365": "Fix a label in a sample meeting list and check the page.",
+      "developer": "Change one game rule on a branch and play a round.",
+      "sources": [
+        [
+          "Your First Session",
+          "https://docs.devin.ai/get-started/first-run"
+        ],
+        [
+          "Devin Session Tools",
+          "https://docs.devin.ai/work-with-devin/devin-session-tools"
+        ],
+        [
+          "Devin GitHub integration",
+          "https://docs.devin.ai/integrations/gh"
+        ],
+        [
+          "Security Profiles",
+          "https://docs.devin.ai/product-guides/security-profiles"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "Devin can show its work and open a pull request, or PR. A PR is a proposed change that someone can inspect before it joins the main code.",
+          "A branch lets you try a change on a separate line of work. You can test there before anyone merges the change into the shared copy."
+        ],
+        "sources": [
+          [
+            "Your First Session",
+            "https://docs.devin.ai/get-started/first-run"
+          ],
+          [
+            "Devin Session Tools",
+            "https://docs.devin.ai/work-with-devin/devin-session-tools"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Start a new session in Agent mode. Pick a practice repo where you can propose changes.",
+          "Ask Devin to add a label to a test page, run its check and open a draft PR. A draft tells teammates the change is still being checked.",
+          "Open the changed file and the test output. Compare both with the job you gave it."
+        ],
+        "sources": [
+          [
+            "Your First Session",
+            "https://docs.devin.ai/get-started/first-run"
+          ],
+          [
+            "Devin Session Tools",
+            "https://docs.devin.ai/work-with-devin/devin-session-tools"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A passing test only covers the case it tried. The agent cannot open a PR if its Git access is read-only."
+        ],
+        "sources": [
+          [
+            "Your First Session",
+            "https://docs.devin.ai/get-started/first-run"
+          ],
+          [
+            "Devin Session Tools",
+            "https://docs.devin.ai/work-with-devin/devin-session-tools"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-agent.availability}}"
+        ],
+        "sources": [
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ],
+          [
+            "Your First Session",
+            "https://docs.devin.ai/get-started/first-run"
+          ],
+          [
+            "Devin Session Tools",
+            "https://docs.devin.ai/work-with-devin/devin-session-tools"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "A session message saying “done” is easy to skim. Check the actual branch, test result and PR before accepting the change."
+        ],
+        "sources": [
+          [
+            "Your First Session",
+            "https://docs.devin.ai/get-started/first-run"
+          ],
+          [
+            "Devin Session Tools",
+            "https://docs.devin.ai/work-with-devin/devin-session-tools"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Use Your First Session to pick Agent mode. The GitHub integration guide explains which repos the agent can use."
+        ],
+        "sources": [
+          [
+            "Your First Session",
+            "https://docs.devin.ai/get-started/first-run"
+          ],
+          [
+            "Devin Session Tools",
+            "https://docs.devin.ai/work-with-devin/devin-session-tools"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      }
+    ],
+    "surface": "agent",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "id": "devin-reference-deepwiki",
+    "title": "DeepWiki · Follow a diagram back to its source",
+    "summary": "Start with a map of a project, then open the file that proves one arrow.",
+    "tags": [
+      "devin",
+      "limits",
+      "wiki",
+      "research"
+    ],
+    "firstGuide": "devin-first-repo",
+    "relatedLabs": [
+      "lab-devin-13"
+    ],
+    "intro": {
+      "what": "DeepWiki turns indexed project files into a wiki, a set of linked pages about the code.",
+      "features": "Its pages can include a diagram, a short explanation and links to source files. A link lets you compare the map with what the code says.",
+      "exchange": "Look up the part of a mail report that makes the final table.",
+      "m365": "Trace how a sample form sends a response to a list.",
+      "developer": "Find the file that loads questions for a quiz.",
+      "sources": [
+        [
+          "DeepWiki repository wikis",
+          "https://docs.devin.ai/work-with-devin/deepwiki"
+        ],
+        [
+          "Index a Repository",
+          "https://docs.devin.ai/onboard-devin/index-repo"
+        ],
+        [
+          "Ask Devin",
+          "https://docs.devin.ai/work-with-devin/ask-devin"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "Its pages can include a diagram, a short explanation and links to source files. A link lets you compare the map with what the code says."
+        ],
+        "sources": [
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open DeepWiki for an indexed practice repo. Pick a page about a feature you know.",
+          "Find one arrow or sentence about two parts of the app. Follow its source link and look for the call in the file.",
+          "If an arrow has no link, follow the page’s source links. Ask Devin to find the exact call if you still need it."
+        ],
+        "sources": [
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A diagram can explain the intended path. It cannot show that a particular job ran or that a test passed yesterday."
+        ],
+        "sources": [
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-deepwiki.availability}}"
+        ],
+        "sources": [
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "Read the linked revision. A good map from last week can still show an old name after someone moves a file."
+        ],
+        "sources": [
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read DeepWiki for diagrams and citations. Read Index a Repository to see how a repo becomes available for the wiki."
+        ],
+        "sources": [
+          [
+            "DeepWiki repository wikis",
+            "https://docs.devin.ai/work-with-devin/deepwiki"
+          ],
+          [
+            "Index a Repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ]
+        ]
+      }
+    ],
+    "surface": "deepwiki",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "id": "devin-reference-review",
+    "title": "Devin Review · Check a finding on a pull request",
+    "summary": "Test a review comment against the changed lines before you act on it.",
+    "tags": [
+      "devin",
+      "limits",
+      "reviews",
+      "code"
+    ],
+    "firstGuide": "devin-review-first",
+    "relatedLabs": [
+      "lab-devin-02"
+    ],
+    "intro": {
+      "what": "Review reads a diff, the lines a PR adds or removes. It groups changes and points out possible bugs.",
+      "features": "Ask for a one-time review or set up automatic reviews. Each finding points to code you can inspect.",
+      "exchange": "Try the empty-row case when a mailbox export rule changes.",
+      "m365": "Check whether a changed list filter still includes a blank owner.",
+      "developer": "Play a tie round after a score rule changes.",
+      "sources": [
+        [
+          "Devin Review",
+          "https://docs.devin.ai/work-with-devin/devin-review"
+        ],
+        [
+          "Devin GitHub integration",
+          "https://docs.devin.ai/integrations/gh"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "Ask for a one-time review or set up automatic reviews. Each finding points to code you can inspect."
+        ],
+        "sources": [
+          [
+            "Devin Review",
+            "https://docs.devin.ai/work-with-devin/devin-review"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open a practice PR in a connected repo. Post /devin review as a new PR comment.",
+          "Open the review and find the line linked to a finding. Write down the input that would make it fail.",
+          "Run that input on the proposed change. If there is no finding, still try the boundary case yourself."
+        ],
+        "sources": [
+          [
+            "Devin Review",
+            "https://docs.devin.ai/work-with-devin/devin-review"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A finding can be mistaken. An empty list of findings cannot prove the change is bug-free."
+        ],
+        "sources": [
+          [
+            "Devin Review",
+            "https://docs.devin.ai/work-with-devin/devin-review"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-review.availability}}"
+        ],
+        "sources": [
+          [
+            "Devin Review",
+            "https://docs.devin.ai/work-with-devin/devin-review"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "Check the commit the review examined. If new changes arrived, request a review of the latest commit before closing a finding."
+        ],
+        "sources": [
+          [
+            "Devin Review",
+            "https://docs.devin.ai/work-with-devin/devin-review"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "The Review guide covers findings and repeat reviews. The GitHub integration guide explains comments that request changes."
+        ],
+        "sources": [
+          [
+            "Devin Review",
+            "https://docs.devin.ai/work-with-devin/devin-review"
+          ],
+          [
+            "Devin GitHub integration",
+            "https://docs.devin.ai/integrations/gh"
+          ]
+        ]
+      }
+    ],
+    "surface": "review",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "id": "devin-reference-skills",
+    "title": "Skills · Save a recipe that Devin can repeat",
+    "summary": "Give a repeated task a name. Try the same recipe on two small samples.",
+    "tags": [
+      "devin",
+      "limits",
+      "skills",
+      "automation"
+    ],
+    "firstGuide": "devin-first-repo",
+    "relatedLabs": [
+      "lab-devin-06"
+    ],
+    "intro": {
+      "what": "A skill is a file of instructions for one job. It can tell Devin which facts to read and what the result should look like.",
+      "features": "Keep a repo skill at .agents/skills/<name>/SKILL.md. Use @skills:<name> in a cloud prompt to call it by name. Older guides call these recipes Playbooks.",
+      "exchange": "Give a weekly mail count the same headings each time.",
+      "m365": "Turn meeting notes into a list of decisions and owners.",
+      "developer": "Test the reset button after every change to a game.",
+      "sources": [
+        [
+          "Devin Skills",
+          "https://docs.devin.ai/product-guides/skills"
+        ],
+        [
+          "Creating Playbooks",
+          "https://docs.devin.ai/product-guides/creating-playbooks"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "Keep a repo skill at .agents/skills/<name>/SKILL.md. Use @skills:<name> in a cloud prompt to call it by name. Older guides call these recipes Playbooks."
+        ],
+        "sources": [
+          [
+            "Devin Skills",
+            "https://docs.devin.ai/product-guides/skills"
+          ],
+          [
+            "Creating Playbooks",
+            "https://docs.devin.ai/product-guides/creating-playbooks"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "In a practice repo, create .agents/skills/count-ready/SKILL.md. Copy the starter file into it and commit it. The header names the skill. The last line gives it a rule.",
+          "Once the skill is available, send “@skills:count-ready Labels: ready, waiting, ready.”",
+          "Check for a count of two. Change one label and call the same skill again."
+        ],
+        "sources": [
+          [
+            "Devin Skills",
+            "https://docs.devin.ai/product-guides/skills"
+          ],
+          [
+            "Creating Playbooks",
+            "https://docs.devin.ai/product-guides/creating-playbooks"
+          ]
+        ],
+        "practiceCode": "---\nname: count-ready\ndescription: Count rows marked ready.\n---\nRead the labels in the request. Count only rows marked ready. Give the count and their names."
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A saved recipe cannot supply missing input or grant access to a file the session cannot read."
+        ],
+        "sources": [
+          [
+            "Devin Skills",
+            "https://docs.devin.ai/product-guides/skills"
+          ],
+          [
+            "Creating Playbooks",
+            "https://docs.devin.ai/product-guides/creating-playbooks"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-skills.availability}}"
+        ],
+        "sources": [
+          [
+            "Devin Skills",
+            "https://docs.devin.ai/product-guides/skills"
+          ],
+          [
+            "Creating Playbooks",
+            "https://docs.devin.ai/product-guides/creating-playbooks"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "Use the exact skill name when testing. A result that looks right once does not prove the session used the saved rule."
+        ],
+        "sources": [
+          [
+            "Devin Skills",
+            "https://docs.devin.ai/product-guides/skills"
+          ],
+          [
+            "Creating Playbooks",
+            "https://docs.devin.ai/product-guides/creating-playbooks"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "The Skills guide gives the file layout and call syntax. Creating Playbooks explains the older form you may still see."
+        ],
+        "sources": [
+          [
+            "Devin Skills",
+            "https://docs.devin.ai/product-guides/skills"
+          ],
+          [
+            "Creating Playbooks",
+            "https://docs.devin.ai/product-guides/creating-playbooks"
+          ]
+        ]
+      }
+    ],
+    "surface": "skills",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "id": "devin-reference-blueprints",
+    "title": "Blueprints & Snapshots · Start with the tools ready",
+    "summary": "Build the workbench once and check what the next session finds on it.",
+    "tags": [
+      "devin",
+      "limits",
+      "setup",
+      "snapshots"
+    ],
+    "firstGuide": "devin-first-repo",
+    "relatedLabs": [
+      "lab-devin-04"
+    ],
+    "intro": {
+      "what": "A blueprint lists what to install. A build follows the list and saves a snapshot, a ready-to-start copy of the work machine.",
+      "features": "The snapshot can hold the runtime that runs the code and the packages the project needs. Each new session gets a fresh copy.",
+      "exchange": "Prepare the tools that read a made-up mail report.",
+      "m365": "Put the library for a sample roster export in the saved setup.",
+      "developer": "Start a new game project with its test runner ready.",
+      "sources": [
+        [
+          "Devin environment blueprints",
+          "https://docs.devin.ai/onboard-devin/environment/blueprints"
+        ],
+        [
+          "Devin environment setup",
+          "https://docs.devin.ai/onboard-devin/environment"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "The snapshot can hold the runtime that runs the code and the packages the project needs. Each new session gets a fresh copy."
+        ],
+        "sources": [
+          [
+            "Devin environment blueprints",
+            "https://docs.devin.ai/onboard-devin/environment/blueprints"
+          ],
+          [
+            "Devin environment setup",
+            "https://docs.devin.ai/onboard-devin/environment"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open Settings, then Environment for a practice repo. Read the blueprint and find the command that installs the test tool.",
+          "After an approved practice build shows Success in Snapshots, start a new session and ask for the tool’s version.",
+          "Run a small project test. A printed version checks the install. A passing test checks that the project can use it."
+        ],
+        "sources": [
+          [
+            "Devin environment blueprints",
+            "https://docs.devin.ai/onboard-devin/environment/blueprints"
+          ],
+          [
+            "Devin environment setup",
+            "https://docs.devin.ai/onboard-devin/environment"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "Installing a tool inside one running session does not add it to the saved snapshot. Change the blueprint and build it again."
+        ],
+        "sources": [
+          [
+            "Devin environment blueprints",
+            "https://docs.devin.ai/onboard-devin/environment/blueprints"
+          ],
+          [
+            "Devin environment setup",
+            "https://docs.devin.ai/onboard-devin/environment"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-blueprints.availability}}"
+        ],
+        "sources": [
+          [
+            "Devin environment blueprints",
+            "https://docs.devin.ai/onboard-devin/environment/blueprints"
+          ],
+          [
+            "Devin environment setup",
+            "https://docs.devin.ai/onboard-devin/environment"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "Check which snapshot is active before comparing two sessions. An older session may still be using the previous setup."
+        ],
+        "sources": [
+          [
+            "Devin environment blueprints",
+            "https://docs.devin.ai/onboard-devin/environment/blueprints"
+          ],
+          [
+            "Devin environment setup",
+            "https://docs.devin.ai/onboard-devin/environment"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read Environment Blueprints for build steps. Environment Setup explains where to check repository access and active setup."
+        ],
+        "sources": [
+          [
+            "Devin environment blueprints",
+            "https://docs.devin.ai/onboard-devin/environment/blueprints"
+          ],
+          [
+            "Devin environment setup",
+            "https://docs.devin.ai/onboard-devin/environment"
+          ]
+        ]
+      }
+    ],
+    "surface": "blueprints",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ],
+    "unverified": [
+      "A fixed startup time for every session."
+    ]
+  },
+  {
+    "id": "devin-reference-cli",
+    "title": "Devin CLI · Hand a local task to the cloud",
+    "summary": "Start a check at your keyboard and find the same task on the cloud machine.",
+    "tags": [
+      "devin",
+      "limits",
+      "terminal",
+      "handoff"
+    ],
+    "firstGuide": "devin-first-repo",
+    "relatedLabs": [
+      "lab-devin-05"
+    ],
+    "intro": {
+      "what": "The Devin CLI runs in a terminal, a window where you type commands. Start it in the folder that holds your code.",
+      "features": "The /handoff command sends the current branch, conversation and pending code changes to a cloud session. You can follow the job after you close the laptop.",
+      "exchange": "Hand off a slow test of a fake mailbox export.",
+      "m365": "Run a sample list check locally before handing over its longer test.",
+      "developer": "Try a small score change locally and have the cloud run the game tests.",
+      "sources": [
+        [
+          "Hand off to cloud Devins",
+          "https://docs.devin.ai/cli/handoff"
+        ],
+        [
+          "Essential Commands",
+          "https://docs.devin.ai/cli/essential-commands"
+        ],
+        [
+          "Devin Auth",
+          "https://docs.devin.ai/cli/enterprise/devin-auth"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "The /handoff command sends the current branch, conversation and pending code changes to a cloud session. You can follow the job after you close the laptop."
+        ],
+        "sources": [
+          [
+            "Hand off to cloud Devins",
+            "https://docs.devin.ai/cli/handoff"
+          ],
+          [
+            "Essential Commands",
+            "https://docs.devin.ai/cli/essential-commands"
+          ],
+          [
+            "Devin Auth",
+            "https://docs.devin.ai/cli/enterprise/devin-auth"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Open a terminal in a connected practice repo. Start the installed CLI with devin and ask it to identify the current branch.",
+          "Check the changed files for anything you do not want to send. At the Devin prompt enter /handoff followed by one small test request.",
+          "Open the cloud session it creates. Check the branch and the test result."
+        ],
+        "sources": [
+          [
+            "Hand off to cloud Devins",
+            "https://docs.devin.ai/cli/handoff"
+          ],
+          [
+            "Essential Commands",
+            "https://docs.devin.ai/cli/essential-commands"
+          ],
+          [
+            "Devin Auth",
+            "https://docs.devin.ai/cli/enterprise/devin-auth"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A handoff starts a fresh cloud machine. Something running only on your laptop, such as a local preview server, will need to start again there."
+        ],
+        "sources": [
+          [
+            "Hand off to cloud Devins",
+            "https://docs.devin.ai/cli/handoff"
+          ],
+          [
+            "Essential Commands",
+            "https://docs.devin.ai/cli/essential-commands"
+          ],
+          [
+            "Devin Auth",
+            "https://docs.devin.ai/cli/enterprise/devin-auth"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-cli.availability}}"
+        ],
+        "sources": [
+          [
+            "Devin Auth",
+            "https://docs.devin.ai/cli/enterprise/devin-auth"
+          ],
+          [
+            "Hand off to cloud Devins",
+            "https://docs.devin.ai/cli/handoff"
+          ],
+          [
+            "Essential Commands",
+            "https://docs.devin.ai/cli/essential-commands"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "Pending edits can travel with the handoff. Keep the practice change on its own branch and inspect the changed files first."
+        ],
+        "sources": [
+          [
+            "Hand off to cloud Devins",
+            "https://docs.devin.ai/cli/handoff"
+          ],
+          [
+            "Essential Commands",
+            "https://docs.devin.ai/cli/essential-commands"
+          ],
+          [
+            "Devin Auth",
+            "https://docs.devin.ai/cli/enterprise/devin-auth"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read Essential Commands to start the CLI. Hand off to cloud Devins lists what travels. Devin Auth explains the role needed for enterprise sign-in."
+        ],
+        "sources": [
+          [
+            "Hand off to cloud Devins",
+            "https://docs.devin.ai/cli/handoff"
+          ],
+          [
+            "Essential Commands",
+            "https://docs.devin.ai/cli/essential-commands"
+          ],
+          [
+            "Devin Auth",
+            "https://docs.devin.ai/cli/enterprise/devin-auth"
+          ]
+        ]
+      }
+    ],
+    "surface": "cli",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "id": "devin-reference-apps",
+    "title": "Devin Apps · Share an internal tool with the right people",
+    "summary": "Build a tiny web tool and check who can open its link.",
+    "tags": [
+      "devin",
+      "limits",
+      "apps",
+      "sharing"
+    ],
+    "firstGuide": "devin-follow-session",
+    "relatedLabs": [
+      "lab-devin-28"
+    ],
+    "intro": {
+      "what": "A Devin App is a web tool that Devin builds and serves at a stable address. Visitors sign in to Devin.",
+      "features": "The Share control sets who can open it. Use a made-up dataset when testing a new app.",
+      "exchange": "Give the mail team a private page for a pretend queue count.",
+      "m365": "Let a small group try a list filter using sample rows.",
+      "developer": "Share a score counter with an invited tester.",
+      "sources": [
+        [
+          "Devin Apps",
+          "https://docs.devin.ai/product-guides/devin-apps"
+        ],
+        [
+          "Automations",
+          "https://docs.devin.ai/product-guides/automations"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "The Share control sets who can open it. Use a made-up dataset when testing a new app."
+        ],
+        "sources": [
+          [
+            "Devin Apps",
+            "https://docs.devin.ai/product-guides/devin-apps"
+          ],
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "In a practice session, ask for a Devin App with two sample rows and a count of the open rows.",
+          "Open the App. Compare the count with the rows. In Share, inspect General access before sending anyone a link.",
+          "For a limited trial, choose Only people with access. Check who already has access in that setting."
+        ],
+        "sources": [
+          [
+            "Devin Apps",
+            "https://docs.devin.ai/product-guides/devin-apps"
+          ],
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A Devin App cannot be made public. It cannot register its own service worker, the browser helper a web app uses for offline mode."
+        ],
+        "sources": [
+          [
+            "Devin Apps",
+            "https://docs.devin.ai/product-guides/devin-apps"
+          ],
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-apps.availability}}"
+        ],
+        "sources": [
+          [
+            "Devin Apps",
+            "https://docs.devin.ai/product-guides/devin-apps"
+          ],
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "A link alone cannot grant an outsider access. Count the people in the sharing list as well as the admins covered by the setting."
+        ],
+        "sources": [
+          [
+            "Devin Apps",
+            "https://docs.devin.ai/product-guides/devin-apps"
+          ],
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Use Devin Apps for hosting, sharing and limits. Automations explains how a job can refresh a tool on a schedule."
+        ],
+        "sources": [
+          [
+            "Devin Apps",
+            "https://docs.devin.ai/product-guides/devin-apps"
+          ],
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ]
+        ]
+      }
+    ],
+    "surface": "apps",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "id": "devin-reference-scheduled",
+    "title": "Scheduled Devins · Run a check on a clock",
+    "summary": "Set up a repeat report and see exactly when it will run next.",
+    "tags": [
+      "devin",
+      "limits",
+      "scheduling",
+      "automation"
+    ],
+    "firstGuide": "devin-follow-session",
+    "relatedLabs": [
+      "lab-devin-11"
+    ],
+    "intro": {
+      "what": "A schedule starts work at a chosen time. New scheduled jobs use a Schedule trigger in Automations. Older schedules still run.",
+      "features": "Use a one-time practice run to check the job. Once the report is right, choose how often you want it to repeat.",
+      "exchange": "Count sample messages still waiting at the end of a shift.",
+      "m365": "Make a weekly list of practice tasks with no owner.",
+      "developer": "Check once a week that a game’s saved example still opens.",
+      "sources": [
+        [
+          "Automations",
+          "https://docs.devin.ai/product-guides/automations"
+        ],
+        [
+          "Scheduled Sessions",
+          "https://docs.devin.ai/product-guides/scheduled-sessions"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "Use a one-time practice run to check the job. Once the report is right, choose how often you want it to repeat."
+        ],
+        "sources": [
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ],
+          [
+            "Scheduled Sessions",
+            "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "In Automations choose Create automation. Add a Schedule trigger and choose Run once for your first practice report.",
+          "Pick a future time and check the time zone. Give the job a tiny set of made-up rows and ask it just to report a count.",
+          "After the run, open its session and compare the count with the rows. Review the time zone again when setting up a weekly run."
+        ],
+        "sources": [
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ],
+          [
+            "Scheduled Sessions",
+            "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A clock can start a job. It cannot tell whether the report used fresh data or whether the answer was correct."
+        ],
+        "sources": [
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ],
+          [
+            "Scheduled Sessions",
+            "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-scheduled.availability}}"
+        ],
+        "sources": [
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ],
+          [
+            "Scheduled Sessions",
+            "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "A weekly run at nine uses the chosen zone. Two people can read the same clock setting and expect different times."
+        ],
+        "sources": [
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ],
+          [
+            "Scheduled Sessions",
+            "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read Automations for the current editor. Scheduled Sessions explains where an older schedule fits and how to move it."
+        ],
+        "sources": [
+          [
+            "Automations",
+            "https://docs.devin.ai/product-guides/automations"
+          ],
+          [
+            "Scheduled Sessions",
+            "https://docs.devin.ai/product-guides/scheduled-sessions"
+          ]
+        ]
+      }
+    ],
+    "surface": "scheduled",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "id": "devin-reference-workflows",
+    "title": "Dynamic Workflows & Fleets · Test one project before many",
+    "summary": "Give one practice project a change. Check its result before sending the rest.",
+    "tags": [
+      "devin",
+      "limits",
+      "workflows",
+      "fleets"
+    ],
+    "firstGuide": "devin-follow-session",
+    "relatedLabs": [
+      "lab-devin-15"
+    ],
+    "intro": {
+      "what": "A fleet is a group of sessions doing related jobs. In a dynamic workflow, a script tells those sessions what to do and in what order.",
+      "features": "A workflow can send one job to each project. The script reads their results. A pass can unlock the next step. A failure can hold the other jobs for review.",
+      "exchange": "Try a mailbox column change on one sample export before rolling it out.",
+      "m365": "Move a sample team-list rule across two practice projects.",
+      "developer": "Test a save-file upgrade on one game before changing the rest.",
+      "sources": [
+        [
+          "Devin Dynamic Workflows",
+          "https://docs.devin.ai/work-with-devin/dynamic-workflows"
+        ],
+        [
+          "Advanced Capabilities",
+          "https://docs.devin.ai/work-with-devin/advanced-capabilities"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "A workflow can send one job to each project. The script reads their results. A pass can unlock the next step. A failure can hold the other jobs for review."
+        ],
+        "sources": [
+          [
+            "Devin Dynamic Workflows",
+            "https://docs.devin.ai/work-with-devin/dynamic-workflows"
+          ],
+          [
+            "Advanced Capabilities",
+            "https://docs.devin.ai/work-with-devin/advanced-capabilities"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "In an allowed session ask for a workflow that reads two pretend results. Give it a rule: if the pilot fails, stop before the next batch.",
+          "Try a failed pilot first. Ask which projects, if any, reached the next stage.",
+          "Change the pilot result to pass. The next projects should now be eligible for the next check."
+        ],
+        "sources": [
+          [
+            "Devin Dynamic Workflows",
+            "https://docs.devin.ai/work-with-devin/dynamic-workflows"
+          ],
+          [
+            "Advanced Capabilities",
+            "https://docs.devin.ai/work-with-devin/advanced-capabilities"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A fleet gives you more workers. It does not make a bad rule safe to repeat or decide what “pass” means for your project."
+        ],
+        "sources": [
+          [
+            "Devin Dynamic Workflows",
+            "https://docs.devin.ai/work-with-devin/dynamic-workflows"
+          ],
+          [
+            "Advanced Capabilities",
+            "https://docs.devin.ai/work-with-devin/advanced-capabilities"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-workflows.availability}}"
+        ],
+        "sources": [
+          [
+            "Devin Dynamic Workflows",
+            "https://docs.devin.ai/work-with-devin/dynamic-workflows"
+          ],
+          [
+            "Advanced Capabilities",
+            "https://docs.devin.ai/work-with-devin/advanced-capabilities"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "A started session is not proof of a finished change. Record the project, branch and test result before moving to another batch."
+        ],
+        "sources": [
+          [
+            "Devin Dynamic Workflows",
+            "https://docs.devin.ai/work-with-devin/dynamic-workflows"
+          ],
+          [
+            "Advanced Capabilities",
+            "https://docs.devin.ai/work-with-devin/advanced-capabilities"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read Dynamic Workflows for stages and saved results. Advanced Capabilities describes a parent session supervising other sessions."
+        ],
+        "sources": [
+          [
+            "Devin Dynamic Workflows",
+            "https://docs.devin.ai/work-with-devin/dynamic-workflows"
+          ],
+          [
+            "Advanced Capabilities",
+            "https://docs.devin.ai/work-with-devin/advanced-capabilities"
+          ]
+        ]
+      }
+    ],
+    "surface": "workflows",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "id": "devin-reference-integrations",
+    "title": "Integrations & API v3 · Trace a request to one session",
+    "summary": "Match the request in a chat or ticket to the work Devin starts.",
+    "tags": [
+      "devin",
+      "limits",
+      "connectors",
+      "api",
+      "m365"
+    ],
+    "firstGuide": "open-devin",
+    "relatedLabs": [
+      "lab-devin-08"
+    ],
+    "intro": {
+      "what": "An integration lets another tool ask Devin to work. An API is a set of requests a program can send instead of someone clicking a button.",
+      "features": "In Slack, tag @Devin. In Teams, tag @Devin AI. In Jira, a ticket assignment, a mention or a label can start a job. An app can start one with POST /v3/organizations/{org_id}/sessions. Each connection needs to be set up first.",
+      "exchange": "Match a sample mail-report ticket to its session and test result.",
+      "m365": "Follow a request from a Teams thread to the session it opened.",
+      "developer": "Use a pretend game issue to trace one request and one reply.",
+      "sources": [
+        [
+          "Slack",
+          "https://docs.devin.ai/integrations/slack"
+        ],
+        [
+          "Microsoft Teams",
+          "https://docs.devin.ai/integrations/microsoft-teams"
+        ],
+        [
+          "Devin Jira integration",
+          "https://docs.devin.ai/integrations/jira"
+        ],
+        [
+          "Create Session",
+          "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "In Slack, tag @Devin. In Teams, tag @Devin AI. In Jira, a ticket assignment, a mention or a label can start a job. An app can start one with POST /v3/organizations/{org_id}/sessions. Each connection needs to be set up first."
+        ],
+        "sources": [
+          [
+            "Slack",
+            "https://docs.devin.ai/integrations/slack"
+          ],
+          [
+            "Microsoft Teams",
+            "https://docs.devin.ai/integrations/microsoft-teams"
+          ],
+          [
+            "Devin Jira integration",
+            "https://docs.devin.ai/integrations/jira"
+          ],
+          [
+            "Create Session",
+            "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Pick a practice Teams channel where Devin AI is installed. Mention @Devin AI and ask for a summary of one fictional task.",
+          "Look for the reply in the same thread. Match its session to the original request before sending another message.",
+          "For a program, read Create Session. The org_id in braces stands for your organization’s ID. The reply identifies the new session."
+        ],
+        "sources": [
+          [
+            "Slack",
+            "https://docs.devin.ai/integrations/slack"
+          ],
+          [
+            "Microsoft Teams",
+            "https://docs.devin.ai/integrations/microsoft-teams"
+          ],
+          [
+            "Devin Jira integration",
+            "https://docs.devin.ai/integrations/jira"
+          ],
+          [
+            "Create Session",
+            "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "A ticket alone cannot give Devin access to a repo. Creating a session does not mean that its work is finished."
+        ],
+        "sources": [
+          [
+            "Slack",
+            "https://docs.devin.ai/integrations/slack"
+          ],
+          [
+            "Microsoft Teams",
+            "https://docs.devin.ai/integrations/microsoft-teams"
+          ],
+          [
+            "Devin Jira integration",
+            "https://docs.devin.ai/integrations/jira"
+          ],
+          [
+            "Create Session",
+            "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-integrations.availability}}"
+        ],
+        "sources": [
+          [
+            "Create Session",
+            "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+          ],
+          [
+            "Slack",
+            "https://docs.devin.ai/integrations/slack"
+          ],
+          [
+            "Microsoft Teams",
+            "https://docs.devin.ai/integrations/microsoft-teams"
+          ],
+          [
+            "Devin Jira integration",
+            "https://docs.devin.ai/integrations/jira"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "Save the session ID with the request. If a reply gets lost, look for that ID before starting another job."
+        ],
+        "sources": [
+          [
+            "Slack",
+            "https://docs.devin.ai/integrations/slack"
+          ],
+          [
+            "Microsoft Teams",
+            "https://docs.devin.ai/integrations/microsoft-teams"
+          ],
+          [
+            "Devin Jira integration",
+            "https://docs.devin.ai/integrations/jira"
+          ],
+          [
+            "Create Session",
+            "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read the guide for the channel you will use. Create Session gives the v3 request and required permission."
+        ],
+        "sources": [
+          [
+            "Slack",
+            "https://docs.devin.ai/integrations/slack"
+          ],
+          [
+            "Microsoft Teams",
+            "https://docs.devin.ai/integrations/microsoft-teams"
+          ],
+          [
+            "Devin Jira integration",
+            "https://docs.devin.ai/integrations/jira"
+          ],
+          [
+            "Create Session",
+            "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+          ]
+        ]
+      }
+    ],
+    "surface": "integrations",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "id": "devin-reference-outposts",
+    "title": "Enterprise Deployment & Outposts · Find where the work runs",
+    "summary": "Separate the place that plans a job from the machine that opens its files.",
+    "tags": [
+      "devin",
+      "limits",
+      "deployment",
+      "permissions"
+    ],
+    "firstGuide": "devin-first-repo",
+    "relatedLabs": [
+      "lab-devin-09"
+    ],
+    "intro": {
+      "what": "A deployment is where a service runs. With an Outpost, Devin plans in the cloud. A worker on your machine reads files and runs commands.",
+      "features": "With Enterprise Cloud, teams share the cloud, but each job gets its own machine. With a dedicated VPC, the host sets aside a private cloud network for one customer. With Outposts, your team runs the worker.",
+      "exchange": "Check which machine would read a pretend mail report.",
+      "m365": "Decide where a sample list export may be opened.",
+      "developer": "Choose a worker that already has your game’s test tools.",
+      "sources": [
+        [
+          "Enterprise Deployment",
+          "https://docs.devin.ai/enterprise/deployment/overview"
+        ],
+        [
+          "Devin Outposts: self-hosted infrastructure",
+          "https://docs.devin.ai/cloud/outposts/overview"
+        ],
+        [
+          "Security Profiles",
+          "https://docs.devin.ai/product-guides/security-profiles"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "What it is for",
+        "paragraphs": [
+          "With Enterprise Cloud, teams share the cloud, but each job gets its own machine. With a dedicated VPC, the host sets aside a private cloud network for one customer. With Outposts, your team runs the worker."
+        ],
+        "sources": [
+          [
+            "Enterprise Deployment",
+            "https://docs.devin.ai/enterprise/deployment/overview"
+          ],
+          [
+            "Devin Outposts: self-hosted infrastructure",
+            "https://docs.devin.ai/cloud/outposts/overview"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      },
+      {
+        "title": "Do this first",
+        "paragraphs": [
+          "Start with a diagram of the training setup: cloud planner, practice worker, sample folder. Draw a line from each job to the place it runs.",
+          "Read the Git rule in a sample security profile, the saved limits for a session. Work out whether that session can read code and push a branch.",
+          "Before a real run, ask your admin which worker and profile the session would use."
+        ],
+        "sources": [
+          [
+            "Enterprise Deployment",
+            "https://docs.devin.ai/enterprise/deployment/overview"
+          ],
+          [
+            "Devin Outposts: self-hosted infrastructure",
+            "https://docs.devin.ai/cloud/outposts/overview"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      },
+      {
+        "title": "What it cannot do",
+        "paragraphs": [
+          "The plan still lives in the cloud. A worker can read a local file and still lack the right to push code."
+        ],
+        "sources": [
+          [
+            "Enterprise Deployment",
+            "https://docs.devin.ai/enterprise/deployment/overview"
+          ],
+          [
+            "Devin Outposts: self-hosted infrastructure",
+            "https://docs.devin.ai/cloud/outposts/overview"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      },
+      {
+        "title": "Plan and availability",
+        "paragraphs": [
+          "{{fact.devin-reference-outposts.availability}}"
+        ],
+        "sources": [
+          [
+            "Devin Outposts: self-hosted infrastructure",
+            "https://docs.devin.ai/cloud/outposts/overview"
+          ],
+          [
+            "Enterprise Deployment",
+            "https://docs.devin.ai/enterprise/deployment/overview"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      },
+      {
+        "title": "Gotchas",
+        "paragraphs": [
+          "Ask two things. Who runs the machine? Where does Devin make the plan?",
+          "Git rules still apply on an Outpost. Your team must put the network rules into effect on its worker."
+        ],
+        "sources": [
+          [
+            "Enterprise Deployment",
+            "https://docs.devin.ai/enterprise/deployment/overview"
+          ],
+          [
+            "Devin Outposts: self-hosted infrastructure",
+            "https://docs.devin.ai/cloud/outposts/overview"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      },
+      {
+        "title": "Official docs",
+        "paragraphs": [
+          "Read Enterprise Deployment for hosting choices, Outposts for worker placement, and Security Profiles for rules on what a session can do."
+        ],
+        "sources": [
+          [
+            "Enterprise Deployment",
+            "https://docs.devin.ai/enterprise/deployment/overview"
+          ],
+          [
+            "Devin Outposts: self-hosted infrastructure",
+            "https://docs.devin.ai/cloud/outposts/overview"
+          ],
+          [
+            "Security Profiles",
+            "https://docs.devin.ai/product-guides/security-profiles"
+          ]
+        ]
+      }
+    ],
+    "surface": "outposts",
+    "lastVerified": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  }
+]

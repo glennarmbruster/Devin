@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title description">
+<title id="title">Trace one arrow to its files</title>
+<desc id="description">The wiki links the quiz to the deck. In quiz.py, index zero reads the first word. In deck.py, PEAR is first and PLUM is second.</desc>
+<rect x="2" y="2" width="896" height="416" rx="16" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="32" y="51" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#182c2d">Trace one arrow to its files</text>
+<text x="32" y="87" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#145756">A wiki gives you a map. The linked files let you check one claim.</text>
+<path d="M32 108H868" stroke="#8b571b" stroke-width="2"/>
+<rect x="32" y="142" width="222" height="159" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+<text x="47" y="175" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">Wiki map</text>
+<text x="47" y="209" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">Quiz reads deck</text>
+<text x="47" y="238" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">Follow its links</text>
+<path d="M263 221 H311 m-9 -7 9 7 -9 7" fill="none" stroke="#8b571b" stroke-width="4" stroke-linejoin="round"/>
+<rect x="324" y="142" width="225" height="159" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+<text x="339" y="175" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">quiz.py</text>
+<text x="339" y="209" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">Reads CARDS[0]</text>
+<text x="339" y="238" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">0 means first</text>
+<path d="M558 221 H606 m-9 -7 9 7 -9 7" fill="none" stroke="#8b571b" stroke-width="4" stroke-linejoin="round"/>
+<rect x="618" y="142" width="250" height="159" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+<text x="633" y="175" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">deck.py</text>
+<text x="633" y="209" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">0   PEAR</text>
+<text x="633" y="238" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">1   PLUM</text>
+<text x="34" y="384" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#182c2d">Read the two linked files at the same revision. The first word is PEAR.</text>
+</svg>

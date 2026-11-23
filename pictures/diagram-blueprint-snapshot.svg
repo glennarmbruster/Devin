@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
+  <title id="title">Pack the tools before the job starts</title>
+  <desc id="description">A three-step picture shows a recipe with tools and tests, a saved snapshot made from that recipe, and a new session that uses the ready tools.</desc>
+  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
+  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">Pack the tools before the job starts</text>
+  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">A blueprint is a recipe for a ready-to-use work machine.</text>
+  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="33" y="178" width="249" height="165" rx="11" fill="#faf6ea" stroke="#8b571b" stroke-width="2.5" />
+  <rect x="33" y="178" width="6" height="165" rx="3" fill="#8b571b" stroke="#8b571b" stroke-width="0" />
+  <text x="49" y="211" fill="#8b571b" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Blueprint</text>
+  <text x="49" y="243" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Pick a runtime.</text>
+  <text x="49" y="270" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">List needed tools.</text>
+  <rect x="45" y="126" width="36" height="36" rx="18" fill="#8b571b" stroke="#8b571b" stroke-width="2" />
+  <text x="63" y="152" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle">1</text>
+  <path d="M286 252L318 252" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M309.6 257.4L318 252L309.6 246.6" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="325" y="178" width="249" height="165" rx="11" fill="#faf6ea" stroke="#145756" stroke-width="2.5" />
+  <rect x="325" y="178" width="6" height="165" rx="3" fill="#145756" stroke="#145756" stroke-width="0" />
+  <text x="341" y="211" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Built snapshot</text>
+  <text x="341" y="243" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Save the ready</text>
+  <text x="341" y="270" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">project and tools.</text>
+  <rect x="337" y="126" width="36" height="36" rx="18" fill="#145756" stroke="#145756" stroke-width="2" />
+  <text x="355" y="152" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle">2</text>
+  <path d="M578 252L610 252" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M601.6 257.4L610 252L601.6 246.6" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="616" y="178" width="249" height="165" rx="11" fill="#faf6ea" stroke="#145756" stroke-width="2.5" />
+  <rect x="616" y="178" width="6" height="165" rx="3" fill="#145756" stroke="#145756" stroke-width="0" />
+  <text x="632" y="211" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Warm session</text>
+  <text x="632" y="243" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Start from the copy.</text>
+  <text x="632" y="270" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Run a small test.</text>
+  <rect x="628" y="126" width="36" height="36" rx="18" fill="#145756" stroke="#145756" stroke-width="2" />
+  <text x="646" y="152" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle">3</text>
+  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Changed the recipe? Build a fresh snapshot and test it before the team uses it.</text>
+</svg>

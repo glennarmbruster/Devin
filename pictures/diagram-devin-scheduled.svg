@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title description">
+<title id="title">A scheduled check reads the file again</title>
+<desc id="description">Two scheduled runs read queue.csv. At the first run two rows are waiting. One row changes to done. The next run reads the new revision and counts one waiting row.</desc>
+<rect x="2" y="2" width="896" height="416" rx="16" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="32" y="51" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#182c2d">A scheduled check reads the file again</text>
+<text x="32" y="87" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#145756">Each run needs a time, a time zone and a task.</text>
+<path d="M32 108H868" stroke="#8b571b" stroke-width="2"/>
+<text x="37" y="160" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">Schedule</text>
+<text x="37" y="200" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">First run</text>
+<text x="37" y="282" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">Next run</text>
+<rect x="200" y="163" width="355" height="60" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+<text x="220" y="202" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">waiting   ·   done   ·   waiting</text>
+<path d="M569 193 H623 m-9 -7 9 7 -9 7" fill="none" stroke="#8b571b" stroke-width="4" stroke-linejoin="round"/>
+<rect x="639" y="163" width="225" height="60" rx="8" fill="#145756" stroke="#145756" stroke-width="3"/>
+<text x="655" y="202" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#faf6ea">2 waiting</text>
+<rect x="200" y="245" width="355" height="60" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+<text x="220" y="284" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">waiting   ·   done   ·   done</text>
+<path d="M569 275 H623 m-9 -7 9 7 -9 7" fill="none" stroke="#8b571b" stroke-width="4" stroke-linejoin="round"/>
+<rect x="639" y="245" width="225" height="60" rx="8" fill="#145756" stroke="#145756" stroke-width="3"/>
+<text x="655" y="284" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#faf6ea">1 waiting</text>
+<text x="34" y="384" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#182c2d">Compare the report with the file at the revision that session read.</text>
+</svg>

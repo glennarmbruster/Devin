@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title description">
+<title id="title">What travels with a handoff?</title>
+<desc id="description">The branch, conversation and pending edit travel together. The local cards file ends in ELM. After adding ASH, the cloud sees three words.</desc>
+<rect x="2" y="2" width="896" height="416" rx="16" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="32" y="51" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#182c2d">What travels with a handoff?</text>
+<text x="32" y="87" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#145756">A cloud session starts on its own machine.</text>
+<path d="M32 108H868" stroke="#8b571b" stroke-width="2"/>
+<rect x="32" y="143" width="247" height="166" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+<text x="47" y="176" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">Local terminal</text>
+<text x="47" y="210" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">OAK</text>
+<text x="47" y="239" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">ELM</text>
+<text x="47" y="287" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#8b571b">Pending edit: ASH</text>
+<text x="337" y="184" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#145756">/handoff</text>
+<path d="M303 211 H544 m-9 -7 9 7 -9 7" fill="none" stroke="#8b571b" stroke-width="4" stroke-linejoin="round"/>
+<text x="311" y="249" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#182c2d">Branch + chat + edit</text>
+<rect x="569" y="143" width="297" height="166" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+<text x="584" y="176" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">Cloud session</text>
+<text x="584" y="210" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">OAK, ELM, ASH</text>
+<text x="584" y="239" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">3 nonempty lines</text>
+<text x="34" y="384" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#182c2d">Check the branch and the last word in the file when the cloud session opens.</text>
+</svg>

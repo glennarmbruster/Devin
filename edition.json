@@ -1,0 +1,38 @@
+{
+  "reviewed": "2026-11-23",
+  "groups": [
+    {
+      "title": "First steps",
+      "file": "begin-basics.json",
+      "guide": true,
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Cognition · Devin",
+      "file": "begin-devin.json",
+      "guide": true,
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "{{fact.devin.enterprise.name}}",
+      "file": "devin.json",
+      "reviewed": "2026-11-22"
+    },
+    {
+      "title": "Devin: full potential",
+      "file": "devin-reference.json",
+      "reviewed": "2026-11-23"
+    },
+    {
+      "title": "{{fact.devin.enterprise.name}} Hands-On Labs",
+      "track": "devin",
+      "file": "labs-devin.json",
+      "reviewed": "2026-11-22",
+      "startLabel": "Open the Devin web app",
+      "startUrl": "https://app.devin.ai/",
+      "gettingStarted": "Sign in through your organization and select its training repository. Start a new session. Choose Ask for investigation or planning and Agent when a step asks you to change the practice project."
+    }
+  ],
+  "version": 1,
+  "title": "All About Devin"
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 386" role="img" aria-labelledby="title desc">
+<title id="title">Undo takes off the newest move</title><desc id="desc">The list holds juice, toast, juice in that order. Undo removes only the last juice, leaving juice and toast. Undo is unavailable when the list is empty.</desc>
+<rect x="2" y="2" width="836" height="382" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="27" y="45" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="29" font-weight="700">Undo takes off the newest move</text>
+<text x="28" y="81" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="400">Two identical orders still count as two separate moves.</text>
+<path d="M28 99H812" fill="none" stroke="#145756" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 328H812" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="28" y="360" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="18" font-weight="700">Keep one history entry per tap, even when the same item was tapped twice.</text>
+<rect x="31" y="126" width="375" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="43" y="153" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Before Undo</text>
+<rect x="435" y="126" width="374" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="447" y="153" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">After one Undo</text>
+<rect x="51" y="176" width="314" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="208.0" y="200" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">1   Juice</text>
+<rect x="51" y="221" width="314" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="208.0" y="245" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">2   Toast</text>
+<rect x="51" y="266" width="314" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="208.0" y="290" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">3   Juice  ← newest</text>
+<rect x="457" y="176" width="314" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="614.0" y="200" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">1   Juice</text>
+<rect x="457" y="221" width="314" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="614.0" y="245" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">2   Toast  ← newest</text>
+<path d="M403 221h24m-7 -6 7 6 -7 6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

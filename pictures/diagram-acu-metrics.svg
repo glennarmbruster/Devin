@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
+  <title id="title">Count every try in the cost of a win</title>
+  <desc id="description">Three attempts cost 3, 2 and 5 ACUs, for 10 total. Two pull requests were accepted, so 10 divided by 2 gives 5 ACUs per accepted pull request.</desc>
+  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
+  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">Count every try in the cost of a win</text>
+  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">ACUs measure agent work. In this example, a win means an accepted pull request.</text>
+  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="39" y="143" width="248" height="90" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2" />
+  <text x="53" y="180" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="start">3 ACUs</text>
+  <text x="53" y="215" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Accepted</text>
+  <rect x="321" y="143" width="248" height="90" rx="8" fill="#faf6ea" stroke="#8b571b" stroke-width="2" />
+  <text x="335" y="180" fill="#8b571b" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="start">2 ACUs</text>
+  <text x="335" y="215" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Redo</text>
+  <rect x="603" y="143" width="248" height="90" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2" />
+  <text x="617" y="180" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="start">5 ACUs</text>
+  <text x="617" y="215" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Accepted</text>
+  <rect x="40" y="263" width="813" height="88" rx="8" fill="#145756" stroke="#145756" stroke-width="2" />
+  <text x="56" y="291" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="start">10 ACUs total  ÷  2 accepted pull requests  =  5 ACUs per win</text>
+  <text x="56" y="320" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">A redo uses work even when the team keeps none of its changes.</text>
+  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">With zero accepted pull requests, report the ACUs spent and leave the rate blank.</text>
+</svg>

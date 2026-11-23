@@ -1,0 +1,1675 @@
+[
+  {
+    "id": "lab-devin-01",
+    "title": "Build a read-only Exchange mailbox report",
+    "summary": "Which of six pretend mailboxes should appear on a list for people and shared teams? You can build the report without connecting to a mail system.",
+    "level": "Starter",
+    "requires": "Get the offline practice kit and PowerShell 7. You can run the included answer without Devin or a mail connection. To build with Devin, also use an approved practice repository. The optional actual mail check needs separate permission.",
+    "features": "Ask Devin for a plan. Read its script. Use pretend mailbox rows and a small test to check the result.",
+    "roles": [
+      "Make a read-only mailbox list.",
+      "Share a report someone else can test.",
+      "Build a small tool with a known answer."
+    ],
+    "prompt": "Plan Get-MailboxInventory.ps1 for PowerShell 7. In practice mode use -InputCsv. In live mode use -Live in an already signed-in session. Both need -OutputCsv for a new file. Read only user and shared mailboxes. Keep DisplayName, PrimarySmtpAddress and RecipientTypeDetails, in that order. Sort by the main mail address. Preserve commas and accents. With no matches, write only the header. Stop for a blank or repeated address, an existing output, or a failed read. Keep any old file safe. In live mode use only Get-EXOMailbox -RecipientTypeDetails UserMailbox,SharedMailbox -ResultSize Unlimited -ErrorAction Stop. Show how each rule will be tested.",
+    "steps": [
+      {
+        "title": "Unzip the sample kit",
+        "text": "Tap Download the practice kit. Unzip it. Find the folder holding mailboxes.csv. Open PowerShell 7 there and run the three lines. Predict which four of the six rows will be included.",
+        "help": "Get-Location shows the current folder. If the CSV is missing, look inside the unpacked folder. The room and device rows stay out.",
+        "code": "Get-Location\n$PSVersionTable.PSVersion\nImport-Csv ./mailboxes.csv | Format-Table -AutoSize"
+      },
+      {
+        "title": "Open a practice project",
+        "text": "Save mailboxes.csv and Test-Inventory.ps1 in an approved practice repository on a new branch. Keep the Reference folder on your computer. In Devin choose that project, open Ask and paste the opening prompt.",
+        "help": "Ask Devin to name the two files it sees. If you have no Devin access, use the Reference script on your computer starting at the next-but-one step."
+      },
+      {
+        "title": "Move from a plan to a script",
+        "text": "Read the plan. Check which mailbox types it will read and what it will do if a read fails. Use Send to Devin or start an Agent session in the same project. Give it the request.",
+        "help": "Look at the changed files. You expect one report script. If there are extra mail commands, ask what they do before running the file.",
+        "code": "Write Get-MailboxInventory.ps1 from the plan. Run the tests if PowerShell 7 is available. Make a draft pull request so I can review the change. Show the changed file, test command, results and any part you could not test."
+      },
+      {
+        "title": "Make a local report",
+        "text": "Place the reviewed script beside the practice CSV. These lines run the included answer. To test your own script, set $reportScript to its path first. Open the resulting rows with Import-Csv.",
+        "help": "Use a fresh output name if report.csv already exists. Team, Blue is one field. Quoted commas belong inside that field.",
+        "code": "$reportScript = './Reference/Get-MailboxInventory.ps1'\n& $reportScript -InputCsv ./mailboxes.csv -OutputCsv ./report.csv\nImport-Csv ./report.csv | Format-Table -AutoSize"
+      },
+      {
+        "title": "Run the five checks",
+        "text": "Run the test file in the same PowerShell window. Read each result. It checks which rows appear, the header with no rows, bad addresses, an existing output and a pretend live read.",
+        "help": "Five PASS lines mean the script met the practice checks. The test uses a stand-in for Exchange, so it can run without a mail connection.",
+        "code": "./Test-Inventory.ps1 -Script $reportScript"
+      },
+      {
+        "title": "Prove the test can catch a mistake",
+        "text": "Run the block. It makes a temporary copy of the answer, reverses the sort there and tests that copy. Then it removes the temporary file and checks the original again.",
+        "help": "Look for a failed order check on the temporary copy. The untouched answer should still pass. This shows the test can catch a real difference.",
+        "code": "$copy = Join-Path ([IO.Path]::GetTempPath()) (\"inventory-{0}.ps1\" -f [guid]::NewGuid())\n(Get-Content ./Reference/Get-MailboxInventory.ps1 -Raw).Replace('Sort-Object PrimarySmtpAddress |', 'Sort-Object PrimarySmtpAddress -Descending |') | Set-Content -LiteralPath $copy\ntry { ./Test-Inventory.ps1 -Script $copy } catch { $_.Exception.Message } finally { Remove-Item -LiteralPath $copy }\n./Test-Inventory.ps1 -Script ./Reference/Get-MailboxInventory.ps1"
+      },
+      {
+        "title": "Optional: run an approved live read",
+        "text": "The local exercise is complete. For a live check, use only a work computer and account approved for this read. Open a fresh PowerShell 7 window with the approved Exchange module. Inspect the script first. Sign in on that computer only, then use the commands.",
+        "help": "The live script reads mailboxes your account may see. It writes a local CSV to a fresh path. Keep that file on the approved device. Never paste it into the agent or add it to the practice project.",
+        "code": "Import-Module ExchangeOnlineManagement\n$upn = Read-Host 'Your authorized Exchange Online sign-in'\nConnect-ExchangeOnline -UserPrincipalName $upn -ShowBanner:$false\ntry {\n    $out = Join-Path ([IO.Path]::GetTempPath()) (\"mailbox-inventory-{0}.csv\" -f [guid]::NewGuid())\n    ./Reference/Get-MailboxInventory.ps1 -Live -OutputCsv $out\n    Import-Csv -LiteralPath $out | Group-Object RecipientTypeDetails | Select-Object Name, Count\n    $out\n} finally {\n    Disconnect-ExchangeOnline -Confirm:$false\n}"
+      },
+      {
+        "title": "Review the evidence",
+        "text": "Read the code, the five test results and the list of changed files. For an approved live run, check one user mailbox and one shared mailbox in your admin center. Keep a short note of the command and counts.",
+        "help": "Label your results clearly. A simulated live read proves the code followed the test rules. An actual sign-in is a different test."
+      }
+    ],
+    "check": [
+      "The four addresses sort as accounts@example.test, box-a@example.test, box-b@example.test and box-c@example.test. The types in order are shared, user, shared, user.",
+      "All five checks pass with the original. The backward sort fails. Team, Blue stays in one name field and Café Desk keeps its accent. Room and device rows stay out."
+    ],
+    "sources": [
+      [
+        "Cognition · start in Ask and move to Agent",
+        "https://docs.devin.ai/get-started/first-run"
+      ],
+      [
+        "Microsoft · Get-EXOMailbox parameters",
+        "https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-exomailbox?view=exchange-ps"
+      ],
+      [
+        "Microsoft · Exchange Online connection and prerequisites",
+        "https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps"
+      ],
+      [
+        "Microsoft · Exchange Online feature permissions",
+        "https://learn.microsoft.com/en-us/exchange/permissions-exo/feature-permissions"
+      ],
+      [
+        "Microsoft · install PowerShell",
+        "https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell"
+      ]
+    ],
+    "kit": "practice/exchange-inventory.zip",
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-02",
+    "title": "Test both sides of a mail limit",
+    "summary": "A mailbox gets a watch label at 80%. Try 79, 80 and 81.",
+    "level": "Starter",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Checking both sides of a fence shows which side the fence post belongs on.",
+    "roles": [
+      "Check a mail usage limit.",
+      "Read a warning rule in a sheet.",
+      "Test a game score limit."
+    ],
+    "prompt": "The sample file is quota.py. Predict the label for 79, 80 and 81. Run it with Python and show the three answers. Point to the piece of code that decides what happens at 80. Keep the original rule.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation. Name the practice file quota.py.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "def label(percent):\n    return \"watch\" if percent >= 80 else \"normal\"\n\nfor value in (79, 80, 81):\n    print(value, label(value))"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. 79 is normal. Both 80 and 81 are watch.",
+        "help": "Look at the little equals sign. Put 79, 80 and 81 on a number line and mark everything at least 80 as watch."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Run label(-1) as a separate trial. Discuss whether the word normal makes sense for that input.",
+        "help": "If 80 is labeled normal, look for > where the sample says >=."
+      }
+    ],
+    "check": [
+      "79 is normal. Both 80 and 81 are watch.",
+      "The current code returns normal. You have found a missing rule for a bad percentage."
+    ],
+    "sources": [
+      [
+        "Cognition · starting a session",
+        "https://docs.devin.ai/get-started/first-run"
+      ],
+      [
+        "Cognition · working with sessions",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-03",
+    "title": "Fix a comma that breaks a row",
+    "summary": "A team label contains a comma. The table should still have just two columns.",
+    "level": "Starter",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "In a CSV file, quotes can wrap a comma that belongs inside a single field.",
+    "roles": [
+      "Read a comma inside a mailbox label.",
+      "Import names from a practice table.",
+      "Read puzzle titles that contain commas."
+    ],
+    "prompt": "Build the two sample files. Run the starter once and print each row’s length. Replace its simple comma split with Python’s built-in csv reader. Test the full label and the number of fields.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "sample.csv:\nid,name\nm1,\"North, West\"\nm2,East\nparser.py starter: print([len(line.rstrip().split(\",\")) for line in open(\"sample.csv\")])"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The broken count list is 2, 3, 2. The fixed list is 2, 2, 2.",
+        "help": "Put a pencil loop around the quotes on the m1 row. Draw a line only at the comma outside those quotes. You should see two fields."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add m3,\"\" as a new row. Check its two fields and see whether the second field stays empty.",
+        "help": "If North and West still show up as separate columns, see whether the script still splits each line by hand."
+      }
+    ],
+    "check": [
+      "The broken count list is 2, 3, 2. The fixed list is 2, 2, 2.",
+      "The new row has two fields. The second is an empty string. North, West stays together on its own row."
+    ],
+    "sources": [
+      [
+        "Cognition · working with sessions",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-04",
+    "title": "Run a report from two different folders",
+    "summary": "A report should find its own sample table even if you open a terminal somewhere else.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A street address for a file can start at the script or at the terminal. This tool needs the script’s folder.",
+    "roles": [
+      "Make a portable mail report.",
+      "Hand a small report folder to a teammate.",
+      "Move a game and its level file together."
+    ],
+    "prompt": "In cleanlab make rows.csv and report.py. Read rows.csv from the folder that holds the script. Print the sum of the counts. Give me a command to run the report and the short list of files it needs.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "site,count\nWest,3\nEast,5"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. From inside cleanlab, python3 report.py prints 8. From its parent folder, python3 cleanlab/report.py also prints 8.",
+        "help": "Run the report from the parent folder of cleanlab. Read the input path if it fails. Check which folder really contains rows.csv."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Copy the named files into a fresh folder. Run there. Then try a separate copy with the input missing.",
+        "help": "If the second command cannot find rows.csv, ask how the script builds the path to that file."
+      }
+    ],
+    "check": [
+      "From inside cleanlab, python3 report.py prints 8. From its parent folder, python3 cleanlab/report.py also prints 8.",
+      "Both complete copies print 8. The copy missing its input stops with an error."
+    ],
+    "sources": [
+      [
+        "Cognition · environment blueprints",
+        "https://docs.devin.ai/onboard-devin/environment/blueprints"
+      ],
+      [
+        "Cognition · maintaining environments",
+        "https://docs.devin.ai/enterprise/environment-management/best-practices"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-05",
+    "title": "Test a repair before you accept it",
+    "summary": "A list has stray spaces and two spellings of the same ID. Find the one ID in the noise.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Clean each label before checking whether you have seen it. A string of spaces becomes empty after cleaning.",
+    "roles": [
+      "Count each mailbox ID once.",
+      "Fix a group list.",
+      "Keep extra spaces out of a game lookup."
+    ],
+    "prompt": "The starter file is candidate.py. Create tests from the rule: ignore case and outside spaces, skip blank IDs, return each clean ID once in order. Run the broken version. Fix only the cleanup and run the tests again.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation. Name the practice file candidate.py.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "def unique(ids):\n    return sorted({v.lower() for v in ids if v})\n\nsample = [\" A1 \", \"a1\", \"\", \" \"]"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The supplied list should give just a1. Before the repair extra spaces create extra entries.",
+        "help": "Write each ID surrounded by brackets so you can see the spaces. Clean the labels before using a list of items already seen."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Try B2 and b2 with outside spaces, plus two spellings of C3. Also test an empty list.",
+        "help": "If you cannot see the spaces, ask Python to print repr for each item so its edges show."
+      }
+    ],
+    "check": [
+      "The supplied list should give just a1. Before the repair extra spaces create extra entries.",
+      "The new group gives b2 and c3 once each. The empty group gives an empty list."
+    ],
+    "sources": [
+      [
+        "Cognition · reviewing code changes",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ],
+    "writeYourOwn": {
+      "goal": "Fix a list that counts the same ID twice.",
+      "given": "Test a blank, a space, and two spellings of A1.",
+      "compare": "Check whether your prompt says how to treat spaces, case and empty input."
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-06",
+    "title": "Write a check that another session can reuse",
+    "summary": "Leave a short recipe for checking a count sheet. Try it on a second sheet without explaining it all over again.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A clear recipe works on new numbers. A recipe that just remembers the first answer cannot pass this test.",
+    "roles": [
+      "Check mailbox item counts.",
+      "Share a simple review recipe.",
+      "Hand over a game score validator."
+    ],
+    "prompt": "Make training/REVIEW.md. It should explain how to read ID and Count, keep zero and other whole numbers greater than zero, and flag other values. Report valid row count, sum and the IDs that need a look.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "ID,Count\na,3\nb,0\nc,"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Rows a and b are valid, even though b is zero. Their sum is 3. Row c needs a look.",
+        "help": "Cross out negative, blank and broken counts. Include zero in the row count and write zero in the sum. Compare your paper rule with the recipe."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Open a fresh session and give it only the recipe and the second sheet with x=-2, y=8 and z=1.",
+        "help": "If b disappears, add a line to the recipe showing that zero is a real count.",
+        "code": "ID,Count\nx,-2\ny,8\nz,1"
+      }
+    ],
+    "check": [
+      "Rows a and b are valid, even though b is zero. Their sum is 3. Row c needs a look.",
+      "Two rows count. The sum is 9. Row x needs a look."
+    ],
+    "sources": [
+      [
+        "Cognition · using playbooks",
+        "https://docs.devin.ai/product-guides/using-playbooks"
+      ],
+      [
+        "Cognition · reusable skills",
+        "https://docs.devin.ai/product-guides/skills"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-07",
+    "title": "Keep the score when the page reloads",
+    "summary": "A tiny scorecard is only useful if it remembers your points when you reopen the page.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "The saved number works like a bookmark. The same browser at the same address can find it later.",
+    "roles": [
+      "Remember the last count in a practice report.",
+      "Keep a local counter between visits.",
+      "Build a replayable scorecard."
+    ],
+    "prompt": "Build a one-page scorecard with a total, a number field and Add. Allow negative scores. Save the total in this browser with localStorage. Leave a blank entry out and show a hint. Use plain HTML and JavaScript. Show a browser test.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Opening score: 0\nFirst change: +12\nSecond change: -5\nAfter reload: blank submission",
+        "caption": "Score changes and reload test"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. The total starts at 0, then becomes 12, then 7. Reload shows 7.",
+        "help": "Record the score before each click, after each click and after reload. Add a separate line for the blank field, which should leave the total alone."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Submit a blank entry. Read the hint. Reload the same address once more.",
+        "help": "If reload starts from zero, check whether the tool reads its saved value when it opens, before drawing the score."
+      }
+    ],
+    "check": [
+      "The total starts at 0, then becomes 12, then 7. Reload shows 7.",
+      "The total stays 7 both times. The hint asks for a number."
+    ],
+    "sources": [
+      [
+        "Cognition · working with sessions",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-08",
+    "title": "Keep one task for each issue and revision",
+    "summary": "A ticket desk received the same card several times. The second revision really is a new task.",
+    "level": "Advanced",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Think of a pair as a two-part locker number. You need both parts to know which locker is yours.",
+    "roles": [
+      "Deduplicate mail support tickets.",
+      "Track repeat requests.",
+      "Prevent duplicate game rewards."
+    ],
+    "prompt": "Build a local Python and SQLite task list. SQLite is a small database in one file. Use issue and revision together to identify a task. If a delivery repeats or another delivery has the same pair, reuse the task. Print the decision for each row.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "delivery,issue,revision\nd1,T21,r1\nd1,T21,r1\nd2,T21,r1\nd3,T21,r2"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The four events produce two tasks: T21/r1 and T21/r2.",
+        "help": "Make a paper card for each different issue and revision. Check the stored tasks after a restart against those cards."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Run the first three rows, close the program, then run the full list with the same database. Add d4,T22,r1.",
+        "help": "If a restart makes extra tasks, check that both runs open the same database file and use the same two-part match."
+      }
+    ],
+    "check": [
+      "The four events produce two tasks: T21/r1 and T21/r2.",
+      "Old deliveries keep their tasks after restart. The new issue makes the third task."
+    ],
+    "sources": [
+      [
+        "Cognition · tracking sessions",
+        "https://docs.devin.ai/api-reference/common-flows"
+      ],
+      [
+        "Cognition · creating a v3 session",
+        "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-09",
+    "title": "Find a missing and an extra permission",
+    "summary": "Compare the approved list with what the test report actually found. Check both directions.",
+    "level": "Advanced",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "If you check only for extra keys, you may miss a key someone should have received.",
+    "roles": [
+      "Review a sample mailbox access list.",
+      "Compare group grants with an approved sheet.",
+      "Check which game roles can open each area."
+    ],
+    "prompt": "List observed pairs missing from approved, then approved pairs missing from observed. Also flag any repeated input row. Keep case as written. Read these two lists only.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Approved: Reader/reports, Maintainer/app.\nObserved: Reader/reports, Reader/reports, Reader/app."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. Reader/app is extra. Maintainer/app is missing. Reader/reports is repeated.",
+        "help": "Write two columns, approved and observed. Cross out each matching pair once. A second copy of the same pair gets a separate repeat mark."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Replace the repeat Reader/reports with Maintainer/app and remove Reader/app. Run again.",
+        "help": "If the missing pair is absent from the report, compare approved against observed in a separate pass."
+      }
+    ],
+    "check": [
+      "Reader/app is extra. Maintainer/app is missing. Reader/reports is repeated.",
+      "The lists now match. The repeat also disappears."
+    ],
+    "sources": [
+      [
+        "Cognition · repository access by organization",
+        "https://docs.devin.ai/enterprise/integrations/git-integrations"
+      ],
+      [
+        "Cognition · security profiles",
+        "https://docs.devin.ai/product-guides/security-profiles"
+      ],
+      [
+        "Cognition · reviewing code changes",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ]
+    ],
+    "writeYourOwn": {
+      "goal": "Compare approved and observed permissions.",
+      "given": "Reader/reports occurs twice. Reader/app appears only in the observed list.",
+      "compare": "Look for separate outputs for an extra grant, a missing grant and a duplicate."
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-10",
+    "title": "Count the cost of one accepted change",
+    "summary": "Several sessions can work on the same change. Count that change once when you measure the cost.",
+    "level": "Advanced",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A second receipt for work on the same job still costs something. It does not turn that job into two finished jobs.",
+    "roles": [
+      "Measure work on a sample report fix.",
+      "Compare the cost of two practice jobs.",
+      "Track time spent on a game patch."
+    ],
+    "prompt": "Add all the pretend units in the rows. Count each accepted pull request ID once. A pull request is a change someone reviews. Divide total units by accepted changes. List the IDs behind your count.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "session,units,pr,accepted\ns1,4,P1,yes\ns2,2,P1,yes\ns3,3,P2,no\ns4,1,,no"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The rows use 10 units. Only P1 is accepted. That gives 10 units per accepted change.",
+        "help": "Add all four unit charges, including failed work. Circle the ID P1 once. Divide by the number of different accepted IDs you circled."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Set every accepted marker to no and repeat the report.",
+        "help": "If you get 5 units per win, check whether you counted two yes rows for P1."
+      }
+    ],
+    "check": [
+      "The rows use 10 units. Only P1 is accepted. That gives 10 units per accepted change.",
+      "Total use is still 10. Accepted changes are 0. The rate has no value because you cannot divide by zero."
+    ],
+    "sources": [
+      [
+        "Cognition · PR metrics",
+        "https://docs.devin.ai/api-reference/v3/metrics/metrics-prs"
+      ],
+      [
+        "Cognition · daily consumption",
+        "https://docs.devin.ai/api-reference/v3/consumption/consumption-daily-users"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-11",
+    "title": "Tell two matching clock readings apart",
+    "summary": "Two events both say 1:15. Their offsets show that they happened an hour apart.",
+    "level": "Expert",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "The offset tells you how to compare a clock with UTC. Two clocks can both show 1:15 at different moments.",
+    "roles": [
+      "Sort mail events.",
+      "Align times in a shared log.",
+      "Compare game actions across devices."
+    ],
+    "prompt": "Convert the four sample times to UTC using Python. Sort the times you can place. Flag missing offsets. Count events from the start time up to, but excluding, the end time. Show the ID for each event you count.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "A 2026-11-01T01:15:00-04:00\nB 2026-11-01T01:15:00-05:00\nC 2026-11-01T06:30:00+00:00\nD 2026-11-01T01:20:00\nWindow 05:15Z through 06:30Z on Nov 1."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. A is 05:15 UTC and B is 06:15 UTC. Both count. C is exactly at the end. D has no offset.",
+        "help": "Add four hours to the first 01:15 and five hours to the next 01:15. Read their new positions against the test window."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Move only the start to 05:15:01 UTC. Run the same checks.",
+        "help": "If C is counted, change the test for the end time from at or before to strictly before."
+      }
+    ],
+    "check": [
+      "A is 05:15 UTC and B is 06:15 UTC. Both count. C is exactly at the end. D has no offset.",
+      "Now only B is in the window. The gap from A to B is still 60 minutes."
+    ],
+    "sources": [
+      [
+        "Cognition · working with sessions",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-12",
+    "title": "Find a task after its reply gets lost",
+    "summary": "A pretend service makes a task but the “done” message never arrives. Should you make another?",
+    "level": "Expert",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A lost receipt does not prove a job was lost. Look for the job before paying for a second one.",
+    "roles": [
+      "Recover a sample report job.",
+      "Check a repeated team request.",
+      "Recover after a game save reply goes missing."
+    ],
+    "prompt": "Build a local pretend service and a client. Store T9 with S1, then lose the reply. Save a note saying the result is unknown. On restart, look up T9. If exactly one session exists, use it. With two matches, ask for a review. Print how many creates actually ran.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Create T9: store S1, then throw timeout.\nLookup T9: one match S1.\nCreate call counter begins at zero.",
+        "caption": "Sample rules and inputs"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. One match returns S1. The create count is 1, even after restart.",
+        "help": "Stop after the pretend service stores S1 but before a reply arrives. Reopen the client. Inspect the saved tag and count actual create calls."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change the lookup so T9 has both S1 and S2. Try the check again.",
+        "help": "If the second run creates a task, check that it reads the saved unknown result before it tries to start anything."
+      }
+    ],
+    "check": [
+      "One match returns S1. The create count is 1, even after restart.",
+      "The result says which two IDs conflict. It makes no new task."
+    ],
+    "sources": [
+      [
+        "Cognition · creating a v3 session",
+        "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions"
+      ],
+      [
+        "Cognition · tracking sessions",
+        "https://docs.devin.ai/api-reference/common-flows"
+      ],
+      [
+        "Cognition · reading a v3 session",
+        "https://docs.devin.ai/api-reference/v3/sessions/get-organizations-session"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-13",
+    "title": "Read an old field and its new label",
+    "summary": "An app is changing count to total. Update the reader before you update the writer.",
+    "level": "Expert",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Teaching the reader both words first gives the writer time to change. It also gives you a way back.",
+    "roles": [
+      "Read two versions of a mailbox export.",
+      "Move an old sheet to new column names.",
+      "Keep an old game save readable."
+    ],
+    "prompt": "Use two practice folders called producer and consumer. One writes a JSON record and the other reads it. Accept count or total. If both are present, require the numbers to match. Test old and new records and show the safest update order.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "legacy {\"count\":2}\nnew {\"total\":2}\ntransition {\"count\":2,\"total\":2}\nconflict {\"count\":2,\"total\":3}"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The old record, the new record and the equal pair each give 2. The mismatched pair fails.",
+        "help": "Draw a box around each key in the two-field example. Compare their values. Accept that row only if both ways of reading it agree."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Put the old writer back and keep the new reader. Read its output once more.",
+        "help": "If the reader chooses one number from a conflicting pair, add the check for two fields before choosing either one."
+      }
+    ],
+    "check": [
+      "The old record, the new record and the equal pair each give 2. The mismatched pair fails.",
+      "The old record still gives 2. The reader still rejects count 2 paired with total 3."
+    ],
+    "sources": [
+      [
+        "Cognition · coordinating sessions",
+        "https://docs.devin.ai/work-with-devin/advanced-capabilities"
+      ],
+      [
+        "Cognition · reviewing code changes",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-14",
+    "title": "Protect a good report during a failed update",
+    "summary": "A two-team report is missing half its data. Keep yesterday’s good total until you have a full new one.",
+    "level": "Expert",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A spare sheet lets you finish and check your work before you replace the copy other people are reading.",
+    "roles": [
+      "Protect a mail size report.",
+      "Keep a shared summary complete.",
+      "Save a level without losing the last good copy."
+    ],
+    "prompt": "Start current.json at total 7. Require North and South once each with whole counts of zero or more. Write a new file on the side. Replace the good file only after the input and the new file are complete. Test a forced stop just before the swap.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "current.json contains {\"total\":7}\nmanifest: North,South\npartial input: North=4\ngood input: North=4,South=5"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. A file naming only North leaves 7. A forced stop with both rows ready also leaves the old file exactly as it was.",
+        "help": "Make a spare copy of current.json. Stop the new write just before the report swap. Compare the visible report with your spare."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Run with North=4 and South=5. Then try two North rows and no South.",
+        "help": "If the old report vanishes, check whether the program opens it for writing before all the checks finish."
+      }
+    ],
+    "check": [
+      "A file naming only North leaves 7. A forced stop with both rows ready also leaves the old file exactly as it was.",
+      "The full set writes 9. The bad repeat leaves that good 9 unchanged."
+    ],
+    "sources": [
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ],
+      [
+        "Cognition · reviewing code changes",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      [
+        "Cognition · maintaining environments",
+        "https://docs.devin.ai/enterprise/environment-management/best-practices"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-15",
+    "title": "Prove a mail move is ready",
+    "summary": "A group wants a yes or no before a move. It needs a full count and a real approval.",
+    "level": "Expert",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A high score cannot fill a missing row or sign a permission slip. All three pieces of proof matter.",
+    "roles": [
+      "Check a practice mail move.",
+      "Prepare a rollout decision.",
+      "Decide when a new game build is ready."
+    ],
+    "prompt": "Make a local report that requires each listed group exactly once. Completed must be between zero and attempted. Require 95% finished overall plus a clear owner approval. Show which sample row proves each check. Make tests and a short README.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Manifest North,South. R1 North 48/50. R2 South 47/50. A1 owner: review pending."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The starting numbers are 95 of 100, but A1 says review pending. The result is HOLD.",
+        "help": "Use two marks: one for 95 of 100 and one for owner approval. Both must be present. Check each group exists before doing the addition."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change A1 to approved. Then separately test missing South and a restored South at 51/50. Follow the README in a fresh folder.",
+        "help": "If 51/50 gives a pass, compare completed with attempted for each group before adding the groups."
+      }
+    ],
+    "check": [
+      "The starting numbers are 95 of 100, but A1 says review pending. The result is HOLD.",
+      "Approval makes the complete set pass at exactly 95%. Both bad sets stop, and the test directions work for the next reader."
+    ],
+    "sources": [
+      [
+        "Cognition · asking about a repository",
+        "https://docs.devin.ai/work-with-devin/ask-devin"
+      ],
+      [
+        "Cognition · reviewing code changes",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      [
+        "Cognition · test evidence and recordings",
+        "https://docs.devin.ai/work-with-devin/testing-and-recordings"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-16",
+    "title": "Build a button that counts by twos",
+    "summary": "Your first tiny app needs a button, a number and a way to start over.",
+    "level": "Starter",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Starting small makes it easy to spot the first thing that went wrong. Both ways of pressing a button should do the same job.",
+    "roles": [
+      "Count sample mailbox pairs.",
+      "Count items during a group drill.",
+      "Build a simple clicker."
+    ],
+    "prompt": "In my practice project build a single index.html. Show the number, Count by two and Reset. Use real buttons that work by click or keyboard. Ask before changing other files. Record a browser test.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Start 0. Count button adds 2. Reset returns to 0.",
+        "caption": "Sample rules and inputs"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Two taps give 2 and then 4. Reset gives 0.",
+        "help": "Make a paper trail of counts: 0, 2, 4, 0. Tap the app in the same sequence. Test one button press using the keyboard too."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Use the Tab key to move to Count by two. Press Enter once, then press Reset.",
+        "help": "If Enter adds four, check whether both the click handler and a second key handler ran for the same press."
+      }
+    ],
+    "check": [
+      "Two taps give 2 and then 4. Reset gives 0.",
+      "The keyboard press gives 2 just like a tap. Reset returns to 0."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-17",
+    "title": "Make a lost-and-found tag finder",
+    "summary": "Search by item code and show a useful message for a code the list never had.",
+    "level": "Starter",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "When the code identifies one item, matching only the first letter can point to the wrong item.",
+    "roles": [
+      "Look up a fake mailbox by ID.",
+      "Find a sample asset tag.",
+      "Build a lookup panel for game items."
+    ],
+    "prompt": "Build a small offline HTML tag finder. Add a field, Find and Clear. Ignore outside spaces and letter case; require a full code. Show one item or Unknown tag. Give me the file and browser test evidence.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "T1 hat; T2 blue bag; T3 mug."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Entering “ t2 ” shows blue bag. T alone shows Unknown tag.",
+        "help": "Read the full label beside T2 in the source before searching. Remove the spaces and lower the capitals in your head, then compare the match."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Search T9, then Clear, then T1.",
+        "help": "If T returns all three, ask for exact code matching after spaces and capitals are cleaned."
+      }
+    ],
+    "check": [
+      "Entering “ t2 ” shows blue bag. T alone shows Unknown tag.",
+      "T9 shows Unknown tag. Clear empties the field and old result. T1 shows hat."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-18",
+    "title": "Make a short mail subject checker",
+    "summary": "Sometimes a report needs to spot an empty or unclear subject in a pile of practice notes.",
+    "level": "Starter",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Trim first so a stray space cannot make a four-letter subject pass.",
+    "roles": [
+      "Review fake mail subjects.",
+      "Check labels in a practice form.",
+      "Help a player name a saved game."
+    ],
+    "prompt": "Build an HTML checker with a text box for one subject and Check. Trim the ends. An empty result says Missing. Under five characters says Too short. Otherwise say Ready. Show the measured length and a Reset button.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Subjects: Trip; two spaces; Plan update. Minimum length 5 after trimming."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Trip gives 4 and Too short. Two spaces gives 0 and Missing. Plan update gives 11 and Ready.",
+        "help": "Count the four letters in Trip on your fingers. For two spaces, trim both ends and count again. Plan update includes its middle space."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Enter “ Plans ” including the outside spaces.",
+        "help": "If a blank is called short, check for zero length before checking the under-five rule."
+      }
+    ],
+    "check": [
+      "Trip gives 4 and Too short. Two spaces gives 0 and Missing. Plan update gives 11 and Ready.",
+      "The reported length is 5 and the word is Ready."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-19",
+    "title": "Make a one-minute packing quiz",
+    "summary": "A player checks three things they think belong in a kit. Make the answers easy to verify.",
+    "level": "Starter",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A score alone cannot teach the player much. Show the missed choices after they commit to an answer.",
+    "roles": [
+      "Quiz a mail trainee on a checklist.",
+      "Practice which files belong in a kit.",
+      "Play a short packing game."
+    ],
+    "prompt": "Build a one-page quiz with three labeled choices, Check answers and Try again. Award one point per correct choice picked and subtract one for each wrong pick, with a minimum of zero. Show which answers to review.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Choices: map, key, bell. Correct set: map and bell."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Picking only map earns 1. Picking all three earns 1 because key costs one point.",
+        "help": "Place one token beside each correct pick and take one away for key. Count the remaining tokens before looking at the app’s score."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Try again, then select map and bell only and press Check.",
+        "help": "If the score changes on every extra tap of Check, calculate it from the selected boxes each time."
+      }
+    ],
+    "check": [
+      "Picking only map earns 1. Picking all three earns 1 because key costs one point.",
+      "The result is 2 of 2 with no wrong picks. Reset unchecks all three."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-20",
+    "title": "Build a note card with a character limit",
+    "summary": "A small counter helps a writer stay inside a limit.",
+    "level": "Starter",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "What you are typing and what you last saved are two different things. One can change without changing the other.",
+    "roles": [
+      "Write a short mail banner.",
+      "Set a size limit for a form response.",
+      "Add short notes to a game."
+    ],
+    "prompt": "Make an HTML note card with a text field and a count of characters left. Enable Save up to the limit and disable it when the length exceeds the limit or for a blank note. Show the saved note in a separate area.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Limit 12. Sample “Meet at pier” has 12 characters including spaces."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Typing Meet at pier shows 0 left and allows Save. The saved area shows the phrase.",
+        "help": "Count each space in Meet at pier. Save that exact note, then compare the writing field with the saved note after adding the exclamation point."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Add an exclamation point. Try saving. Then erase the draft.",
+        "help": "If an over-limit edit changes the saved area, update that area only when Save succeeds."
+      }
+    ],
+    "check": [
+      "Typing Meet at pier shows 0 left and allows Save. The saved area shows the phrase.",
+      "The extra character shows 1 over. Save is off. The previous saved note stays visible in both cases."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-21",
+    "title": "Make a card draw without repeats",
+    "summary": "Draw every card from a small deck once. Shuffle only when a new round begins.",
+    "level": "Starter",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Pulling a card out of the pile prevents it appearing twice before the pile is rebuilt.",
+    "roles": [
+      "Pick practice mail checks without repeats.",
+      "Choose training prompts at random.",
+      "Build a reusable card deck."
+    ],
+    "prompt": "Build an HTML app with Draw and New deck. Use the fixed order in test mode. In regular play shuffle once per new deck. Remove each drawn card and show how many are left. Stop at an empty deck.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Fixed test deck bell, key, rope, flag."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Four draws give bell, key, rope and flag in test mode. The remaining counts are 3, 2, 1, 0.",
+        "help": "Write down each card as it leaves the pile. If all four cards have left, there is no card for a fifth draw. Check the pile before and after reset."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Try Draw again, then New deck. Draw once in the reset test deck.",
+        "help": "If a card repeats early, inspect the remaining deck after each draw. Make sure the picked card has left it."
+      }
+    ],
+    "check": [
+      "Four draws give bell, key, rope and flag in test mode. The remaining counts are 3, 2, 1, 0.",
+      "The extra draw cannot create a fifth card. The reset deck starts with bell and 3 remaining."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-22",
+    "title": "Test a two-player race to ten",
+    "summary": "Build a whole turn game, including the rules after someone wins.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A game has a state for playing and one for finished. Recording that state keeps later taps from changing a win.",
+    "roles": [
+      "Test a mail drill target.",
+      "Track two teams through an exercise.",
+      "Play a dice race to ten."
+    ],
+    "prompt": "Build an HTML game with Roll, current team, scores, winner and Restart. Switch teams after each valid roll. Use sample rolls in test mode and a six-sided die in play. Lock Roll after a win.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Start at 0 for both. Blue rolls 4, Gold 3, Blue 6. Target 10.",
+        "caption": "Sample rules and inputs"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Blue reaches 10 on turn three. Gold remains at 3. The winner says Blue.",
+        "help": "Write the teams down in turn order. Add 4 to Blue, 3 to Gold, then 6 to Blue. Draw a line under the winning turn."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Press Roll again after the win, then Restart. Inspect the first team and both scores.",
+        "help": "If Gold gets a fourth turn, check for a winner before handing over the turn."
+      }
+    ],
+    "check": [
+      "Blue reaches 10 on turn three. Gold remains at 3. The winner says Blue.",
+      "The extra press has no effect. Restart puts Blue first with 0 to 0."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-23",
+    "title": "Make a menu order with an undo button",
+    "summary": "Undo should reverse the last choice, including two orders of the same thing.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A list of moves lets you step backward one move at a time. A total by itself forgets what was ordered last.",
+    "roles": [
+      "Undo the last sample mail selection.",
+      "Review edits to a supply list.",
+      "Give a game a last-move undo."
+    ],
+    "prompt": "Build an HTML menu with one button per item, a visible order list, total and Undo last. Treat repeated items as separate choices. Disable Undo for an empty order.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Juice 2 tokens, toast 3, fruit 1. Order juice, toast, juice."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. The first three choices total 7. Undo removes only the last juice and leaves 5.",
+        "help": "Write each purchase on its own slip. For Undo, remove the last slip only. Add the remaining prices yourself before you trust the display."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Undo twice more. Try Undo on empty, then add fruit.",
+        "help": "If both juices disappear, remove the last list entry instead of all entries with its name."
+      }
+    ],
+    "check": [
+      "The first three choices total 7. Undo removes only the last juice and leaves 5.",
+      "The order reaches zero without turning negative. Fruit starts a fresh order totaling 1."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-24",
+    "title": "Build a report with honest empty pages",
+    "summary": "A service can return an empty middle page while later pages still have results.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "An empty page can still point forward, like a blank page in the middle of a book. Only the next-page mark tells you where to go.",
+    "roles": [
+      "Read pages of sample mailbox results.",
+      "Gather all pages of a practice file list.",
+      "Load a long puzzle catalog."
+    ],
+    "prompt": "Build a local report reader using just these fake pages. Follow the next pointer even when a page has no items. Stop at no next page. Track pages already read and flag a repeated pointer. Add tests for both paths.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Page 1 items A,B next 2. Page 2 empty next 3. Page 3 item C next none."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. The clean run visits pages 1, 2, 3 and returns A, B, C in order.",
+        "help": "Follow the number after next. Draw an arrow from the empty middle page to page 3. On the second run, check where an arrow returns to a page already read."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Make page 3 point back to 2. Run again and count the visits.",
+        "help": "If C goes missing, see whether an empty items list mistakenly ends the loop."
+      }
+    ],
+    "check": [
+      "The clean run visits pages 1, 2, 3 and returns A, B, C in order.",
+      "The reader flags a loop after exactly three different pages. It does not return the partial list as complete."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "writeYourOwn": {
+      "goal": "Read every page of a list and tell the reader if the report is incomplete.",
+      "given": "Page 2 has no rows but points to page 3. A later test makes page 3 point back to page 2.",
+      "compare": "Did you describe how success differs from a stopped loop?"
+    },
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-25",
+    "title": "Build a word ladder checker",
+    "summary": "A player changes one letter per move to reach the final word.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Rules must all pass before the app adds a move. A word can look close and still fail the allowed-list check.",
+    "roles": [
+      "Check small changes to a sample mail label.",
+      "Validate a short list of approved terms.",
+      "Play a word ladder."
+    ],
+    "prompt": "Build one HTML word game with a text field, current word, move history and Restart. Require the same word length, exactly one changed letter and a word from the allowed list. Ignore outside spaces and case.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Start CAT, goal DOG. Allowed: CAT, COT, COG, DOG. Try CAT → COT → COG → DOG.",
+        "caption": "Sample rules and inputs"
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. The three moves reach DOG and win in 3. COT is a valid first move.",
+        "help": "Compare the letters one at a time in CAT and COT. Try the same check with DOG. Only after counting changes do you check the allowed list."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Start over. Try CAT to DOG directly and CAT to MAT, then type “ cot ”.",
+        "help": "If a bad move changes the count, show the error first and return before adding to the history."
+      }
+    ],
+    "check": [
+      "The three moves reach DOG and win in 3. COT is a valid first move.",
+      "The first move changes too many letters. MAT is outside the list. The third works and counts as move 1."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-26",
+    "title": "Build a practice handoff planner",
+    "summary": "A task may depend on another task finishing first. Make that order clear.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A tower cannot keep its top blocks in place after its base is removed. A check can depend on earlier checks.",
+    "roles": [
+      "Guide a report from input to review.",
+      "Track tasks with prerequisites.",
+      "Make a quest that unlocks in order."
+    ],
+    "prompt": "Build a local browser checklist. Each task has a checkbox, a list of earlier tasks and a reason if locked. Start with only Read input available. If an earlier task is unchecked, clear later completed steps that depend on it. Display the number of finished steps out of three after every change. Display the number of finished steps out of three after every change.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Choose the practice repository in Devin. Stage the supplied sample and build request together in one unsent message.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Read input has no earlier task. Make report needs Read input. Review needs Make report."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Checking Read input unlocks Make report. Checking Make report unlocks Review.",
+        "help": "Write the three tasks as a chain. Cross out the first check. Trace both links to find which later checks lose their support."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Finish all three, then uncheck Read input. Inspect the later tasks and their reasons.",
+        "help": "If Review stays done, follow the chain past the first task that became invalid."
+      }
+    ],
+    "check": [
+      "Checking Read input unlocks Make report. Checking Make report unlocks Review.",
+      "Both later tasks become unchecked and locked. The finish count returns to 0 of 3."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-27",
+    "title": "Build a duplicate-file finder from a list",
+    "summary": "Two equal-sized files can be different. Test what your tool treats as a match.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Two boxes can weigh the same and contain different things. Compare the contents before declaring a match.",
+    "roles": [
+      "Compare saved practice report files.",
+      "Find repeats in a made-up document kit.",
+      "Check for copied puzzle files."
+    ],
+    "prompt": "Make a local Python tool with three tiny sample files. Group equal file contents. Print file names in each group. Read files only. Make no changes to the sample folder. Add a test proving equal size alone is not a match.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "A.txt has blue. B.txt has blue. C.txt has gold. All three words have four letters."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Compare the result with this hand check. A.txt and B.txt share a group. C.txt stands alone even though all sizes match.",
+        "help": "Count the bytes in blue and gold. Their lengths agree. Then read each letter side by side to see why matching size alone gives a wrong group."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change B.txt to gold and add a new empty D.txt. Run the finder again.",
+        "help": "If C joined the first group, ask for a final check of file bytes rather than just the length."
+      }
+    ],
+    "check": [
+      "A.txt and B.txt share a group. C.txt stands alone even though all sizes match.",
+      "B and C now group together. A and D stand alone. The tool leaves every file in place."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-28",
+    "title": "Build a scoreboard with a tie rule",
+    "summary": "A table must explain a tie without picking a winner by accident.",
+    "level": "Intermediate",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Alphabetical order makes the screen steady. It should never break a real points tie.",
+    "roles": [
+      "Sort sample queues with equal counts.",
+      "Rank team practice totals fairly.",
+      "Build a board with joint winners."
+    ],
+    "prompt": "Build an offline HTML board that sorts high to low, shows ties and lists tied labels alphabetically. Add a score input per team and a reset. Label joint leaders. Save scores on this device.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Blue 7, Gold 7, Green 4. Put equal scores at the same rank; next rank skips the tied slot."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. The ranks are Blue 1, Gold 1, Green 3. Both top teams are marked joint leaders.",
+        "help": "Write down the number of teams with more points than each team, then add one for its rank. Two teams tied for the highest score both get rank one."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Change Green to 8, reload, and compare all ranks. Then reset.",
+        "help": "If Gold is called second at 7, compare its points with the previous team before assigning a new rank."
+      }
+    ],
+    "check": [
+      "The ranks are Blue 1, Gold 1, Green 3. Both top teams are marked joint leaders.",
+      "Green is 1. Blue and Gold share rank 2. After reset the original scores and tie return."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-29",
+    "title": "Capstone: ship a two-player treasure hunt",
+    "summary": "Finish and test a local game with turns, hidden tiles, a score and a clear end.",
+    "level": "Advanced",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "A fixed board lets two people check the same scores. Hiding a used tile again during a round would make the proof fall apart.",
+    "roles": [
+      "Use a fixed sample to replay a mail incident.",
+      "Design a reproducible two-team drill.",
+      "Ship a complete local treasure game."
+    ],
+    "prompt": "Build a browser game with six covered buttons, a visible turn, totals, replay and a short help page. In test mode keep this grid fixed. A used tile cannot consume another turn. End after six legal picks. Include tests and a README for a fresh reader.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Fixed 2×3 grid slots 1–6 contain coin, blank, coin, gem, blank, coin. Coin=1, gem=3. Turns alternate Blue then Gold."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Pick 1, then 4, then 1 again. Blue has 1 and Gold 3. The repeat leaves Blue’s turn in place.",
+        "help": "Follow the six legal picks on paper. Leave the repeated pick off your turn list. Give the gem three points and each coin one."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Continue with 2, 3, 5 and 6. Read the winner and replay. Test all buttons with the keyboard.",
+        "help": "If the winner differs, write down who owned each legal pick and check whether the repeated 1 wrongly used a turn."
+      }
+    ],
+    "check": [
+      "Pick 1, then 4, then 1 again. Blue has 1 and Gold 3. The repeat leaves Blue’s turn in place.",
+      "The final scores are Blue 1 and Gold 5. Replay covers all six tiles and returns the first turn to Blue."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "lab-devin-30",
+    "title": "Capstone: deliver a read-only mail change desk",
+    "summary": "Combine a before-and-after report, a download and a test that protects a good result.",
+    "level": "Expert",
+    "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
+    "features": "Two snapshots tell you which rows changed. A bad snapshot can make an entire group seem to vanish, so check both lists first.",
+    "roles": [
+      "Review a fake mailbox type change.",
+      "Compare two saved inventory lists.",
+      "Build a tool that shows exactly what changed."
+    ],
+    "prompt": "Build a local HTML app with two CSV inputs, Compare, a visible check table and Download report. Label Added, Removed, Type changed and Same. Validate each file for unique nonblank IDs and known types before updating. Include samples, README, and a test for a bad second file. Use no mail connection.",
+    "steps": [
+      {
+        "title": "Start a practice session",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "help": "Check the repository name on the session before giving it the lab request.",
+        "code": "Before A=user, B=shared, C=user. After A=user, B=user, D=shared. IDs are pretend and match without case."
+      },
+      {
+        "title": "Ask for a working result",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
+      },
+      {
+        "title": "Check the first result",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. The clean run shows D added, C removed, B changed from shared to user and A the same. Every ID appears once.",
+        "help": "Match the two A rows and the two B rows before checking for additions or removals. Read the type on each side of B to spot the change."
+      },
+      {
+        "title": "Try the second test",
+        "text": "Save the good report. Add a second b to After and compare. Then restore the original input and download again.",
+        "help": "If B and b become separate boxes, check each ID after cleaning spaces and case but before building the comparison."
+      }
+    ],
+    "check": [
+      "The clean run shows D added, C removed, B changed from shared to user and A the same. Every ID appears once.",
+      "The duplicate case shows a row error and keeps the last good result. The restored download matches all four expected entries."
+    ],
+    "sources": [
+      [
+        "Cognition · your first Devin session",
+        "https://docs.devin.ai/get-started/first-run"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  }
+]

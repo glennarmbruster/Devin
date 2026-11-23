@@ -1,0 +1,7 @@
+DisplayName,PrimarySmtpAddress,RecipientTypeDetails
+Bookings,box-b@example.test,SharedMailbox
+North room,north@example.test,RoomMailbox
+"Team, Blue",box-a@example.test,UserMailbox
+Loaner tablet,tablet@example.test,EquipmentMailbox
+Café Desk,box-c@example.test,UserMailbox
+Accounts,accounts@example.test,SharedMailbox

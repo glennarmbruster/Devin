@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
+  <title id="title">Check all four access boundaries</title>
+  <desc id="description">Four checks ask what the signed-in person may do, what a service bot may request, which organization owns the task, and which repository the Git connection can open.</desc>
+  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
+  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">Check all four access boundaries</text>
+  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">For a mail-report project, each permission answers a different question.</text>
+  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="46" y="129" width="808" height="46" rx="6" fill="#faf6ea" stroke="#145756" stroke-width="1.6" />
+  <rect x="46" y="129" width="251" height="46" rx="6" fill="#145756" stroke="#145756" stroke-width="1.6" />
+  <text x="60" y="160" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Human account</text>
+  <text x="311" y="160" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Who can approve the change?</text>
+  <rect x="46" y="185" width="808" height="46" rx="6" fill="#faf6ea" stroke="#145756" stroke-width="1.6" />
+  <rect x="46" y="185" width="251" height="46" rx="6" fill="#145756" stroke="#145756" stroke-width="1.6" />
+  <text x="60" y="216" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Service bot</text>
+  <text x="311" y="216" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">What may this automated caller request?</text>
+  <rect x="46" y="241" width="808" height="46" rx="6" fill="#faf6ea" stroke="#145756" stroke-width="1.6" />
+  <rect x="46" y="241" width="251" height="46" rx="6" fill="#145756" stroke="#145756" stroke-width="1.6" />
+  <text x="60" y="272" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Devin organization</text>
+  <text x="311" y="272" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Which team owns the session?</text>
+  <rect x="46" y="297" width="808" height="46" rx="6" fill="#faf6ea" stroke="#145756" stroke-width="1.6" />
+  <rect x="46" y="297" width="251" height="46" rx="6" fill="#145756" stroke="#145756" stroke-width="1.6" />
+  <text x="60" y="328" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Git repository</text>
+  <text x="311" y="328" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Which project and files may Devin open?</text>
+  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">For a read-only report, begin with a practice repo and the smallest grants that work.</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
+  <title id="title">Try two projects before a larger rollout</title>
+  <desc id="description">A shared rule feeds a trial in Repo A and Repo B. Both results must pass before the next group starts. A failure sends the work back for repair.</desc>
+  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
+  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">Try two projects before a larger rollout</text>
+  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Use the same rule and the same check in each project.</text>
+  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="36" y="179" width="206" height="135" rx="11" fill="#faf6ea" stroke="#8b571b" stroke-width="2.5" />
+  <rect x="36" y="179" width="6" height="135" rx="3" fill="#8b571b" stroke="#8b571b" stroke-width="0" />
+  <text x="52" y="212" fill="#8b571b" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Shared rule</text>
+  <text x="52" y="244" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Keep zero.</text>
+  <text x="52" y="271" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Test blank input.</text>
+  <path d="M244 244H267V178H296 M267 244V304H296" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="309" y="141" width="193" height="76" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2" />
+  <text x="323" y="172" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Pilot in Repo A</text>
+  <text x="323" y="201" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Test zero.</text>
+  <rect x="309" y="265" width="193" height="76" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2" />
+  <text x="323" y="296" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Pilot in Repo B</text>
+  <text x="323" y="325" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Test blank.</text>
+  <path d="M503 178H548V242H587 M503 303H548V242" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M575 242L604 242" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M595.6 247.4L604 242L595.6 236.6" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="615" y="175" width="248" height="145" rx="11" fill="#faf6ea" stroke="#145756" stroke-width="2.5" />
+  <rect x="615" y="175" width="6" height="145" rx="3" fill="#145756" stroke="#145756" stroke-width="0" />
+  <text x="631" y="208" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Next small group</text>
+  <text x="631" y="240" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Both pass? Begin.</text>
+  <text x="631" y="267" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">One fails? Fix it.</text>
+  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Save the two pilot results with the shared rule so the next group can repeat the check.</text>
+</svg>

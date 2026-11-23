@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 386" role="img" aria-labelledby="title desc">
+<title id="title">The comma inside a name</title><desc id="desc">In the row m1 comma double-quote North comma West double-quote, splitting at every comma makes three pieces. A CSV reader returns m1 and North, West as two fields.</desc>
+<rect x="2" y="2" width="836" height="382" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="27" y="45" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="29" font-weight="700">The comma inside a name</text>
+<text x="28" y="81" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="400">CSV is a table saved as text. Quotes can wrap one whole field.</text>
+<path d="M28 99H812" fill="none" stroke="#145756" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 328H812" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="28" y="360" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="18" font-weight="700">Count the fields and check the full label. This row should have two fields.</text>
+<rect x="35" y="119" width="769" height="40" rx="4" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="47" y="146" text-anchor="start" fill="#faf6ea" font-family="Verdana, sans-serif" font-size="19" font-weight="700">One row in the file</text>
+<text x="54" y="188" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="23" font-weight="700">m1,&quot;North, West&quot;</text>
+<text x="37" y="245" text-anchor="start" fill="#8b571b" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Split at every comma</text>
+<rect x="339" y="220" width="83" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="380.5" y="244" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">m1</text>
+<rect x="436" y="220" width="122" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="497.0" y="244" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">&quot;North</text>
+<rect x="574" y="220" width="125" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="636.5" y="244" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700"> West&quot;</text>
+<text x="37" y="300" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Read with a CSV reader</text>
+<rect x="339" y="275" width="83" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="380.5" y="299" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">m1</text>
+<rect x="436" y="275" width="194" height="35" rx="4" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="533.0" y="299" text-anchor="middle" fill="#145756" font-family="Verdana, sans-serif" font-size="17" font-weight="700">North, West</text>
+</svg>

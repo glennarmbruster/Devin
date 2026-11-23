@@ -1,0 +1,226 @@
+[
+  {
+    "id": "open-devin",
+    "title": "Open Devin and ask it to read one file",
+    "summary": "Devin can help you work with a project’s files. First, ask it a question with an answer you can check yourself.",
+    "topic": "Devin",
+    "where": [
+      "Use a browser on a Mac or PC. Go to app.devin.ai and sign in to the practice workspace you may use. At work, use the account your team invited. Ask needs a connected project that Devin has finished reading into its index. An iPad can display the lesson; desktop gives you more room to follow the session."
+    ],
+    "actions": [
+      {
+        "title": "Find the right workspace",
+        "do": "Open app.devin.ai and sign in. Read the workspace name in the app. A workspace is where a group keeps its projects and jobs.",
+        "see": "The name matches the practice space you meant to open.",
+        "stuck": "If it is unfamiliar, use the workspace picker. Ask the person who set up the practice space if you cannot find it."
+      },
+      {
+        "title": "Choose Ask",
+        "do": "Open a new session. A session is one job and its replies. Choose Ask for this reading exercise.",
+        "see": "There is a place to type a question about a project.",
+        "stuck": "If the screen says Agent, return to the mode picker and choose Ask."
+      },
+      {
+        "title": "Choose one project",
+        "do": "Open the repository picker. A repository is a project folder with a record of its changes. Pick the approved practice one with a README file.",
+        "see": "You see the name of that one project beside the question box.",
+        "stuck": "If it is missing, check whether Devin has access and has finished indexing its files."
+      },
+      {
+        "title": "Check a fact",
+        "do": "Ask “Read README.md. What is its first heading? Link to the file. Leave the project alone.” Open the link and compare the heading yourself.",
+        "see": "The words in the answer match the heading in the actual README.",
+        "stuck": "If they differ, check the file path and the branch, which tells you which copy of the project Devin read."
+      }
+    ],
+    "roles": [
+      "Read a pretend mail report’s instructions.",
+      "Look up how a team practice task works.",
+      "Find the start page of a small app."
+    ],
+    "sources": [
+      [
+        "Cognition · your first session",
+        "https://docs.devin.ai/get-started/first-run"
+      ],
+      [
+        "Cognition · Ask Devin",
+        "https://docs.devin.ai/work-with-devin/ask-devin"
+      ],
+      [
+        "Cognition · indexing a repository",
+        "https://docs.devin.ai/onboard-devin/index-repo"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "devin-first-repo",
+    "title": "Choose a practice project Devin can find",
+    "summary": "You can use a file with a known heading to check that Devin has found the right project.",
+    "topic": "Devin",
+    "where": [
+      "Use a desktop browser. Start with an approved practice repository already connected to Devin. On a personal account you can make a private one at github.com/new if your plan and GitHub connection allow it."
+    ],
+    "actions": [
+      {
+        "title": "Pick a project",
+        "do": "Open the practice project on its Git website. To make a new one on GitHub, choose New repository, name it ai-reading-practice, pick Private and add a README.",
+        "see": "The project’s file list shows README.md.",
+        "stuck": "If making a new project is unavailable to you, use one the owner set aside for practice."
+      },
+      {
+        "title": "Take a few notes",
+        "do": "Open README.md. Write down its first heading and a short phrase underneath. If the file has only a heading, write the file name beside it.",
+        "see": "You now hold two facts you can check without Devin.",
+        "stuck": "If several README files appear, use the one in the project’s top folder. Note its path."
+      },
+      {
+        "title": "Find it in Ask",
+        "do": "Open app.devin.ai. In Ask, open the repository picker. Type the exact project name. Wait if the list says it is still indexing.",
+        "see": "The project appears and can be selected when ready.",
+        "stuck": "If it still does not appear, the connection may need access to this project. Ask the project owner to check."
+      },
+      {
+        "title": "Try your two clues",
+        "do": "Ask for the first heading and a phrase underneath in the file you chose. Open Devin’s source link. Compare it with your notes.",
+        "see": "The project, file and quoted words line up. If there is no second phrase, the answer should say so.",
+        "stuck": "If the quote comes from another branch, switch to the one where you read the source."
+      }
+    ],
+    "roles": [
+      "Find the right practice mail project.",
+      "Check where a shared report guide lives.",
+      "Point an app helper at the right files."
+    ],
+    "sources": [
+      [
+        "GitHub · creating a repository",
+        "https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository"
+      ],
+      [
+        "Cognition · your first session",
+        "https://docs.devin.ai/get-started/first-run"
+      ],
+      [
+        "Cognition · indexing a repository",
+        "https://docs.devin.ai/onboard-devin/index-repo"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "devin-follow-session",
+    "title": "Watch Devin make one tiny change",
+    "summary": "Follow one two-line file from your first request to its final check. You choose whether the change is ready.",
+    "topic": "Devin",
+    "where": [
+      "On a computer open app.devin.ai. Choose a practice project where Devin may make a change. You can read the session on iPad, but the file and tool panes fit better on a larger screen."
+    ],
+    "actions": [
+      {
+        "title": "Name the whole job",
+        "do": "Start an Agent session in your practice project. Type “Make PRACTICE.md. Its only lines should be # Practice and Ready for review. Show the change and check the lines. Leave it for my review.”",
+        "see": "The request names one file and gives both lines.",
+        "stuck": "If the plan lists several files, ask Devin to keep the job to PRACTICE.md."
+      },
+      {
+        "title": "Find the progress",
+        "do": "Open the session’s progress view. Read the steps as Devin works. Look for the step that creates the practice file.",
+        "see": "You can tell which part has run and which part still needs a check.",
+        "stuck": "If the view is quiet, read the session message. It may be waiting for your reply."
+      },
+      {
+        "title": "Inspect the result",
+        "do": "Open the file view or IDE, the window where you can read code. Select PRACTICE.md. Check the two lines. Look in Shell or the session record for the check Devin ran.",
+        "see": "The file shows the two lines in order. The check points to that same file.",
+        "stuck": "If the check is only a promise, ask Devin to open the saved file and show its contents."
+      },
+      {
+        "title": "Leave it for review",
+        "do": "Open the diff, the view showing what changed, or the draft pull request. Check for extra files. Ask for a fix in this session if a line is wrong.",
+        "see": "A reviewer can see a single small change and its check.",
+        "stuck": "If another edit appears, ask what caused it and request a smaller proposal before the shared project changes."
+      }
+    ],
+    "roles": [
+      "Review one made-up mail report file.",
+      "Check a change to a practice runbook.",
+      "Watch an agent build one piece of a game."
+    ],
+    "sources": [
+      [
+        "Cognition · your first session",
+        "https://docs.devin.ai/get-started/first-run"
+      ],
+      [
+        "Cognition · session tools",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  },
+  {
+    "id": "devin-review-first",
+    "title": "Check a finding in Devin Review",
+    "summary": "A reviewer may flag a line that could cause trouble. Test the idea before deciding whether the line needs an edit.",
+    "topic": "Devin",
+    "where": [
+      "Go to app.devin.ai/review in a desktop browser. Sign in with an account that can review the chosen practice pull request. A pull request asks a person to review a change before adding it to the shared project."
+    ],
+    "actions": [
+      {
+        "title": "Read the request",
+        "do": "Choose one practice pull request in Review. Read its title and the short description of what the change is supposed to do.",
+        "see": "You know what the author wanted a reader or app user to see.",
+        "stuck": "If the request is too large, pick a practice change with one small file."
+      },
+      {
+        "title": "Read one file",
+        "do": "Open the changed files. Choose one and find an added or removed line. In your own words, write what the line changed.",
+        "see": "You have a prediction you can test, such as a button showing a different label.",
+        "stuck": "If it is hard to explain, compare the old line and the new line one word at a time."
+      },
+      {
+        "title": "Follow a finding",
+        "do": "If Review flagged a problem, open its finding. Read the exact line it points to. Pick one input that might show the problem.",
+        "see": "You have a file, a line and a test idea. If there are no findings, you can still check the planned change.",
+        "stuck": "If the finding sounds broad, ask which input would make its claim true."
+      },
+      {
+        "title": "Write your check",
+        "do": "Make a private note with the file name, your test input and the result you would expect. Compare this with any test linked to the request. Leave the final merge choice to the project owner.",
+        "see": "A reader can repeat your check and decide whether the finding fits.",
+        "stuck": "If a linked test uses a different input, keep your claim open until someone checks the matching case."
+      }
+    ],
+    "roles": [
+      "Review one line of a sample mail report.",
+      "Explain a change to a shared tool.",
+      "Check an app bug report against the code."
+    ],
+    "sources": [
+      [
+        "Cognition · Devin Review",
+        "https://docs.devin.ai/work-with-devin/devin-review"
+      ],
+      [
+        "Cognition · session tools",
+        "https://docs.devin.ai/work-with-devin/devin-session-tools"
+      ]
+    ],
+    "basis": [
+      "ai-drafted"
+    ],
+    "lastVerified": "2026-11-22"
+  }
+]

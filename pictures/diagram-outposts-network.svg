@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
+  <title id="title">Where does the worker run?</title>
+  <desc id="description">The Devin Cloud side holds the agent and queue. Across a boundary, the customer worker connects out, takes a job, and runs commands inside its own work environment.</desc>
+  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
+  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">Where does the worker run?</text>
+  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">With Outposts, your team runs the worker on a machine it controls.</text>
+  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="33" y="132" width="335" height="219" rx="11" fill="#faf6ea" stroke="#145756" stroke-width="2.5" />
+  <rect x="529" y="132" width="336" height="219" rx="11" fill="#faf6ea" stroke="#8b571b" stroke-width="2.5" />
+  <text x="50" y="177" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" text-anchor="start">Devin Cloud</text>
+  <text x="547" y="177" fill="#8b571b" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Your team’s machines</text>
+  <text x="50" y="235" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">The agent plans steps.</text>
+  <text x="50" y="274" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">The queue holds jobs.</text>
+  <text x="548" y="235" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">The worker claims a job.</text>
+  <text x="548" y="274" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Commands run here.</text>
+  <path d="M448 130V177 M448 275V351" fill="none" stroke="#182c2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 8" />
+  <path d="M526 221L371 221" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M379.4 215.6L371 221L379.4 226.4" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="450" y="205" fill="#8b571b" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="middle">connects out</text>
+  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">The cloud helps run the session. Your team sets the worker’s access and network rules.</text>
+</svg>

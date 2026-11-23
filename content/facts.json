@@ -1,0 +1,142 @@
+[
+  {
+    "key": "devin.enterprise.name",
+    "value": "Devin Enterprise",
+    "source": "https://docs.devin.ai/get-started/first-run",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-integrations.detail-1",
+    "value": "In Slack or Teams, use an approved practice channel. Check that the app is installed and your account is linked. Ask which Devin team and project will receive the request. Start with one practice ticket and one small test. Follow the session link and check that you landed in the expected project.",
+    "source": "https://docs.devin.ai/integrations/slack",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-ask.availability",
+    "value": "Ask needs access to a connected, indexed repo for private code questions. The public DeepWiki site offers basic questions on public repos. Full planning and session creation are in the Devin app.",
+    "source": "https://docs.devin.ai/work-with-devin/deepwiki",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-agent.availability",
+    "value": "The connected code host must grant access to the project. A read-only Git security profile permits reading code but prevents pushing a branch or opening a PR.",
+    "source": "https://docs.devin.ai/product-guides/security-profiles",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-deepwiki.availability",
+    "value": "Public DeepWiki works with public GitHub projects. For a private wiki, your team must connect the repo and give Devin access to index it.",
+    "source": "https://docs.devin.ai/work-with-devin/deepwiki",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-review.availability",
+    "value": "A public GitHub PR can be viewed in Devin Review without a Devin login. A private PR needs a sign-in with access. Comment triggers need the integration for that repo.",
+    "source": "https://docs.devin.ai/work-with-devin/devin-review",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-skills.availability",
+    "value": "Cloud discovers SKILL.md files in connected repos. A skill saved in Customize has a personal or shared scope. As accounts move from Playbooks to Skills, existing instructions carry over.",
+    "source": "https://docs.devin.ai/product-guides/skills",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-blueprints.availability",
+    "value": "Repo access is required before environment setup. A successful build supplies a snapshot for new sessions. Not verified (2026-11-23): a fixed number of seconds for every startup.",
+    "source": "https://docs.devin.ai/onboard-devin/environment/blueprints",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-cli.availability",
+    "value": "For enterprise sign-in with a Devin account, the assigned role needs the Use Devin CLI permission. Check your organization’s login instructions before starting.",
+    "source": "https://docs.devin.ai/cli/enterprise/devin-auth",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-apps.availability",
+    "value": "Every visitor must sign in to Devin. With Only people with access, the creator, organization admins and people you add can open the App.",
+    "source": "https://docs.devin.ai/product-guides/devin-apps",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-scheduled.availability",
+    "value": "New scheduled work lives in Automations. Existing legacy schedules can still run. The editor lets you change the time zone from the browser default.",
+    "source": "https://docs.devin.ai/product-guides/automations",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-workflows.availability",
+    "value": "Dynamic Workflows can run in a Devin session. For enterprise accounts an admin must first enable Dynamic workflows in Enterprise Settings.",
+    "source": "https://docs.devin.ai/work-with-devin/dynamic-workflows",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-integrations.availability",
+    "value": "The v3 endpoint needs the organization-level UseDevinSessions permission. Each chat or ticket integration also needs its own setup and access.",
+    "source": "https://docs.devin.ai/api-reference/v3/sessions/post-organizations-sessions",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  },
+  {
+    "key": "devin-reference-outposts.availability",
+    "value": "A shared Outpost can serve members of the organizations it is shared with. A personal Outpost is for its owner’s sessions. Mandatory security profiles can further restrict a session’s actions.",
+    "source": "https://docs.devin.ai/cloud/outposts/overview",
+    "verifiedOn": "2026-11-23",
+    "basis": [
+      "ai-drafted",
+      "source-read"
+    ]
+  }
+]

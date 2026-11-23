@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 386" role="img" aria-labelledby="title desc">
+<title id="title">What clears the mail move?</title><desc id="desc">A list covers the scope. Tests check the result. A written approval lets the team proceed.</desc>
+<rect x="2" y="2" width="836" height="382" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="27" y="45" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="29" font-weight="700">What clears the mail move?</text>
+<text x="28" y="81" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="18" font-weight="400">Check the evidence before you give the go-ahead.</text>
+<path d="M28 99H812" fill="none" stroke="#145756" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28 328H812" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="28" y="360" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="18" font-weight="700">Keep the count, test result and approval with the decision.</text>
+<rect x="33" y="127" width="774" height="49" rx="6" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="47" y="159" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Scope</text>
+<text x="337" y="159" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="20" font-weight="400">Count the planned boxes.</text>
+<rect x="33" y="191" width="774" height="49" rx="6" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="47" y="223" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Test</text>
+<text x="337" y="223" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="20" font-weight="400">Check every result.</text>
+<rect x="33" y="255" width="774" height="49" rx="6" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="47" y="287" text-anchor="start" fill="#145756" font-family="Verdana, sans-serif" font-size="19" font-weight="700">Approval</text>
+<text x="337" y="287" text-anchor="start" fill="#182c2d" font-family="Verdana, sans-serif" font-size="20" font-weight="400">Find the signed decision.</text>
+</svg>

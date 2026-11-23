@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title description">
+<title id="title">Who can open a private App?</title>
+<desc id="description">The visitor follows the App link and signs in to Devin. The sharing rules then decide whether that person can open the App. Someone outside the allowed group cannot open it.</desc>
+<rect x="2" y="2" width="896" height="416" rx="16" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="32" y="51" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#182c2d">Who can open a private App?</text>
+<text x="32" y="87" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#145756">A link leads to the tool. Two checks decide who gets in.</text>
+<path d="M32 108H868" stroke="#8b571b" stroke-width="2"/>
+<rect x="32" y="143" width="200" height="141" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+<text x="47" y="176" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">App link</text>
+<text x="47" y="210" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">Find the tool</text>
+<path d="M240 207 H285 m-9 -7 9 7 -9 7" fill="none" stroke="#8b571b" stroke-width="4" stroke-linejoin="round"/>
+<rect x="298" y="143" width="213" height="141" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+<text x="313" y="176" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">Sign in</text>
+<text x="313" y="210" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">Who is visiting?</text>
+<path d="M520 207 H565 m-9 -7 9 7 -9 7" fill="none" stroke="#8b571b" stroke-width="4" stroke-linejoin="round"/>
+<rect x="577" y="143" width="290" height="141" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+<text x="592" y="176" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">Sharing rules</text>
+<text x="592" y="210" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">Is this visitor</text>
+<text x="592" y="239" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">in the allowed group?</text>
+<rect x="577" y="300" width="290" height="43" rx="8" fill="#145756" stroke="#145756" stroke-width="3"/>
+<text x="594" y="329" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#faf6ea">Allowed  →  open App</text>
+<text x="34" y="384" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#182c2d">Use the Share panel to check the audience before you send the link.</text>
+</svg>

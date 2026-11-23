@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 460" role="img" aria-labelledby="cover-title cover-desc">
+<title id="cover-title">All About Devin</title>
+<desc id="cover-desc">A branching circuit runs from a terminal prompt to a checked result on a dark field-guide cover.</desc>
+<rect width="360" height="460" rx="8" fill="#182c2d"/>
+<rect x="12" y="12" width="336" height="436" rx="4" fill="none" stroke="#faf6ea" stroke-width="2"/>
+<path d="M31 68H329 M31 304H329" stroke="#8b571b" stroke-width="3"/>
+<text x="32" y="48" fill="#faf6ea" font-family="Verdana,sans-serif" font-size="18" letter-spacing="2">FIELD GUIDE</text>
+<g fill="none" stroke="#145756" stroke-width="9"><path d="M57 211h64l49-49h112M57 229h85l42 42h92"/><path d="M104 102h48l34 34h113"/></g>
+<path d="M58 190h59l50 50h41l39-39h54" fill="none" stroke="#8b571b" stroke-width="9"/>
+<g fill="#182c2d" stroke="#faf6ea" stroke-width="4"><rect x="37" y="156" width="67" height="61" rx="8"/><rect x="268" y="174" width="55" height="53" rx="7"/></g>
+<path d="m52 175 12 12-12 12m16-1h18m193 3 10 10 20-22" fill="none" stroke="#faf6ea" stroke-width="4"/>
+<g fill="#faf6ea"><circle cx="282" cy="162" r="6"/><circle cx="276" cy="271" r="6"/><circle cx="299" cy="136" r="6"/></g>
+<text x="31" y="350" fill="#faf6ea" font-family="Georgia,serif" font-size="36">All About</text>
+<text x="29" y="423" fill="#faf6ea" font-family="Georgia,serif" font-weight="bold" font-size="85">Devin</text>
+</svg>
