@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 780 392"><title id="title">Trace the read-only mailbox inventory</title><desc id="desc">The practice input has six mailbox rows. The report keeps the two requested kinds and sorts the four remaining addresses.</desc><rect x="1" y="1" width="778" height="390" rx="12" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="30" y="40" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#145756">Trace the read-only mailbox inventory</text>
+<text x="30" y="70" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">The practice input has six mailbox rows. The report keeps the two requested</text>
+<text x="30" y="94" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">kinds and sorts the four remaining addresses.</text>
+<rect x="30" y="120" width="350" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="46" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Input · six made-up rows</text>
+<text x="46" y="182" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Two user mailboxes</text>
+<text x="46" y="208" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Two shared mailboxes</text>
+<text x="46" y="234" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">One room and one device</text>
+<text x="46" y="260" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">The CSV stays unchanged.</text>
+<rect x="400" y="120" width="350" height="154" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="416" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Output · four rows</text>
+<text x="416" y="182" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">accounts · shared</text>
+<text x="416" y="208" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">box-a · user</text>
+<text x="416" y="234" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">box-b · shared</text>
+<text x="416" y="260" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">box-c · user</text>
+<rect x="30" y="297" width="720" height="76" rx="8" fill="#faf6ea" stroke="#8b571b" stroke-width="2"/>
+<text x="46" y="325" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#8b571b">Open the result with a CSV reader</text>
+<text x="46" y="353" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Check the order and types. Team, Blue stays one name and Café keeps its accent.</text>
+</svg>

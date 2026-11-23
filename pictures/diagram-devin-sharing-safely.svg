@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 780 398"><title id="title">Check what each shared link opens</title><desc id="desc">A session, a code review and an App show different things. Check the audience for each link you plan to send.</desc><rect x="1" y="1" width="778" height="396" rx="12" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="30" y="40" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#145756">Check what each shared link opens</text>
+<text x="30" y="70" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">A session, a code review and an App show different things. Check the</text>
+<text x="30" y="94" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">audience for each link you plan to send.</text>
+<rect x="30" y="121" width="720" height="156" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<rect x="30" y="121" width="720" height="39" rx="8" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="43" y="147" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#faf6ea">Link</text>
+<text x="178" y="147" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#faf6ea">Read before sharing</text>
+<text x="498" y="147" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#faf6ea">Check with the reviewer</text>
+<text x="43" y="186" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Session</text>
+<text x="178" y="186" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Messages, files, command output</text>
+<text x="498" y="186" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Can open this session</text>
+<text x="43" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Draft PR</text>
+<text x="178" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Branch, changed files, latest test</text>
+<text x="498" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Can read this practice repo</text>
+<path d="M31 199h718" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="43" y="264" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Devin App</text>
+<text x="178" y="264" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Share → General access and list</text>
+<text x="498" y="264" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Can open with intended role</text>
+<path d="M31 238h718" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="30" y="303" width="720" height="76" rx="8" fill="#faf6ea" stroke="#8b571b" stroke-width="2"/>
+<text x="46" y="331" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#8b571b">Small App trial · Only people with access</text>
+<text x="46" y="359" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">The creator and organization admins still have access. Check all added groups.</text>
+</svg>

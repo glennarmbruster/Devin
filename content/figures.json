@@ -124,7 +124,7 @@
     "placements": {
       "devin-reference-agent": {
         "field": "sections.1.paragraphs.1",
-        "evidence": "Ask Devin to add a label to a test page, run its check and open a draft PR."
+        "evidence": "Ask Devin to fix the ID cleanup on a practice branch, run the checks and open a draft PR."
       },
       "devin-review-first": {
         "field": "actions.0.do",
@@ -527,7 +527,7 @@
     "placements": {
       "devin-reference-ask": {
         "field": "sections.1.paragraphs.1",
-        "evidence": "Link to the rule and to one place that calls it.”"
+        "evidence": "Request a link to the rule and a link to the test that calls the report."
       }
     }
   },
@@ -570,6 +570,424 @@
       "devin-reference-integrations": {
         "field": "sections.1.paragraphs.1",
         "evidence": "Match its session to the original request before sending another message."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-ask.webp",
+    "lesson": "devin-reference-ask",
+    "also": [
+      "lab-devin-01"
+    ],
+    "caption": "Illustrated practice screen. Open the cited report file and match its two mailbox types to the check in the test file.",
+    "alt": "Ask reply about the training mailbox report. Its source identifies UserMailbox and SharedMailbox, the two types checked by the test.",
+    "source": "https://docs.devin.ai/work-with-devin/ask-devin",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-ask": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "Use the Exchange inventory kit in an indexed practice repo for this screen. Ask which two mailbox types the report keeps. Open the citation for Get-MailboxInventory.ps1, then check the type names in Test-Inventory.ps1."
+      },
+      "lab-devin-01": {
+        "field": "steps.1.text",
+        "evidence": "Ask which mailbox types Get-MailboxInventory.ps1 keeps. Open its source link and check the matching type names in Test-Inventory.ps1."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-agent.webp",
+    "lesson": "devin-reference-agent",
+    "also": [
+      "lab-devin-05"
+    ],
+    "caption": "Illustrated practice screen. Open the test step in Progress and compare its output with the one clean ID you expected.",
+    "alt": "Progress in an Agent session shows candidate.py and the latest check. Four sample inputs produce just a1.",
+    "source": "https://docs.devin.ai/work-with-devin/devin-session-tools",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-agent": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "The ID cleanup lab uses candidate.py. In the session, choose Progress and open its latest test step. For “ A1 ”, “a1”, an empty string and a single space, the corrected output contains a1 once. Read the actual output before sharing the change."
+      },
+      "lab-devin-05": {
+        "field": "steps.1.text",
+        "evidence": "Choose Progress in the Agent session. Open the run for candidate.py. For “ A1 ”, “a1”, an empty entry and one space, the repaired result should contain a1 once."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-deepwiki.webp",
+    "lesson": "devin-reference-deepwiki",
+    "also": [],
+    "caption": "Illustrated practice screen. Follow the map to the source list to see why the first card reads PEAR.",
+    "alt": "Wiki map connects quiz.py to deck.py. A linked source shows the two cards in order.",
+    "source": "https://docs.devin.ai/work-with-devin/deepwiki",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-deepwiki": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "Open the source link for deck.py on the practice quiz wiki page. The map shows quiz.py reads the first card from deck.py. In the source list, position 0 contains PEAR and position 1 contains PLUM."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-review.webp",
+    "lesson": "devin-reference-review",
+    "also": [],
+    "caption": "Illustrated practice screen. Select the finding and check the one score that changed its result.",
+    "alt": "Review finding compares greater than or equal to 5 with greater than 5. The test at 5 fails.",
+    "source": "https://docs.devin.ai/work-with-devin/devin-review",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-review": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "Open Bugs in the practice PR review and select the finding about the badge. The rule says a score of 5 qualifies. Read the changed comparison and test 4, 5 and 6."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-skills.webp",
+    "lesson": "devin-reference-skills",
+    "also": [],
+    "caption": "Illustrated practice screen. Call the saved skill twice. The second sample should report one ready label.",
+    "alt": "Two messages call count-ready. The first result is 2 and the second is 1 after a label changes.",
+    "source": "https://docs.devin.ai/product-guides/skills",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-skills": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "In session chat, call @skills:count-ready with the labels ready, waiting, ready. Compare the two matching labels with the returned count. Change the first label to waiting and run the same skill again."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-blueprints.webp",
+    "lesson": "devin-reference-blueprints",
+    "also": [
+      "lab-devin-01"
+    ],
+    "caption": "Illustrated practice screen. A successful snapshot and a passing project test answer two different questions.",
+    "alt": "Snapshots shows a successful practice build. A separate fresh session shows its project test passed.",
+    "source": "https://docs.devin.ai/onboard-devin/environment/blueprints",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-blueprints": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "Open Snapshots in the practice environment. Find the successful build you intend to use. In a fresh session from that snapshot, run the project check and open its output. The pictured practice report expects four output rows."
+      },
+      "lab-devin-01": {
+        "field": "steps.3.text",
+        "evidence": "If you run the kit in a prepared Devin environment, open Snapshots and confirm which successful build you selected. In a fresh session, check that the practice report actually produces four rows."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-cli.webp",
+    "lesson": "devin-reference-cli",
+    "also": [],
+    "caption": "Illustrated practice screen. Check the branch and the pending third line again in the cloud session.",
+    "alt": "Local terminal shows a pending third line in cards.txt. The cloud session reports three lines ending in ASH.",
+    "source": "https://docs.devin.ai/cli/handoff",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-cli": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "Before typing /handoff, inspect the practice branch and the pending edit to cards.txt. In the new cloud session, check the same branch, three lines in the file and ASH as the last line."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-apps.webp",
+    "lesson": "devin-reference-apps",
+    "also": [],
+    "caption": "Illustrated practice screen. Check General access and the people with access before sending the App link.",
+    "alt": "Ticket App with its sharing panel open. General access is restricted, with creator, admins and a reviewer identified.",
+    "source": "https://docs.devin.ai/product-guides/devin-apps",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-apps": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "Open Share on the practice ticket App. Under General access choose Only people with access. Read the access list and roles. The example includes the App creator, organization admins and one added reviewer."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-scheduled.webp",
+    "lesson": "devin-reference-scheduled",
+    "also": [],
+    "caption": "Illustrated practice screen. Compare the saved schedule with the run time, then count the two waiting rows.",
+    "alt": "One-time schedule at 09:00 UTC and its finished report showing two waiting rows out of three.",
+    "source": "https://docs.devin.ai/product-guides/automations",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-scheduled": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "Open the Schedule trigger and choose Run once. Read the date, local time and time zone together. After it runs, open the resulting session. For this practice run, queue.csv contains waiting, ready, waiting."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-workflows.webp",
+    "lesson": "devin-reference-workflows",
+    "also": [],
+    "caption": "Illustrated practice screen. A failed pilot should leave both projects on hold and start no follow-up work.",
+    "alt": "Workflow panel shows a failed pilot. Elm and Ash are both held. The next batch has zero started projects.",
+    "source": "https://docs.devin.ai/work-with-devin/dynamic-workflows",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-workflows": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "Open the workflow panel in the practice session. The pilot is the small trial run. When it fails, the two follow-up projects Elm and Ash must stay on hold. Read the report before trying the passing case."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-integrations.webp",
+    "lesson": "devin-reference-integrations",
+    "also": [],
+    "caption": "Illustrated practice screen. Match T4 to S8 in the same Teams thread before starting more work.",
+    "alt": "Sample Teams thread with a T4 request, a reply linking session S8 and a follow-up that refers to the same ticket.",
+    "source": "https://docs.devin.ai/integrations/microsoft-teams",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-integrations": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "In the approved Teams practice channel, mention @Devin AI on ticket T4. Open the session from its reply. In this example its label is S8. Keep that match in the thread when the same ticket comes up again."
+      }
+    }
+  },
+  {
+    "file": "devin-ui-outposts.webp",
+    "lesson": "devin-reference-outposts",
+    "also": [],
+    "caption": "Illustrated practice screen. Check both where the work runs and which Git actions the session may take.",
+    "alt": "Two settings views identify the practice Outpost worker and a Read-only Git profile. Read succeeds and push is blocked.",
+    "source": "https://docs.devin.ai/product-guides/security-profiles",
+    "credit": "Original teaching mockup · based on Devin documentation",
+    "placements": {
+      "devin-reference-outposts": {
+        "field": "sections.1.paragraphs.3",
+        "evidence": "Ask the practice admin to show the worker and the security profile that apply to the session. In the profile, inspect Git access. Read-only lets the worker read the practice repo. It blocks a push and opening a PR."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-workspace-setup.svg",
+    "lesson": "devin-environment",
+    "also": [
+      "lab-devin-01",
+      "lab-devin-04"
+    ],
+    "caption": "Verify access, the indexed repo and the working branch before an edit.",
+    "alt": "Choose the project before you start. A private practice repo holds a made-up report and its README. Match the project and branch to the job you want Devin to do.",
+    "source": "#devin-environment",
+    "credit": "Original teaching diagram",
+    "placements": {
+      "devin-environment": {
+        "field": "sections.3.paragraphs.2",
+        "evidence": "For Ask, open Settings, then DeepWiki. Find the practice repo and check its indexed branch. An index is the copy Devin searches. Ask it for a line from README.md and open the link. A link to the wrong branch is a reason to stop and check the selection."
+      },
+      "lab-devin-01": {
+        "field": "steps.1.text",
+        "evidence": "For this run, use mail-report-practice or your own approved practice repo. Check its indexed branch for Ask. Open the inventory kit file there before starting a separate branch for the Agent edit."
+      },
+      "lab-devin-04": {
+        "field": "steps.0.text",
+        "evidence": "Use an approved training repository for this folder test. Check its name and README in Devin, then select a practice branch for the edit. Create cleanlab inside that branch. The two runs start in cleanlab and in its parent folder."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-markdown-skills.svg",
+    "lesson": "devin-playbooks",
+    "also": [
+      "lab-devin-06"
+    ],
+    "caption": "Keep the project guide and the repeatable directions in their own Markdown files.",
+    "alt": "Two Markdown files, two different readers. Both files are plain text. Git keeps their history so a teammate can review the exact words that changed.",
+    "source": "#devin-playbooks",
+    "credit": "Original teaching diagram",
+    "placements": {
+      "devin-playbooks": {
+        "field": "sections.4.paragraphs.1",
+        "evidence": "Use a heading for the job. Give one action per numbered step. State what to do with a zero and with an empty cell. Name the evidence the next reader should see."
+      },
+      "lab-devin-06": {
+        "field": "steps.3.text",
+        "evidence": "The practice guide uses README.md for the file layout and expected counts. To reuse the check as a Devin skill, save its steps in .agents/skills/check-counts/SKILL.md. Test it with both zero and a missing count before asking a teammate to review the recipe."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-sharing-safely.svg",
+    "lesson": "devin-access",
+    "also": [
+      "lab-devin-01",
+      "lab-devin-30"
+    ],
+    "caption": "Before sharing, inspect the session history, latest PR tests and the App audience where applicable.",
+    "alt": "Check what each shared link opens. A session, a code review and an App show different things. Check the audience for each link you plan to send.",
+    "source": "#devin-access",
+    "credit": "Original teaching diagram",
+    "placements": {
+      "devin-access": {
+        "field": "sections.3.paragraphs.2",
+        "evidence": "Before sending links, check the PR’s source branch, target branch and changed files. Identify the latest edit. Open the test run for that edit. Include its command, expected result, actual result and any test that did not run. Copy the address of the intended session and the address of its draft PR. Ask the reviewer to open both with their own approved account."
+      },
+      "lab-devin-01": {
+        "field": "steps.7.text",
+        "evidence": "For peer review, share the practice session and draft PR only with the approved reviewers. Read the full session and output for private details first. Check the latest test result before sending the links."
+      },
+      "lab-devin-30": {
+        "field": "steps.3.text",
+        "evidence": "When sharing this practice result, use made-up mailbox rows in the session and draft PR. Include the latest duplicate-ID test. If you later host the tool as a Devin App, inspect its separate Share list before sending its link."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-branch-pr-check.svg",
+    "lesson": "lab-devin-01",
+    "also": [
+      "lab-devin-09",
+      "lab-devin-26"
+    ],
+    "caption": "Check the source branch, target branch, changed files and latest test in the proposed edit.",
+    "alt": "Follow an edit from branch to draft PR. A pull request asks someone to review the difference between two branches. Check the direction and the evidence before sharing it.",
+    "source": "#lab-devin-01",
+    "credit": "Original teaching diagram",
+    "placements": {
+      "lab-devin-01": {
+        "field": "steps.2.text",
+        "evidence": "Open the draft pull request. Check that the source is your practice branch and the target is the intended shared branch. Read the changed script and the test output for this edit."
+      },
+      "lab-devin-09": {
+        "field": "steps.3.text",
+        "evidence": "If you propose an edit to this permission report, use a draft PR from the practice branch. Review its changed files and tests. The approved and observed lists are test input; this exercise grants no permissions."
+      },
+      "lab-devin-26": {
+        "field": "steps.3.text",
+        "evidence": "Prepare a draft PR on a practice branch for the planner change. Attach the latest test that unchecks Read input. Check the changed files and branch names before asking for review."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-test-evidence.svg",
+    "lesson": "lab-devin-05",
+    "also": [
+      "lab-devin-02",
+      "lab-devin-07",
+      "lab-devin-14",
+      "lab-devin-16",
+      "lab-devin-22",
+      "lab-devin-29"
+    ],
+    "caption": "Use the same input before and after a repair so the test shows what changed.",
+    "alt": "Make a test tell the truth. Use one small input with an answer you already know. A passing check means the actual result agreed with that expected answer.",
+    "source": "#lab-devin-05",
+    "credit": "Original teaching diagram",
+    "placements": {
+      "lab-devin-05": {
+        "field": "steps.2.text",
+        "evidence": "Run the same ID list against the broken and repaired code. Record what the test expected and what each version produced. Keep the latest output with the proposed change."
+      },
+      "lab-devin-02": {
+        "field": "steps.2.text",
+        "evidence": "Write down the expected labels for 79, 80 and 81 before the run. Compare the output at 80 with the boundary rule. After an edit, repeat those same three inputs."
+      },
+      "lab-devin-07": {
+        "field": "steps.2.text",
+        "evidence": "Predict the saved total before reloading. Record what the page shows after reload. If the code changes, run the same clicks again so the two results can be compared."
+      },
+      "lab-devin-14": {
+        "field": "steps.2.text",
+        "evidence": "First predict the saved total if writing stops early. Force that stop in the practice run and read the file afterward. Repeat the same test after the repair."
+      },
+      "lab-devin-16": {
+        "field": "steps.3.text",
+        "evidence": "Use the same starting score for a tap and a keyboard press. Write down the score you expect and check each actual result after Reset."
+      },
+      "lab-devin-22": {
+        "field": "steps.3.text",
+        "evidence": "Record the expected winner and both scores. Try one extra roll after the win. The check fails if that roll changes a score or starts another turn."
+      },
+      "lab-devin-29": {
+        "field": "steps.2.text",
+        "evidence": "Predict the totals before playing the repeated tile. Compare the actual scores and current team with that prediction. Repeat those moves after any fix."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-csv-report-check.svg",
+    "lesson": "lab-devin-30",
+    "also": [],
+    "caption": "Compare the four mailbox IDs, then protect the last good report when an input ID repeats.",
+    "alt": "Check a mailbox change report by ID. Two made-up CSV files describe mailboxes before and after a change. Match rows by ID so that a new row order cannot change the answer.",
+    "source": "#lab-devin-30",
+    "credit": "Original teaching diagram",
+    "placements": {
+      "lab-devin-30": {
+        "field": "steps.2.text",
+        "evidence": "Match A, B, C and D by ID across the two files. A stays user, B changes from shared to user, C disappears and D is added as shared. Read the downloaded report and compare all four results."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-inventory-rows.svg",
+    "lesson": "lab-devin-01",
+    "also": [],
+    "caption": "Follow six input rows through the filter and verify the four sorted output rows.",
+    "alt": "Trace the read-only mailbox inventory. The practice input has six mailbox rows. The report keeps the two requested kinds and sorts the four remaining addresses.",
+    "source": "#lab-devin-01",
+    "credit": "Original teaching diagram",
+    "placements": {
+      "lab-devin-01": {
+        "field": "steps.4.text",
+        "evidence": "Match the four sorted output rows to the six inputs. Compare each mailbox type and confirm that the room and device rows stayed out."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-retry-lookup.svg",
+    "lesson": "lab-devin-12",
+    "also": [],
+    "caption": "A retry looks up the original ticket. One match and two matches need different decisions.",
+    "alt": "Find the session after a reply goes missing. Ticket T9 was sent once. A reply can get lost even if the service created the session. Look up the saved ticket before deciding what to do.",
+    "source": "#lab-devin-12",
+    "credit": "Original teaching diagram",
+    "placements": {
+      "lab-devin-12": {
+        "field": "steps.3.text",
+        "evidence": "Look up T9 after the lost reply. One matching session can be reused. Two matches, S1 and S2, need a review before another create request."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-release-decision.svg",
+    "lesson": "lab-devin-15",
+    "also": [],
+    "caption": "The move needs complete counts and a clear owner approval. A pending approval keeps it on hold.",
+    "alt": "A mail move needs two kinds of evidence. In this practice report, at least 95 of 100 attempts must finish and the owner must give approval. Either missing check holds the move.",
+    "source": "#lab-devin-15",
+    "credit": "Original teaching diagram",
+    "placements": {
+      "lab-devin-15": {
+        "field": "steps.2.text",
+        "evidence": "Check the group counts and the approval record separately. Reaching 95 of 100 still leaves the move on hold while A1 is pending."
+      }
+    }
+  },
+  {
+    "file": "diagram-devin-page-trail.svg",
+    "lesson": "lab-devin-24",
+    "also": [],
+    "caption": "The empty middle page still leads to C. A repeated next link marks an incomplete result.",
+    "alt": "An empty page can still lead to more rows. A report arrives in pieces. Read each page once, add any items, and check its next link even when the page is empty.",
+    "source": "#lab-devin-24",
+    "credit": "Original teaching diagram",
+    "placements": {
+      "lab-devin-24": {
+        "field": "steps.3.text",
+        "evidence": "Follow the next link on the empty middle page. Verify A, B, C on the clean run. When page 3 links back to page 2, the run should flag the loop and stop."
       }
     }
   }

@@ -21,24 +21,24 @@
       },
       {
         "title": "Open a practice project",
-        "text": "Save mailboxes.csv and Test-Inventory.ps1 in an approved practice repository on a new branch. Keep the Reference folder on your computer. In Devin choose that project, open Ask and paste the opening prompt.",
+        "text": "Save mailboxes.csv and Test-Inventory.ps1 in an approved practice repository on a new branch. Keep the Reference folder on your computer. In Devin choose that project, open Ask and paste the opening prompt. For this run, use mail-report-practice or your own approved practice repo. Check its indexed branch for Ask. Open the inventory kit file there before starting a separate branch for the Agent edit. Ask which mailbox types Get-MailboxInventory.ps1 keeps. Open its source link and check the matching type names in Test-Inventory.ps1.",
         "help": "Ask Devin to name the two files it sees. If you have no Devin access, use the Reference script on your computer starting at the next-but-one step."
       },
       {
         "title": "Move from a plan to a script",
-        "text": "Read the plan. Check which mailbox types it will read and what it will do if a read fails. Use Send to Devin or start an Agent session in the same project. Give it the request.",
+        "text": "Read the plan. Check which mailbox types it will read and what it will do if a read fails. Use Send to Devin or start an Agent session in the same project. Give it the request. Open the draft pull request. Check that the source is your practice branch and the target is the intended shared branch. Read the changed script and the test output for this edit.",
         "help": "Look at the changed files. You expect one report script. If there are extra mail commands, ask what they do before running the file.",
         "code": "Write Get-MailboxInventory.ps1 from the plan. Run the tests if PowerShell 7 is available. Make a draft pull request so I can review the change. Show the changed file, test command, results and any part you could not test."
       },
       {
         "title": "Make a local report",
-        "text": "Place the reviewed script beside the practice CSV. These lines run the included answer. To test your own script, set $reportScript to its path first. Open the resulting rows with Import-Csv.",
+        "text": "Place the reviewed script beside the practice CSV. These lines run the included answer. To test your own script, set $reportScript to its path first. Open the resulting rows with Import-Csv. If you run the kit in a prepared Devin environment, open Snapshots and confirm which successful build you selected. In a fresh session, check that the practice report actually produces four rows.",
         "help": "Use a fresh output name if report.csv already exists. Team, Blue is one field. Quoted commas belong inside that field.",
         "code": "$reportScript = './Reference/Get-MailboxInventory.ps1'\n& $reportScript -InputCsv ./mailboxes.csv -OutputCsv ./report.csv\nImport-Csv ./report.csv | Format-Table -AutoSize"
       },
       {
         "title": "Run the five checks",
-        "text": "Run the test file in the same PowerShell window. Read each result. It checks which rows appear, the header with no rows, bad addresses, an existing output and a pretend live read.",
+        "text": "Run the test file in the same PowerShell window. Read each result. It checks which rows appear, the header with no rows, bad addresses, an existing output and a pretend live read. Match the four sorted output rows to the six inputs. Compare each mailbox type and confirm that the room and device rows stayed out.",
         "help": "Five PASS lines mean the script met the practice checks. The test uses a stand-in for Exchange, so it can run without a mail connection.",
         "code": "./Test-Inventory.ps1 -Script $reportScript"
       },
@@ -56,7 +56,7 @@
       },
       {
         "title": "Review the evidence",
-        "text": "Read the code, the five test results and the list of changed files. For an approved live run, check one user mailbox and one shared mailbox in your admin center. Keep a short note of the command and counts.",
+        "text": "Read the code, the five test results and the list of changed files. For an approved live run, check one user mailbox and one shared mailbox in your admin center. Keep a short note of the command and counts. For peer review, share the practice session and draft PR only with the approved reviewers. Read the full session and output for private details first. Check the latest test result before sending the links.",
         "help": "Label your results clearly. A simulated live read proves the code followed the test rules. An actual sign-in is a different test."
       }
     ],
@@ -119,7 +119,7 @@
       },
       {
         "title": "Check the first result",
-        "text": "Compare the result with this hand check. 79 is normal. Both 80 and 81 are watch.",
+        "text": "Compare the result with this hand check. 79 is normal. Both 80 and 81 are watch. Write down the expected labels for 79, 80 and 81 before the run. Compare the output at 80 with the boundary rule. After an edit, repeat those same three inputs.",
         "help": "Look at the little equals sign. Put 79, 80 and 81 on a number line and mark everything at least 80 as watch."
       },
       {
@@ -218,7 +218,7 @@
     "steps": [
       {
         "title": "Start a practice session",
-        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation.",
+        "text": "Open the practice repository in Devin. Give the agent the sample. A session is one job and its conversation. Use an approved training repository for this folder test. Check its name and README in Devin, then select a practice branch for the edit. Create cleanlab inside that branch. The two runs start in cleanlab and in its parent folder.",
         "help": "Check the repository name on the session before giving it the lab request.",
         "code": "site,count\nWest,3\nEast,5"
       },
@@ -283,12 +283,12 @@
       },
       {
         "title": "Ask for a working result",
-        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view.",
+        "text": "Send the lab request. Ask Devin to run the sample in its practice workspace and show the file and test output. Open the file preview or change view. Choose Progress in the Agent session. Open the run for candidate.py. For “ A1 ”, “a1”, an empty entry and one space, the repaired result should contain a1 once.",
         "help": "If it only describes what should happen, ask for a run on the supplied rows. If the tool is missing, ask for the exact command to run in your own practice folder."
       },
       {
         "title": "Check the first result",
-        "text": "Compare the result with this hand check. The supplied list should give just a1. Before the repair extra spaces create extra entries.",
+        "text": "Compare the result with this hand check. The supplied list should give just a1. Before the repair extra spaces create extra entries. Run the same ID list against the broken and repaired code. Record what the test expected and what each version produced. Keep the latest output with the proposed change.",
         "help": "Write each ID surrounded by brackets so you can see the spaces. Clean the labels before using a list of items already seen."
       },
       {
@@ -353,7 +353,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Open a fresh session and give it only the recipe and the second sheet with x=-2, y=8 and z=1.",
+        "text": "Open a fresh session and give it only the recipe and the second sheet with x=-2, y=8 and z=1. The practice guide uses README.md for the file layout and expected counts. To reuse the check as a Devin skill, save its steps in .agents/skills/check-counts/SKILL.md. Test it with both zero and a missing count before asking a teammate to review the recipe.",
         "help": "If b disappears, add a line to the recipe showing that zero is a real count.",
         "code": "ID,Count\nx,-2\ny,8\nz,1"
       }
@@ -405,7 +405,7 @@
       },
       {
         "title": "Check the first result",
-        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. The total starts at 0, then becomes 12, then 7. Reload shows 7.",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. The total starts at 0, then becomes 12, then 7. Reload shows 7. Predict the saved total before reloading. Record what the page shows after reload. If the code changes, run the same clicks again so the two results can be compared.",
         "help": "Record the score before each click, after each click and after reload. Add a separate line for the blank field, which should leave the total alone."
       },
       {
@@ -520,7 +520,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Replace the repeat Reader/reports with Maintainer/app and remove Reader/app. Run again.",
+        "text": "Replace the repeat Reader/reports with Maintainer/app and remove Reader/app. Run again. If you propose an edit to this permission report, use a draft PR from the practice branch. Review its changed files and tests. The approved and observed lists are test input; this exercise grants no permissions.",
         "help": "If the missing pair is absent from the report, compare approved against observed in a separate pass."
       }
     ],
@@ -695,7 +695,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Change the lookup so T9 has both S1 and S2. Try the check again.",
+        "text": "Change the lookup so T9 has both S1 and S2. Try the check again. Look up T9 after the lost reply. One matching session can be reused. Two matches, S1 and S2, need a review before another create request.",
         "help": "If the second run creates a task, check that it reads the saved unknown result before it tries to start anything."
       }
     ],
@@ -808,7 +808,7 @@
       },
       {
         "title": "Check the first result",
-        "text": "Compare the result with this hand check. A file naming only North leaves 7. A forced stop with both rows ready also leaves the old file exactly as it was.",
+        "text": "Compare the result with this hand check. A file naming only North leaves 7. A forced stop with both rows ready also leaves the old file exactly as it was. First predict the saved total if writing stops early. Force that stop in the practice run and read the file afterward. Repeat the same test after the repair.",
         "help": "Make a spare copy of current.json. Stop the new write just before the report swap. Compare the visible report with your spare."
       },
       {
@@ -867,7 +867,7 @@
       },
       {
         "title": "Check the first result",
-        "text": "Compare the result with this hand check. The starting numbers are 95 of 100, but A1 says review pending. The result is HOLD.",
+        "text": "Compare the result with this hand check. The starting numbers are 95 of 100, but A1 says review pending. The result is HOLD. Check the group counts and the approval record separately. Reaching 95 of 100 still leaves the move on hold while A1 is pending.",
         "help": "Use two marks: one for 95 of 100 and one for owner approval. Both must be present. Check each group exists before doing the addition."
       },
       {
@@ -932,7 +932,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Use the Tab key to move to Count by two. Press Enter once, then press Reset.",
+        "text": "Use the Tab key to move to Count by two. Press Enter once, then press Reset. Use the same starting score for a tap and a keyboard press. Write down the score you expect and check each actual result after Reset.",
         "help": "If Enter adds four, check whether both the click handler and a second key handler ran for the same press."
       }
     ],
@@ -1239,7 +1239,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Press Roll again after the win, then Restart. Inspect the first team and both scores.",
+        "text": "Press Roll again after the win, then Restart. Inspect the first team and both scores. Record the expected winner and both scores. Try one extra roll after the win. The check fails if that roll changes a score or starts another turn.",
         "help": "If Gold gets a fourth turn, check for a winner before handing over the turn."
       }
     ],
@@ -1341,7 +1341,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Make page 3 point back to 2. Run again and count the visits.",
+        "text": "Make page 3 point back to 2. Run again and count the visits. Follow the next link on the empty middle page. Verify A, B, C on the clean run. When page 3 links back to page 2, the run should flag the loop and stop.",
         "help": "If C goes missing, see whether an empty items list mistakenly ends the loop."
       }
     ],
@@ -1449,7 +1449,7 @@
       },
       {
         "title": "Try the second test",
-        "text": "Finish all three, then uncheck Read input. Inspect the later tasks and their reasons.",
+        "text": "Finish all three, then uncheck Read input. Inspect the later tasks and their reasons. Prepare a draft PR on a practice branch for the planner change. Attach the latest test that unchecks Read input. Check the changed files and branch names before asking for review.",
         "help": "If Review stays done, follow the chain past the first task that became invalid."
       }
     ],
@@ -1597,7 +1597,7 @@
       },
       {
         "title": "Check the first result",
-        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Pick 1, then 4, then 1 again. Blue has 1 and Gold 3. The repeat leaves Blue’s turn in place.",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. Pick 1, then 4, then 1 again. Blue has 1 and Gold 3. The repeat leaves Blue’s turn in place. Predict the totals before playing the repeated tile. Compare the actual scores and current team with that prediction. Repeat those moves after any fix.",
         "help": "Follow the six legal picks on paper. Leave the repeated pick off your turn list. Give the gem three points and each coin one."
       },
       {
@@ -1648,12 +1648,12 @@
       },
       {
         "title": "Check the first result",
-        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. The clean run shows D added, C removed, B changed from shared to user and A the same. Every ID appears once.",
+        "text": "Open the browser preview or run the app from its README on your computer. Try the sample actions. The clean run shows D added, C removed, B changed from shared to user and A the same. Every ID appears once. Match A, B, C and D by ID across the two files. A stays user, B changes from shared to user, C disappears and D is added as shared. Read the downloaded report and compare all four results.",
         "help": "Match the two A rows and the two B rows before checking for additions or removals. Read the type on each side of B to spot the change."
       },
       {
         "title": "Try the second test",
-        "text": "Save the good report. Add a second b to After and compare. Then restore the original input and download again.",
+        "text": "Save the good report. Add a second b to After and compare. Then restore the original input and download again. When sharing this practice result, use made-up mailbox rows in the session and draft PR. Include the latest duplicate-ID test. If you later host the tool as a Devin App, inspect its separate Share list before sending its link.",
         "help": "If B and b become separate boxes, check each ID after cleaning spaces and case but before building the comparison."
       }
     ],

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 780 400"><title id="title">A mail move needs two kinds of evidence</title><desc id="desc">In this practice report, at least 95 of 100 attempts must finish and the owner must give approval. Either missing check holds the move.</desc><rect x="1" y="1" width="778" height="398" rx="12" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="30" y="40" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#145756">A mail move needs two kinds of evidence</text>
+<text x="30" y="70" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">In this practice report, at least 95 of 100 attempts must finish and the</text>
+<text x="30" y="94" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">owner must give approval. Either missing check holds the move.</text>
+<rect x="30" y="121" width="720" height="156" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<rect x="30" y="121" width="720" height="39" rx="8" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="43" y="147" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#faf6ea">Count evidence</text>
+<text x="288" y="147" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#faf6ea">Approval record</text>
+<text x="553" y="147" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#faf6ea">Decision</text>
+<text x="43" y="186" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">95 of 100 finished</text>
+<text x="288" y="186" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">A1 · pending review</text>
+<text x="553" y="186" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">HOLD</text>
+<text x="43" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">95 of 100 finished</text>
+<text x="288" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">A1 · approved</text>
+<text x="553" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">PASS</text>
+<path d="M31 199h718" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="43" y="264" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">One group is missing</text>
+<text x="288" y="264" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">A1 · approved</text>
+<text x="553" y="264" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">HOLD</text>
+<path d="M31 238h718" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="30" y="305" width="720" height="76" rx="8" fill="#faf6ea" stroke="#8b571b" stroke-width="2"/>
+<text x="46" y="333" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#8b571b">Validate the input first</text>
+<text x="46" y="361" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Count every required group once. A group cannot finish more than it attempted.</text>
+</svg>

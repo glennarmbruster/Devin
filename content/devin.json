@@ -575,6 +575,55 @@
             ]
           ]
         }
+      },
+      {
+        "title": "Create a practice workspace and choose its repository",
+        "paragraphs": [
+          "A workspace is where you do the job. A repository, or repo, holds the files and their saved history. For your first mail report, use a private training repo called mail-report-practice. Give it a README and a made-up CSV. Keep the live mail project and its settings separate.",
+          "If the repo does not exist, create it in your approved code host or ask its owner to create it. Ask for access to just that practice project. In Devin, pick the right organization. Confirm that you can open the repo and that the Agent has the access it needs for the planned edit. On GitHub, New repository lets you set the name, choose Private and add a README before creating the repo.",
+          "For Ask, open Settings, then DeepWiki. Find the practice repo and check its indexed branch. An index is the copy Devin searches. Ask it for a line from README.md and open the link. A link to the wrong branch is a reason to stop and check the selection.",
+          "For an edit, start from the agreed version of main and work on a new branch, such as practice/report-check. Check the repo and branch names in the session before changing a file. A branch keeps the proposed edit apart until someone reviews it."
+        ],
+        "sources": [
+          [
+            "Repository access",
+            "https://docs.devin.ai/enterprise/integrations/git-integrations"
+          ],
+          [
+            "Index a repository",
+            "https://docs.devin.ai/onboard-devin/index-repo"
+          ],
+          [
+            "Ask Devin",
+            "https://docs.devin.ai/work-with-devin/ask-devin"
+          ],
+          [
+            "First session",
+            "https://docs.devin.ai/get-started/first-run"
+          ],
+          [
+            "GitHub Docs · Create a practice repository",
+            "https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories"
+          ]
+        ]
+      },
+      {
+        "title": "Start warm and check a cloud handoff",
+        "paragraphs": [
+          "A blueprint lists what to install. A snapshot saves the prepared machine. In Settings, open Environment and look at Snapshots. Check that the intended build succeeded and which snapshot the project uses. Start a fresh practice session and run a small test. A successful setup still needs a working report.",
+          "A CLI is a tool you run by typing in a terminal. Before using /handoff, review the conversation, the repo, the current branch and your pending file changes. The CLI carries the conversation and the work-in-progress changes to a fresh cloud machine on that branch. Keep private notes and unrelated edits out of the handoff.",
+          "In the new cloud session, ask for the branch name and inspect one harmless pending change you recognize. Run the same small test there. A result from your laptop alone cannot show what ran in the cloud."
+        ],
+        "sources": [
+          [
+            "Blueprints and snapshots",
+            "https://docs.devin.ai/onboard-devin/environment/blueprints"
+          ],
+          [
+            "Cloud handoff",
+            "https://docs.devin.ai/cli/handoff"
+          ]
+        ]
       }
     ],
     "lastVerified": "2026-11-22",
@@ -831,6 +880,51 @@
             "https://docs.devin.ai/work-with-devin/devin-session-tools"
           ]
         ]
+      },
+      {
+        "title": "Write a README.md a teammate can follow",
+        "paragraphs": [
+          "A .md file is ordinary text with simple marks for headings and lists. An editor can open it, a teammate can read it, and Git can show exactly which line changed. Put README.md at the top of your project. It tells a new reader what the project does and how to check it.",
+          "Start with a short title. Use a heading for the sample, then a numbered list for the test. Name the input file, the result to expect and one case that should fail. Here is a README for a practice count report."
+        ],
+        "sources": [
+          [
+            "Repository skills",
+            "https://docs.devin.ai/product-guides/skills"
+          ],
+          [
+            "First session",
+            "https://docs.devin.ai/get-started/first-run"
+          ],
+          [
+            "GitHub Docs · Markdown headings and lists",
+            "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"
+          ]
+        ],
+        "practiceCode": "# Practice count report\n\n## Sample\ncounts.csv has columns ID and Count.\n\n## Check the report\n1. Enter a,2 and b,0 as the two data rows.\n2. Run the count report on counts.csv.\n3. Expect 2 known counts and a total of 2.\n4. Clear the count for b and run again. Expect 1 known count and a total of 2."
+      },
+      {
+        "title": "Give Devin a repeatable SKILL.md recipe",
+        "paragraphs": [
+          "README.md introduces the whole project. A SKILL.md gives Devin one task to repeat. In the practice repo, save this file at .agents/skills/check-counts/SKILL.md. The short block between the dashed lines names the skill and says when to use it.",
+          "Use a heading for the job. Give one action per numbered step. State what to do with a zero and with an empty cell. Name the evidence the next reader should see.",
+          "Save both Markdown files on your practice branch. Open a draft pull request so a teammate can read the changed lines and try the two inputs. Once the reviewed skill is available, call @skills:check-counts with the practice rows. When the rule changes, the team can see who proposed the change and test the new version."
+        ],
+        "sources": [
+          [
+            "Repository skills",
+            "https://docs.devin.ai/product-guides/skills"
+          ],
+          [
+            "Pull requests",
+            "https://docs.devin.ai/integrations/gh"
+          ],
+          [
+            "GitHub Docs · Markdown headings and lists",
+            "https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax"
+          ]
+        ],
+        "practiceCode": "---\nname: check-counts\ndescription: Check known and missing counts in a practice CSV.\n---\n\n# Check the count sheet\n1. Read the ID and Count columns.\n2. Count a recorded zero as known. List an empty Count by its ID.\n3. Report the known row count, the sum and the IDs that need a look."
       }
     ],
     "lastVerified": "2026-11-22",
@@ -1051,6 +1145,46 @@
           [
             "Connecting source control and granting repository access",
             "https://docs.devin.ai/enterprise/integrations/git-integrations"
+          ]
+        ]
+      },
+      {
+        "title": "Share a session and a draft pull request for review",
+        "paragraphs": [
+          "A session link lets a teammate inspect the work their account can open. A draft pull request, or PR, shows the proposed file changes on a branch. The two links serve different jobs. Use only your approved team space and confirm the reviewer can already read the intended repo.",
+          "Read the session, including earlier messages, attached files and command output. Look for private mail, personal details and secrets. If the session contains material the reviewer should not see, use a fresh session with made-up rows and share that one. Removing a value from the latest message does not remove it from earlier messages.",
+          "Before sending links, check the PR’s source branch, target branch and changed files. Identify the latest edit. Open the test run for that edit. Include its command, expected result, actual result and any test that did not run. Copy the address of the intended session and the address of its draft PR. Ask the reviewer to open both with their own approved account."
+        ],
+        "sources": [
+          [
+            "Session tools",
+            "https://docs.devin.ai/work-with-devin/devin-session-tools"
+          ],
+          [
+            "Pull requests",
+            "https://docs.devin.ai/integrations/gh"
+          ],
+          [
+            "First session",
+            "https://docs.devin.ai/get-started/first-run"
+          ]
+        ]
+      },
+      {
+        "title": "Check who can open a Devin App",
+        "paragraphs": [
+          "An App link, its build session and the code repo each have their own access rules. On the practice ticket App, open Share. Under General access, choose Only people with access for a small review. Inspect the access list and each person or group’s role before copying the link.",
+          "This setting includes the creator, organization admins and the people you add. Check group membership if a group is listed. Give a reviewer only the access needed to open the App unless the job also calls for editing or sharing. Have the intended reviewer sign in and open the link. If the audience is too broad, stop and fix it before sending.",
+          "Use three made-up tickets to check the App. Start with A and C open and B closed. Close C once and confirm only A stays open. The review note can now name one safe input and the exact result someone else can repeat."
+        ],
+        "sources": [
+          [
+            "Devin Apps and sharing",
+            "https://docs.devin.ai/product-guides/devin-apps"
+          ],
+          [
+            "Pull requests",
+            "https://docs.devin.ai/integrations/gh"
           ]
         ]
       }

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 780 466"><title id="title">Find the session after a reply goes missing</title><desc id="desc">Ticket T9 was sent once. A reply can get lost even if the service created the session. Look up the saved ticket before deciding what to do.</desc><rect x="1" y="1" width="778" height="464" rx="12" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="30" y="40" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#145756">Find the session after a reply goes missing</text>
+<text x="30" y="70" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">Ticket T9 was sent once. A reply can get lost even if the service created</text>
+<text x="30" y="94" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">the session. Look up the saved ticket before deciding what to do.</text>
+<rect x="30" y="120" width="720" height="85" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="46" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Lookup</text>
+<text x="46" y="182" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Read the local practice record for T9 and count its matching sessions.</text>
+<path d="M390 205v17H205v18 M390 222h179v18" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="30" y="242" width="350" height="108" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="46" y="272" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">One match · S1</text>
+<text x="46" y="304" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Reuse the existing session.</text>
+<text x="46" y="330" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">The create count stays at 1.</text>
+<rect x="400" y="242" width="350" height="108" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="416" y="272" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Two matches · S1 and S2</text>
+<text x="416" y="304" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Hold for a person to review.</text>
+<text x="416" y="330" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Keep both IDs in the report.</text>
+<rect x="30" y="370" width="720" height="76" rx="8" fill="#faf6ea" stroke="#8b571b" stroke-width="2"/>
+<text x="46" y="398" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#8b571b">Safe retry</text>
+<text x="46" y="426" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">A lost reply alone is never proof that a new session is needed.</text>
+</svg>

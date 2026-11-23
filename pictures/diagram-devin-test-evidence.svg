@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 780 398"><title id="title">Make a test tell the truth</title><desc id="desc">Use one small input with an answer you already know. A passing check means the actual result agreed with that expected answer.</desc><rect x="1" y="1" width="778" height="396" rx="12" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="30" y="40" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#145756">Make a test tell the truth</text>
+<text x="30" y="70" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">Use one small input with an answer you already know. A passing check means</text>
+<text x="30" y="94" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">the actual result agreed with that expected answer.</text>
+<rect x="30" y="121" width="720" height="156" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<rect x="30" y="121" width="720" height="39" rx="8" fill="#145756" stroke="#145756" stroke-width="2"/>
+<text x="43" y="147" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#faf6ea">Checkpoint</text>
+<text x="193" y="147" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#faf6ea">What you do</text>
+<text x="468" y="147" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#faf6ea">What you learn</text>
+<text x="43" y="186" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Predict</text>
+<text x="193" y="186" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Write the expected result.</text>
+<text x="468" y="186" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">The check has a target.</text>
+<text x="43" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Run</text>
+<text x="193" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Record the actual output.</text>
+<text x="468" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">A mismatch is a failure.</text>
+<path d="M31 199h718" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="43" y="264" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Retest</text>
+<text x="193" y="264" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">Use the same input after the edit.</text>
+<text x="468" y="264" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#182c2d">The repaired result should match.</text>
+<path d="M31 238h718" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="30" y="303" width="720" height="76" rx="8" fill="#faf6ea" stroke="#8b571b" stroke-width="2"/>
+<text x="46" y="331" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#8b571b">Keep the evidence</text>
+<text x="46" y="359" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Save the input, command or action, and latest output together for review.</text>
+</svg>

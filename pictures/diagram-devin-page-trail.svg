@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 780 367"><title id="title">An empty page can still lead to more rows</title><desc id="desc">A report arrives in pieces. Read each page once, add any items, and check its next link even when the page is empty.</desc><rect x="1" y="1" width="778" height="365" rx="12" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="30" y="40" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#145756">An empty page can still lead to more rows</text>
+<text x="30" y="70" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">A report arrives in pieces. Read each page once, add any items, and check</text>
+<text x="30" y="94" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">its next link even when the page is empty.</text>
+<rect x="30" y="124" width="220" height="117" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="46" y="154" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Page 1</text>
+<text x="46" y="186" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Items: A, B</text>
+<text x="46" y="212" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Next: page 2</text>
+<rect x="280" y="124" width="220" height="117" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="296" y="154" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Page 2</text>
+<text x="296" y="186" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Items: none</text>
+<text x="296" y="212" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Next: page 3</text>
+<rect x="530" y="124" width="220" height="117" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="546" y="154" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Page 3</text>
+<text x="546" y="186" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Items: C</text>
+<text x="546" y="212" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Next: none</text>
+<path d="M252 184h25m-7 -5 7 5-7 5 M502 184h25m-7 -5 7 5-7 5" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="30" y="271" width="720" height="76" rx="8" fill="#faf6ea" stroke="#8b571b" stroke-width="2"/>
+<text x="46" y="299" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#8b571b">Clean result · A, B, C</text>
+<text x="46" y="327" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">If page 3 points back to page 2, flag a loop. The partial output is incomplete.</text>
+</svg>

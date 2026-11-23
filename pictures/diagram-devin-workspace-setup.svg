@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 780 487"><title id="title">Choose the project before you start</title><desc id="desc">A private practice repo holds a made-up report and its README. Match the project and branch to the job you want Devin to do.</desc><rect x="1" y="1" width="778" height="485" rx="12" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="30" y="40" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#145756">Choose the project before you start</text>
+<text x="30" y="70" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">A private practice repo holds a made-up report and its README. Match the</text>
+<text x="30" y="94" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">project and branch to the job you want Devin to do.</text>
+<rect x="30" y="121" width="720" height="80" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="46" y="151" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Practice repository</text>
+<text x="46" y="183" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Select mail-report-practice in the intended organization.</text>
+<path d="M390 201v17H208v20 M390 218h177v20" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="30" y="240" width="350" height="131" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="46" y="270" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Ask · read and explain</text>
+<text x="46" y="302" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Check the indexed branch.</text>
+<text x="46" y="328" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Ask for a line in README.md.</text>
+<text x="46" y="354" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Open the cited file to confirm it.</text>
+<rect x="400" y="240" width="350" height="131" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="416" y="270" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Agent · propose an edit</text>
+<text x="416" y="302" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Choose a practice branch.</text>
+<text x="416" y="328" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Check the starting files and access.</text>
+<text x="416" y="354" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Review the edit before merging.</text>
+<rect x="30" y="392" width="720" height="76" rx="8" fill="#faf6ea" stroke="#8b571b" stroke-width="2"/>
+<text x="46" y="420" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#8b571b">Check the starting point</text>
+<text x="46" y="448" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">The file link and the branch name should match your intended project.</text>
+</svg>

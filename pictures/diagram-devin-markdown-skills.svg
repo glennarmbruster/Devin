@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 780 490"><title id="title">Two Markdown files, two different readers</title><desc id="desc">Both files are plain text. Git keeps their history so a teammate can review the exact words that changed.</desc><rect x="1" y="1" width="778" height="488" rx="12" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="30" y="40" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#145756">Two Markdown files, two different readers</text>
+<text x="30" y="70" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">Both files are plain text. Git keeps their history so a teammate can review</text>
+<text x="30" y="94" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">the exact words that changed.</text>
+<rect x="30" y="121" width="350" height="184" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="46" y="151" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">README.md · project guide</text>
+<text x="46" y="183" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d"># Practice count report</text>
+<text x="46" y="209" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">## Sample</text>
+<text x="46" y="235" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Name the input and its columns.</text>
+<text x="46" y="261" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">## Check the report</text>
+<text x="46" y="287" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">List the test and expected result.</text>
+<rect x="400" y="121" width="350" height="184" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="416" y="151" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">SKILL.md · repeatable task</text>
+<text x="416" y="183" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Header between --- lines</text>
+<text x="416" y="209" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">name: check-counts</text>
+<text x="416" y="235" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">description: Check practice counts.</text>
+<text x="416" y="261" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d"># Check the count sheet</text>
+<text x="416" y="287" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">List one action per numbered step.</text>
+<text x="30" y="344" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#145756">Save the recipe at</text>
+<text x="30" y="371" font-family="Menlo, monospace" font-size="20" font-weight="700" fill="#182c2d">.agents/skills/check-counts/SKILL.md</text>
+<rect x="30" y="395" width="720" height="76" rx="8" fill="#faf6ea" stroke="#8b571b" stroke-width="2"/>
+<text x="46" y="423" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#8b571b">Review the recipe on a branch</text>
+<text x="46" y="451" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Run the saved skill on a zero and an empty cell. Compare both results.</text>
+</svg>

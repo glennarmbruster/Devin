@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 780 509"><title id="title">Follow an edit from branch to draft PR</title><desc id="desc">A pull request asks someone to review the difference between two branches. Check the direction and the evidence before sharing it.</desc><rect x="1" y="1" width="778" height="507" rx="12" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<text x="30" y="40" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#145756">Follow an edit from branch to draft PR</text>
+<text x="30" y="70" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">A pull request asks someone to review the difference between two branches.</text>
+<text x="30" y="94" font-family="Arial, sans-serif" font-size="19" font-weight="400" fill="#182c2d">Check the direction and the evidence before sharing it.</text>
+<text x="35" y="144" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">main · shared version</text>
+<path d="M36 165H728" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 165v46q0 15 15 15h200" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="336" y="198" width="308" height="56" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="351" y="233" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#145756">practice branch · changed files</text>
+<rect x="30" y="287" width="350" height="108" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="46" y="317" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Draft PR</text>
+<text x="46" y="349" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Source = practice branch</text>
+<text x="46" y="375" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Target = intended shared branch</text>
+<rect x="400" y="287" width="350" height="108" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<text x="416" y="317" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#145756">Latest edit</text>
+<text x="416" y="349" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Read the file changes.</text>
+<text x="416" y="375" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">Open the test run for this edit.</text>
+<rect x="30" y="415" width="720" height="76" rx="8" fill="#faf6ea" stroke="#8b571b" stroke-width="2"/>
+<text x="46" y="443" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#8b571b">Peer check</text>
+<text x="46" y="471" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#182c2d">A draft PR is ready to discuss. The branch stays separate until it is merged.</text>
+</svg>

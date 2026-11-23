@@ -58,9 +58,10 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Choose Ask and select an indexed practice project. A repository, or repo, is a project stored with its change history.",
-          "Ask “Which file decides the score? Link to the rule and to one place that calls it.”",
-          "Open both links. Read the named rule and check that the other file really calls it. Stay in Ask while you plan."
+          "Open Ask and select the indexed practice repo that contains the Exchange inventory kit. A repo holds the project files and their saved history.",
+          "Ask which file limits the report to two mailbox types. Request a link to the rule and a link to the test that calls the report.",
+          "Read the rule in the script. Follow the second link to the check in Test-Inventory.ps1. Stay in Ask while you trace the code.",
+          "Use the Exchange inventory kit in an indexed practice repo for this screen. Ask which two mailbox types the report keeps. Open the citation for Get-MailboxInventory.ps1, then check the type names in Test-Inventory.ps1."
         ],
         "sources": [
           [
@@ -233,9 +234,10 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "Start a new session in Agent mode. Pick a practice repo where you can propose changes.",
-          "Ask Devin to add a label to a test page, run its check and open a draft PR. A draft tells teammates the change is still being checked.",
-          "Open the changed file and the test output. Compare both with the job you gave it."
+          "Open Agent on the practice repo that contains candidate.py from the ID cleanup lab. A few versions of one label should count as a single ID.",
+          "Ask Devin to fix the ID cleanup on a practice branch, run the checks and open a draft PR. A draft invites review while the edit stays off the shared branch.",
+          "Open the changed file. Look for the rule that trims outside spaces and ignores case. Then compare the actual test output with the expected list.",
+          "The ID cleanup lab uses candidate.py. In the session, choose Progress and open its latest test step. For “ A1 ”, “a1”, an empty string and a single space, the corrected output contains a1 once. Read the actual output before sharing the change."
         ],
         "sources": [
           [
@@ -421,7 +423,8 @@
         "paragraphs": [
           "Open DeepWiki for an indexed practice repo. Pick a page about a feature you know.",
           "Find one arrow or sentence about two parts of the app. Follow its source link and look for the call in the file.",
-          "If an arrow has no link, follow the page’s source links. Ask Devin to find the exact call if you still need it."
+          "If an arrow has no link, follow the page’s source links. Ask Devin to find the exact call if you still need it.",
+          "Open the source link for deck.py on the practice quiz wiki page. The map shows quiz.py reads the first card from deck.py. In the source list, position 0 contains PEAR and position 1 contains PLUM."
         ],
         "sources": [
           [
@@ -579,7 +582,8 @@
         "paragraphs": [
           "Open a practice PR in a connected repo. Post /devin review as a new PR comment.",
           "Open the review and find the line linked to a finding. Write down the input that would make it fail.",
-          "Run that input on the proposed change. If there is no finding, still try the boundary case yourself."
+          "Run that input on the proposed change. If there is no finding, still try the boundary case yourself.",
+          "Open Bugs in the practice PR review and select the finding about the badge. The rule says a score of 5 qualifies. Read the changed comparison and test 4, 5 and 6."
         ],
         "sources": [
           [
@@ -717,7 +721,8 @@
         "paragraphs": [
           "In a practice repo, create .agents/skills/count-ready/SKILL.md. Copy the starter file into it and commit it. The header names the skill. The last line gives it a rule.",
           "Once the skill is available, send “@skills:count-ready Labels: ready, waiting, ready.”",
-          "Check for a count of two. Change one label and call the same skill again."
+          "Check for a count of two. Change one label and call the same skill again.",
+          "In session chat, call @skills:count-ready with the labels ready, waiting, ready. Compare the two matching labels with the returned count. Change the first label to waiting and run the same skill again."
         ],
         "sources": [
           [
@@ -856,7 +861,8 @@
         "paragraphs": [
           "Open Settings, then Environment for a practice repo. Read the blueprint and find the command that installs the test tool.",
           "After an approved practice build shows Success in Snapshots, start a new session and ask for the tool’s version.",
-          "Run a small project test. A printed version checks the install. A passing test checks that the project can use it."
+          "Run a small project test. A printed version checks the install. A passing test checks that the project can use it.",
+          "Open Snapshots in the practice environment. Find the successful build you intend to use. In a fresh session from that snapshot, run the project check and open its output. The pictured practice report expects four output rows."
         ],
         "sources": [
           [
@@ -1005,7 +1011,8 @@
         "paragraphs": [
           "Open a terminal in a connected practice repo. Start the installed CLI with devin and ask it to identify the current branch.",
           "Check the changed files for anything you do not want to send. At the Devin prompt enter /handoff followed by one small test request.",
-          "Open the cloud session it creates. Check the branch and the test result."
+          "Open the cloud session it creates. Check the branch and the test result.",
+          "Before typing /handoff, inspect the practice branch and the pending edit to cards.txt. In the new cloud session, check the same branch, three lines in the file and ASH as the last line."
         ],
         "sources": [
           [
@@ -1161,9 +1168,10 @@
       {
         "title": "Do this first",
         "paragraphs": [
-          "In a practice session, ask for a Devin App with two sample rows and a count of the open rows.",
+          "In a practice session, ask for a Devin App with three sample tickets. A and C are open and B is closed. Ask it to show the open count.",
           "Open the App. Compare the count with the rows. In Share, inspect General access before sending anyone a link.",
-          "For a limited trial, choose Only people with access. Check who already has access in that setting."
+          "For a limited trial, choose Only people with access. Check who already has access in that setting.",
+          "Open Share on the practice ticket App. Under General access choose Only people with access. Read the access list and roles. The example includes the App creator, organization admins and one added reviewer."
         ],
         "sources": [
           [
@@ -1301,7 +1309,8 @@
         "paragraphs": [
           "In Automations choose Create automation. Add a Schedule trigger and choose Run once for your first practice report.",
           "Pick a future time and check the time zone. Give the job a tiny set of made-up rows and ask it just to report a count.",
-          "After the run, open its session and compare the count with the rows. Review the time zone again when setting up a weekly run."
+          "After the run, open its session and compare the count with the rows. Review the time zone again when setting up a weekly run.",
+          "Open the Schedule trigger and choose Run once. Read the date, local time and time zone together. After it runs, open the resulting session. For this practice run, queue.csv contains waiting, ready, waiting."
         ],
         "sources": [
           [
@@ -1439,7 +1448,8 @@
         "paragraphs": [
           "In an allowed session ask for a workflow that reads two pretend results. Give it a rule: if the pilot fails, stop before the next batch.",
           "Try a failed pilot first. Ask which projects, if any, reached the next stage.",
-          "Change the pilot result to pass. The next projects should now be eligible for the next check."
+          "Change the pilot result to pass. The next projects should now be eligible for the next check.",
+          "Open the workflow panel in the practice session. The pilot is the small trial run. When it fails, the two follow-up projects Elm and Ash must stay on hold. Read the report before trying the passing case."
         ],
         "sources": [
           [
@@ -1594,7 +1604,8 @@
         "paragraphs": [
           "Pick a practice Teams channel where Devin AI is installed. Mention @Devin AI and ask for a summary of one fictional task.",
           "Look for the reply in the same thread. Match its session to the original request before sending another message.",
-          "For a program, read Create Session. The org_id in braces stands for your organization’s ID. The reply identifies the new session."
+          "For a program, read Create Session. The org_id in braces stands for your organization’s ID. The reply identifies the new session.",
+          "In the approved Teams practice channel, mention @Devin AI on ticket T4. Open the session from its reply. In this example its label is S8. Keep that match in the thread when the same ticket comes up again."
         ],
         "sources": [
           [
@@ -1780,7 +1791,8 @@
         "paragraphs": [
           "Start with a diagram of the training setup: cloud planner, practice worker, sample folder. Draw a line from each job to the place it runs.",
           "Read the Git rule in a sample security profile, the saved limits for a session. Work out whether that session can read code and push a branch.",
-          "Before a real run, ask your admin which worker and profile the session would use."
+          "Before a real run, ask your admin which worker and profile the session would use.",
+          "Ask the practice admin to show the worker and the security profile that apply to the session. In the profile, inspect Git access. Read-only lets the worker read the practice repo. It blocks a push and opening a PR."
         ],
         "sources": [
           [

@@ -338,6 +338,46 @@ for ex in examples:
         require(not layout_words.search(field), 'Replace screen-relative wording in worked example '+ex['id'])
 figures = json.loads((book / 'content/figures.json').read_text())
 check_refs(figures)
+# Each surface has an illustrated control and a result tied to its walkthrough.
+devin_screens = {
+    f'devin-ui-{surface}.webp': 'devin-reference-' + surface
+    for surface in 'ask agent deepwiki review skills blueprints cli apps scheduled workflows integrations outposts'.split()
+}
+# A reference illustration may also teach a lab. These links are the required checkpoints.
+devin_diagrams = {
+    'workspace-setup': ('devin-environment', '01', '04'),
+    'markdown-skills': ('devin-playbooks', '06'),
+    'sharing-safely': ('devin-access', '01', '30'),
+    'branch-pr-check': ('lab-devin-01', '01', '09', '26'),
+    'test-evidence': ('lab-devin-05', '02', '05', '07', '14', '16', '22', '29'),
+    'csv-report-check': ('lab-devin-30', '30'),
+    'inventory-rows': ('lab-devin-01', '01'),
+    'retry-lookup': ('lab-devin-12', '12'),
+    'release-decision': ('lab-devin-15', '15'),
+    'page-trail': ('lab-devin-24', '24'),
+}
+by_picture = {item['file']: item for item in figures}
+require(set(devin_screens) == {name for name in by_picture if name.startswith('devin-ui-')},
+        'Register the twelve Devin surface mockups')
+for name, page in devin_screens.items():
+    fig = by_picture[name]
+    require(fig['lesson'] == page and re.fullmatch(r'sections\.1\.paragraphs\.\d+', fig.get('placements', {}).get(page, {}).get('field', '')),
+            'Place the screen beside its Do this first walkthrough: '+page)
+    require(fig['source'].startswith('https://docs.devin.ai/') and 'mockup' in fig['credit'].lower()
+            and 'practice screen' in fig['caption'].lower(), 'Label and source the Devin mockup: '+name)
+for short_name, (owner, *labs) in devin_diagrams.items():
+    name = 'diagram-devin-'+short_name+'.svg'
+    fig = by_picture.get(name, {})
+    require(fig.get('lesson') == owner, 'Missing Devin concept diagram: '+name)
+    for number in labs:
+        target = 'lab-devin-'+number
+        field = fig.get('placements', {}).get(target, {}).get('field', '')
+        require(re.fullmatch(r'steps\.\d+\.text', field), 'Place '+name+' at the teaching step in '+target)
+for surface, number in [('ask', '01'), ('agent', '05'), ('blueprints', '01')]:
+    target = 'lab-devin-'+number
+    field = by_picture['devin-ui-'+surface+'.webp'].get('placements', {}).get(target, {}).get('field', '')
+    require(re.fullmatch(r'steps\.\d+\.text', field), 'Missing practice screen in '+target)
+
 check_refs(fact_rows)
 require(used_facts == set(facts), 'Unused product facts: '+', '.join(sorted(set(facts)-used_facts)))
 require({p.name for p in (book/'content').glob('*.json')} ==
