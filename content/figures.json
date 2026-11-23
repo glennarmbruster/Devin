@@ -97,8 +97,8 @@
   {
     "file": "diagram-zero-vs-blank.svg",
     "lesson": "devin-start",
-    "caption": "Zero is a real score. A blank value records a missing answer. Only count a turn with a real score.",
-    "alt": "Zero is a real score. A blank value records a missing answer. Only count a turn with a real score.",
+    "caption": "Blue played round 1 and earned 0 points. Nobody entered a score for round 2. Ask Devin to fix the scoreboard so you can tell those two cases apart.",
+    "alt": "Two rounds on Blue’s trivia scoreboard. Round 1 shows 0 for a wrong answer. Round 2 has an empty score box because nobody entered a result.",
     "source": "#devin-start",
     "credit": "All About Devin · original diagram"
   },

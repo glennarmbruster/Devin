@@ -118,9 +118,11 @@
         ]
       },
       {
-        "title": "Pick a change you can judge",
+        "title": "Give Devin a scoreboard bug it can fix",
         "paragraphs": [
-          "Start with “Show 0 when a score is zero. Keep a missing score blank.” Give it three rows: blank, zero and five. Ask it to show all three after the edit. A team owner can help you find the training project when it is missing from the list."
+          "Imagine your team uses a trivia scoreboard. In round 1, Blue gives a wrong answer and earns 0 points. The scorekeeper enters 0, but the scoreboard shows an empty box. That is the bug.",
+          "In round 2, the scorekeeper leaves the box empty. We don’t know whether Blue played or skipped that turn. Only the scorekeeper can tell us. In round 3, Blue earns 5 points.",
+          "Give Devin Agent this request: “Fix the scoreboard so it shows the number I enter, even when I enter 0. Leave the box empty if I haven’t entered a score.” Test the three rounds in order. You should see 0, an empty box, then 5."
         ],
         "sources": [
           [
@@ -137,9 +139,9 @@
           ]
         ],
         "exercise": {
-          "prompt": "Someone asks for a better report. What would make that request clear?",
+          "prompt": "You open the scoreboard and see an empty box for round 2. Can you tell whether Blue skipped that turn?",
           "answer": [
-            "Ask who reads it, what they see now and what they should see. “The zero row should show 0” gives a check you can run."
+            "No. All you know is that nobody entered a score. Ask the scorekeeper what happened. If you want the scoreboard to track skipped turns, give the scorekeeper a separate “Skipped” option."
           ]
         }
       }
