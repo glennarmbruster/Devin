@@ -1,20 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 310" role="img" aria-labelledby="title description">
-  <title id="title">How Blue’s trivia scoreboard should look</title>
-  <desc id="description">Blue played round 1 and earned zero points. Its score box shows 0. Nobody entered a score for round 2, so its box is empty. We cannot tell whether Blue skipped that turn.</desc>
-  <rect x="2" y="2" width="876" height="306" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="2.5"/>
-  <text x="32" y="50" fill="#145756" font-family="Verdana, sans-serif" font-size="29" font-weight="700">How Blue’s trivia scoreboard should look</text>
-  <path d="M32 70H848" stroke="#8b571b" stroke-width="2"/>
-  <rect x="30" y="90" width="396" height="189" rx="14" fill="#faf6ea" stroke="#145756" stroke-width="2.5"/>
-  <text x="50" y="128" fill="#145756" font-family="Verdana, sans-serif" font-size="23" font-weight="700">Round 1</text>
-  <text x="50" y="164" fill="#182c2d" font-family="Verdana, sans-serif" font-size="20">Blue answered and got it wrong.</text>
-  <text x="50" y="191" fill="#182c2d" font-family="Verdana, sans-serif" font-size="20">The scorekeeper entered 0.</text>
-  <text x="50" y="245" fill="#182c2d" font-family="Verdana, sans-serif" font-size="21">Score</text>
-  <rect x="137" y="211" width="78" height="50" rx="5" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
-  <text x="176" y="246" fill="#182c2d" text-anchor="middle" font-family="Verdana, sans-serif" font-size="28" font-weight="700">0</text>
-  <rect x="454" y="90" width="396" height="189" rx="14" fill="#faf6ea" stroke="#8b571b" stroke-width="2.5"/>
-  <text x="474" y="128" fill="#145756" font-family="Verdana, sans-serif" font-size="23" font-weight="700">Round 2</text>
-  <text x="474" y="164" fill="#182c2d" font-family="Verdana, sans-serif" font-size="20">Nobody entered a score.</text>
-  <text x="474" y="191" fill="#182c2d" font-family="Verdana, sans-serif" font-size="20">Did Blue play? We don’t know.</text>
-  <text x="474" y="245" fill="#182c2d" font-family="Verdana, sans-serif" font-size="21">Score</text>
-  <rect x="561" y="211" width="78" height="50" rx="5" fill="#faf6ea" stroke="#182c2d" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 360" role="img" aria-labelledby="title desc" font-family="Verdana, sans-serif">
+  <title id="title">Zero is a real number. Blank means missing data.</title>
+  <desc id="desc">A count of zero is a known reading and appears as 0. A blank or null means no value was recorded. This sample report shows a dash and flags the row as missing.</desc>
+  <rect x="2" y="2" width="916" height="356" rx="16" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+  <text x="32" y="54" fill="#182c2d" font-size="31" font-weight="bold">Zero is a real number. Blank means missing data.</text>
+  <text x="32" y="92" fill="#182c2d" font-size="21">Two rows in a sample report</text>
+  <rect x="28" y="117" width="419" height="216" rx="12" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
+  <rect x="473" y="117" width="419" height="216" rx="12" fill="#faf6ea" stroke="#8b571b" stroke-width="3"/>
+  <text x="50" y="160" fill="#145756" font-size="26" font-weight="bold">Count = 0</text>
+  <text x="50" y="201" fill="#182c2d" font-size="21">Someone recorded zero.</text>
+  <text x="50" y="235" fill="#182c2d" font-size="21">Include this row when counting</text>
+  <text x="50" y="264" fill="#182c2d" font-size="21">known readings.</text>
+  <text x="50" y="307" fill="#145756" font-size="23" font-weight="bold">Display: 0</text>
+  <text x="495" y="160" fill="#8b571b" font-size="26" font-weight="bold">Count = blank / null</text>
+  <text x="495" y="201" fill="#182c2d" font-size="21">Nobody recorded a value.</text>
+  <text x="495" y="235" fill="#182c2d" font-size="21">Keep the row. Flag its count</text>
+  <text x="495" y="264" fill="#182c2d" font-size="21">as missing.</text>
+  <text x="495" y="307" fill="#8b571b" font-size="23" font-weight="bold">Display: -</text>
 </svg>

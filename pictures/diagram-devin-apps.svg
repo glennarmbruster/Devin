@@ -1,23 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title description">
-<title id="title">Who can open a private App?</title>
-<desc id="description">The visitor follows the App link and signs in to Devin. The sharing rules then decide whether that person can open the App. Someone outside the allowed group cannot open it.</desc>
-<rect x="2" y="2" width="896" height="416" rx="16" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
-<text x="32" y="51" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#182c2d">Who can open a private App?</text>
-<text x="32" y="87" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#145756">A link leads to the tool. Two checks decide who gets in.</text>
-<path d="M32 108H868" stroke="#8b571b" stroke-width="2"/>
-<rect x="32" y="143" width="200" height="141" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
-<text x="47" y="176" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">App link</text>
-<text x="47" y="210" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">Find the tool</text>
-<path d="M240 207 H285 m-9 -7 9 7 -9 7" fill="none" stroke="#8b571b" stroke-width="4" stroke-linejoin="round"/>
-<rect x="298" y="143" width="213" height="141" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
-<text x="313" y="176" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">Sign in</text>
-<text x="313" y="210" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">Who is visiting?</text>
-<path d="M520 207 H565 m-9 -7 9 7 -9 7" fill="none" stroke="#8b571b" stroke-width="4" stroke-linejoin="round"/>
-<rect x="577" y="143" width="290" height="141" rx="8" fill="#faf6ea" stroke="#145756" stroke-width="3"/>
-<text x="592" y="176" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#145756">Sharing rules</text>
-<text x="592" y="210" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">Is this visitor</text>
-<text x="592" y="239" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#182c2d">in the allowed group?</text>
-<rect x="577" y="300" width="290" height="43" rx="8" fill="#145756" stroke="#145756" stroke-width="3"/>
-<text x="594" y="329" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#faf6ea">Allowed  →  open App</text>
-<text x="34" y="384" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#182c2d">Use the Share panel to check the audience before you send the link.</text>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 449" font-family="Verdana, sans-serif">
+<title id="title">Check who can open an internal Devin App</title><desc id="desc">An internal web tool may use both sign-in and sharing rules to decide who can open it. Open the link. The link locates the app. Sign in. The service identifies the visitor. Check sharing. The visitor also needs access under the app’s sharing settings.</desc>
+<rect x="2" y="2" width="956" height="445" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Check who can open an internal Devin App</text>
+<text x="28" y="79" fill="#182c2d" font-size="20">An internal web tool may use both sign-in and sharing rules to decide who</text>
+<text x="28" y="107" fill="#182c2d" font-size="20">can open it.</text>
+<rect x="24" y="140" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 157v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="175" fill="#145756" font-size="22" font-weight="bold">Open the link</text>
+<text x="55" y="205" fill="#182c2d" font-size="20">The link locates the app.</text>
+<rect x="24" y="239" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 256v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="274" fill="#145756" font-size="22" font-weight="bold">Sign in</text>
+<text x="55" y="304" fill="#182c2d" font-size="20">The service identifies the visitor.</text>
+<rect x="24" y="338" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 355v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="373" fill="#145756" font-size="22" font-weight="bold">Check sharing</text>
+<text x="55" y="403" fill="#182c2d" font-size="20">The visitor also needs access under the app’s sharing settings.</text>
 </svg>

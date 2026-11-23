@@ -18,7 +18,7 @@
       "features": "Ask for a file link beside each claim. In Plan mode, ask which files a change would touch and which test would prove it.",
       "exchange": "Trace a mail report from a row count to the rule that skips empty rows.",
       "m365": "Find the file that picks the columns in a team roster.",
-      "developer": "Follow a game button from the click to the score rule.",
+      "developer": "Trace a command-line option to the file that reads it. Open the cited line before changing the option.",
       "sources": [
         [
           "Ask Devin",
@@ -184,7 +184,7 @@
       "features": "Devin can show its work and open a pull request, or PR. A PR is a proposed change that someone can inspect before it joins the main code.",
       "exchange": "Test a report with a pretend mailbox that has no owner.",
       "m365": "Fix a label in a sample meeting list and check the page.",
-      "developer": "Change one game rule on a branch and play a round.",
+      "developer": "Have the agent fix one report heading on a branch, run the tests and open the proposed edit for review.",
       "sources": [
         [
           "Your First Session",
@@ -379,7 +379,7 @@
       "features": "Its pages can include a diagram, a short explanation and links to source files. A link lets you compare the map with what the code says.",
       "exchange": "Look up the part of a mail report that makes the final table.",
       "m365": "Trace how a sample form sends a response to a list.",
-      "developer": "Find the file that loads questions for a quiz.",
+      "developer": "Follow a diagram link from a report command to the file that supplies its input.",
       "sources": [
         [
           "DeepWiki repository wikis",
@@ -545,7 +545,7 @@
       "features": "Ask for a one-time review or set up automatic reviews. Each finding points to code you can inspect.",
       "exchange": "Try the empty-row case when a mailbox export rule changes.",
       "m365": "Check whether a changed list filter still includes a blank owner.",
-      "developer": "Play a tie round after a score rule changes.",
+      "developer": "Reproduce a reported cutoff error with a sample count exactly at the limit.",
       "sources": [
         [
           "Devin Review",
@@ -683,7 +683,7 @@
       "features": "Keep a repo skill at .agents/skills/<name>/SKILL.md. Use @skills:<name> in a cloud prompt to call it by name. Older guides call these recipes Playbooks.",
       "exchange": "Give a weekly mail count the same headings each time.",
       "m365": "Turn meeting notes into a list of decisions and owners.",
-      "developer": "Test the reset button after every change to a game.",
+      "developer": "Save a recipe for counting ready jobs and test it on a second set of job labels.",
       "sources": [
         [
           "Devin Skills",
@@ -822,7 +822,7 @@
       "features": "The snapshot can hold the runtime that runs the code and the packages the project needs. Each new session gets a fresh copy.",
       "exchange": "Prepare the tools that read a made-up mail report.",
       "m365": "Put the library for a sample roster export in the saved setup.",
-      "developer": "Start a new game project with its test runner ready.",
+      "developer": "Build a snapshot with the script’s test tools and check their versions in a fresh session.",
       "sources": [
         [
           "Devin environment blueprints",
@@ -963,7 +963,7 @@
       "features": "The /handoff command sends the current branch, conversation and pending code changes to a cloud session. You can follow the job after you close the laptop.",
       "exchange": "Hand off a slow test of a fake mailbox export.",
       "m365": "Run a sample list check locally before handing over its longer test.",
-      "developer": "Try a small score change locally and have the cloud run the game tests.",
+      "developer": "Start a report edit in the local terminal, hand it off, and verify that the cloud session received the edit.",
       "sources": [
         [
           "Hand off to cloud Devins",
@@ -1129,7 +1129,7 @@
       "features": "The Share control sets who can open it. Use a made-up dataset when testing a new app.",
       "exchange": "Give the mail team a private page for a pretend queue count.",
       "m365": "Let a small group try a list filter using sample rows.",
-      "developer": "Share a score counter with an invited tester.",
+      "developer": "Share an internal queue viewer with a practice group and test who can open it.",
       "sources": [
         [
           "Devin Apps",
@@ -1267,7 +1267,7 @@
       "features": "Use a one-time practice run to check the job. Once the report is right, choose how often you want it to repeat.",
       "exchange": "Count sample messages still waiting at the end of a shift.",
       "m365": "Make a weekly list of practice tasks with no owner.",
-      "developer": "Check once a week that a game’s saved example still opens.",
+      "developer": "Schedule a training queue report and compare its next total with the edited sample file.",
       "sources": [
         [
           "Automations",
@@ -1405,7 +1405,7 @@
       "features": "A workflow can send one job to each project. The script reads their results. A pass can unlock the next step. A failure can hold the other jobs for review.",
       "exchange": "Try a mailbox column change on one sample export before rolling it out.",
       "m365": "Move a sample team-list rule across two practice projects.",
-      "developer": "Test a save-file upgrade on one game before changing the rest.",
+      "developer": "Stop a rollout when a pilot script fails. Record which projects still need a test.",
       "sources": [
         [
           "Devin Dynamic Workflows",
@@ -1544,7 +1544,7 @@
       "features": "In Slack, tag @Devin. In Teams, tag @Devin AI. In Jira, a ticket assignment, a mention or a label can start a job. An app can start one with POST /v3/organizations/{org_id}/sessions. Each connection needs to be set up first.",
       "exchange": "Match a sample mail-report ticket to its session and test result.",
       "m365": "Follow a request from a Teams thread to the session it opened.",
-      "developer": "Use a pretend game issue to trace one request and one reply.",
+      "developer": "Follow one practice ticket from its chat thread to its session and back to the reply.",
       "sources": [
         [
           "Slack",
@@ -1738,7 +1738,7 @@
       "features": "With Enterprise Cloud, teams share the cloud, but each job gets its own machine. With a dedicated VPC, the host sets aside a private cloud network for one customer. With Outposts, your team runs the worker.",
       "exchange": "Check which machine would read a pretend mail report.",
       "m365": "Decide where a sample list export may be opened.",
-      "developer": "Choose a worker that already has your game’s test tools.",
+      "developer": "Choose a worker that has the report’s test tools and permission to read its sample input.",
       "sources": [
         [
           "Enterprise Deployment",

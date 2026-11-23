@@ -2,26 +2,44 @@
   {
     "file": "begin-devin-ask.webp",
     "lesson": "open-devin",
-    "caption": "Devin Ask practice view. Open title.txt and compare the first line.",
-    "alt": "Trace an answer. Question. Which file holds the title?. Answer. The title comes from title.txt.. Check it. Open title.txt and compare the first line.",
+    "caption": "Illustrated practice view. Open the link and read the heading yourself.",
+    "alt": "Check a read-only answer. Scope. Select the practice project. Request. Ask for the first heading in README.md and a link to the file. Verify. Open the link and read the heading yourself.",
     "source": "https://docs.devin.ai/get-started/first-run",
-    "credit": "All About Devin · sample screen based on the product guide"
+    "credit": "All About Devin · sample screen based on the product guide",
+    "placements": {
+      "open-devin": {
+        "field": "actions.3.do",
+        "evidence": "Leave the project alone.” Open the link and compare the heading yourself."
+      }
+    }
   },
   {
     "file": "begin-devin-repos.webp",
     "lesson": "devin-first-repo",
-    "caption": "Devin practice view. The question will use the report project.",
-    "alt": "Choose a project. Practice projects. mail-report   ·   score-game   ·   team-notes. Selected. mail-report. Check the source. The question will use the report project.",
+    "caption": "Illustrated practice view. Match both pieces of text to the same file.",
+    "alt": "Confirm the selected project. Before asking. Open README.md in the intended practice repository. In Devin. Select that project and request the heading and a nearby phrase. Verify. Match both pieces of text to the same file.",
     "source": "https://docs.devin.ai/get-started/first-run",
-    "credit": "All About Devin · sample screen based on the product guide"
+    "credit": "All About Devin · sample screen based on the product guide",
+    "placements": {
+      "devin-first-repo": {
+        "field": "actions.3.do",
+        "evidence": "Ask for the first heading and a phrase underneath in the file you chose."
+      }
+    }
   },
   {
     "file": "begin-devin-shell.webp",
     "lesson": "devin-follow-session",
-    "caption": "Devin practice view. PASS · zero is shown as 0.",
-    "alt": "Follow the session. Session. Check the score report.. Shell. python check_score.py. Test output. PASS · zero is shown as 0.",
+    "caption": "Illustrated practice view. Open the file. Both lines should appear in the requested order.",
+    "alt": "Follow a small edit through its check. Request. Name the practice file and the two lines you want it to contain. Session. Inspect the file the agent changed and the check it ran. Verify. Open the file. Both lines should appear in the requested order.",
     "source": "https://docs.devin.ai/work-with-devin/devin-session-tools",
-    "credit": "All About Devin · sample screen based on the product guide"
+    "credit": "All About Devin · sample screen based on the product guide",
+    "placements": {
+      "devin-follow-session": {
+        "field": "actions.0.see",
+        "evidence": "The request names one file and gives both lines."
+      }
+    }
   },
   {
     "file": "practice-before.webp",
@@ -29,7 +47,13 @@
     "caption": "Two files belong to one project. Read the schedule before trusting the time in the notice.",
     "alt": "The practice desk shows schedule.txt beside notice.txt. The notice contains a 9:50 a.m. meeting time.",
     "source": "#first-project",
-    "credit": "All About Devin · Practice desk"
+    "credit": "All About Devin · Practice desk",
+    "placements": {
+      "project-or-chat": {
+        "field": "actions.1.do",
+        "evidence": "The schedule says noon, the notice says ten and the packing list says to bring a map."
+      }
+    }
   },
   {
     "file": "practice-after.webp",
@@ -37,7 +61,13 @@
     "caption": "After the correction, the edited notice says 9:15. Open the schedule to check the two times agree.",
     "alt": "The practice desk shows the updated notice and a message confirming the fix to the meeting time.",
     "source": "#first-project",
-    "credit": "All About Devin · Practice desk"
+    "credit": "All About Devin · Practice desk",
+    "placements": {
+      "read-a-change": {
+        "field": "actions.3.do",
+        "evidence": "Open the edited notice."
+      }
+    }
   },
   {
     "file": "diagram-chat-project-agent.svg",
@@ -46,73 +76,103 @@
     "alt": "Ask a chat for a word meaning, keep trip notes together in a project, or ask an agent to fix a file.",
     "source": "#project-or-chat",
     "credit": "All About Devin · original diagram",
-    "also": [
-      "open-devin"
-    ]
-  },
-  {
-    "file": "diagram-offline-pwa.svg",
-    "lesson": "first-project",
-    "caption": "A web app can save its files before a trip. Test by switching off the network and opening it again.",
-    "alt": "A web app can save its files before a trip. Test by switching off the network and opening it again.",
-    "source": "#first-project",
-    "credit": "All About Devin · original diagram"
+    "placements": {
+      "project-or-chat": {
+        "field": "actions.3.do",
+        "evidence": "For each job, name your starting place: explain a word, store three notes, or edit a file and show the change."
+      }
+    }
   },
   {
     "file": "diagram-diff-review.svg",
     "lesson": "read-a-change",
-    "caption": "The minus line will go away. The plus line will take its place. Check both against the schedule.",
-    "alt": "The minus line will go away. The plus line will take its place. Check both against the schedule.",
+    "caption": "A change view pairs the old and new lines so you can see exactly what the edit would do.",
+    "alt": "Read a proposed file change before accepting it. A change view pairs the old and new lines so you can see exactly what the edit would do.",
     "source": "#read-a-change",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "read-a-change": {
+        "field": "actions.2.do",
+        "evidence": "Show the new line before saving."
+      }
+    }
   },
   {
     "file": "diagram-exchange-pipeline.svg",
     "lesson": "lab-devin-01",
-    "caption": "Read a made-up table, run the report on that table, and compare its rows with the expected answer.",
-    "alt": "Read a made-up table, run the report on that table, and compare its rows with the expected answer.",
+    "caption": "The practice file contains different kinds of mailboxes. The report should keep only the kinds requested.",
+    "alt": "Test a mailbox report before using a live service. The practice file contains different kinds of mailboxes. The report should keep only the kinds requested.",
     "source": "#lab-devin-01",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "lab-devin-01": {
+        "field": "summary",
+        "evidence": "Which of six pretend mailboxes should appear on a list for people and shared teams?"
+      }
+    }
   },
   {
     "file": "diagram-git-branch-pr.svg",
-    "lesson": "devin-first-repo",
-    "caption": "A branch gives you a separate copy to edit. A pull request asks someone to check it before it joins main.",
-    "alt": "A branch gives you a separate copy to edit. A pull request asks someone to check it before it joins main.",
-    "source": "#devin-first-repo",
+    "lesson": "devin-reference-agent",
+    "caption": "A branch gives an edit a separate place to live. A pull request invites a teammate to review it.",
+    "alt": "Review a proposed change before it reaches the shared code. A branch gives an edit a separate place to live. A pull request invites a teammate to review it.",
+    "source": "#devin-reference-agent",
     "credit": "All About Devin · original diagram",
     "also": [
-      "devin-review-first",
-      "devin-reference-agent"
-    ]
+      "devin-review-first"
+    ],
+    "placements": {
+      "devin-reference-agent": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Ask Devin to add a label to a test page, run its check and open a draft PR."
+      },
+      "devin-review-first": {
+        "field": "actions.0.do",
+        "evidence": "Choose one practice pull request in Review."
+      }
+    }
   },
   {
     "file": "diagram-pagination-loop.svg",
-    "lesson": "devin-api",
-    "caption": "Follow the next link even on an empty page. End at a missing link, or stop with a warning when a link repeats.",
-    "alt": "Follow the next link even on an empty page. End at a missing link, or stop with a warning when a link repeats.",
-    "source": "#devin-api",
-    "credit": "All About Devin · original diagram"
+    "lesson": "lab-devin-24",
+    "caption": "A report may return its rows in several pages. A page with no rows can still have a link to the next page.",
+    "alt": "Follow the next link until the report ends. A report may return its rows in several pages. A page with no rows can still have a link to the next page.",
+    "source": "#lab-devin-24",
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "lab-devin-24": {
+        "field": "summary",
+        "evidence": "A service can return an empty middle page while later pages still have results."
+      }
+    }
   },
   {
-    "file": "diagram-zero-vs-blank.svg",
+    "file": "diagram-devin-enterprise-overview.svg",
     "lesson": "devin-start",
-    "caption": "Blue played round 1 and earned 0 points. Nobody entered a score for round 2. Ask Devin to fix the scoreboard so you can tell those two cases apart.",
-    "alt": "Two rounds on Blue’s trivia scoreboard. Round 1 shows 0 for a wrong answer. Round 2 has an empty score box because nobody entered a result.",
+    "caption": "Give Devin a team project and one request. Use Ask for an answer you can check in the files. Use an Agent session for a change your team can test and review.",
+    "alt": "A team repository and a request lead to two paths. Ask Devin reads the files and explains them. An Agent session edits a branch, runs tests and opens a draft pull request for a teammate.",
     "source": "#devin-start",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-start": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "If you want to understand the files, use Ask Devin."
+      }
+    }
   },
   {
     "file": "diagram-devin-speed-modes.svg",
     "lesson": "devin-speed",
-    "caption": "For a question, read the project first. Pick a local edit or a cloud session when the job needs changes.",
-    "alt": "Three paths lead from a question about a file to Ask or DeepWiki, a quick edit to Devin CLI, and a long test to a cloud Agent with a snapshot.",
+    "caption": "Choose based on whether you need to read files, edit them locally or run tests in the cloud.",
+    "alt": "Choose a Devin mode for the job. Choose based on whether you need to read files, edit them locally or run tests in the cloud.",
     "source": "#devin-speed",
     "credit": "All About Devin · original diagram",
-    "also": [
-      "devin-first-session",
-      "devin-reference-ask"
-    ]
+    "placements": {
+      "devin-speed": {
+        "field": "intro.what",
+        "evidence": "A cloud Agent gets its own computer to edit files and run tests."
+      }
+    }
   },
   {
     "file": "diagram-blueprint-snapshot.svg",
@@ -123,7 +183,17 @@
     "credit": "All About Devin · original diagram",
     "also": [
       "devin-reference-blueprints"
-    ]
+    ],
+    "placements": {
+      "devin-environment": {
+        "field": "intro.what",
+        "evidence": "A build follows the recipe and saves a snapshot."
+      },
+      "devin-reference-blueprints": {
+        "field": "intro.what",
+        "evidence": "A build follows the list and saves a snapshot, a ready-to-start copy of the work machine."
+      }
+    }
   },
   {
     "file": "diagram-session-side-chat.svg",
@@ -131,49 +201,83 @@
     "caption": "Open a Side Chat from a worklog message to ask what Devin has seen so far.",
     "alt": "The main timeline runs from reading a file through editing to a test. A side branch at the edit opens a read-only question. The main line keeps going.",
     "source": "#devin-sessions",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-sessions": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "Ask Side Chat which line made it change."
+      }
+    }
   },
   {
     "file": "diagram-devin-review-flow.svg",
     "lesson": "devin-review",
-    "caption": "A reviewer can follow the same test from a broken result to a working result.",
-    "alt": "One test starts red, a one-line edit changes the rule, Devin Review flags lines to check, and a repeat test passes. Save both results for the reviewer.",
+    "caption": "A finding is a possible problem in a proposed change. A small test helps a reviewer decide if it is real.",
+    "alt": "Test a code review finding. A finding is a possible problem in a proposed change. A small test helps a reviewer decide if it is real.",
     "source": "#devin-review",
     "credit": "All About Devin · original diagram",
     "also": [
-      "lab-devin-30",
       "devin-reference-review"
-    ]
+    ],
+    "placements": {
+      "devin-review": {
+        "field": "intro.what",
+        "evidence": "A code review is a check of a proposed edit."
+      },
+      "devin-reference-review": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Open the review and find the line linked to a finding."
+      }
+    }
   },
   {
     "file": "diagram-skill-reuse.svg",
     "lesson": "devin-playbooks",
-    "caption": "A short skill fixes the shape of the answer. Each ticket supplies its own facts.",
-    "alt": "The same SKILL.md file describes two headings. A ticket about a label and a ticket about a score each produce a note with those headings and different evidence.",
+    "caption": "A skill file contains directions a helper can reuse with fresh input. Test the directions on more than one case.",
+    "alt": "Save a repeatable task as a skill. A skill file contains directions a helper can reuse with fresh input. Test the directions on more than one case.",
     "source": "#devin-playbooks",
     "credit": "All About Devin · original diagram",
     "also": [
       "devin-reference-skills"
-    ]
+    ],
+    "placements": {
+      "devin-playbooks": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "Call @skills:verify-import-retries in a fresh session with the whole rule."
+      },
+      "devin-reference-skills": {
+        "field": "summary",
+        "evidence": "Try the same recipe on two small samples."
+      }
+    }
   },
   {
     "file": "diagram-ticket-to-session.svg",
     "lesson": "devin-integrations",
-    "caption": "Use a ticket key in the integration so a repeated message finds the session already running.",
-    "alt": "Jira, Teams, and Slack each point to ticket T-17. A lookup finds or creates one session for T-17. The session links its pull request back to the ticket.",
+    "caption": "A ticket system may deliver the same notice twice. Use its ticket number to find the work already under way.",
+    "alt": "Keep a ticket and its updates in one session. A ticket system may deliver the same notice twice. Use its ticket number to find the work already under way.",
     "source": "#devin-integrations",
     "credit": "All About Devin · original diagram",
-    "also": [
-      "devin-reference-integrations"
-    ]
+    "placements": {
+      "devin-integrations": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Jira can use a Devin app with an agent card, or a linked service account with comments and links."
+      }
+    }
   },
   {
     "file": "diagram-access-four-scopes.svg",
     "lesson": "devin-access",
-    "caption": "Read each grant before you widen it. A missing grant at one step can block the practice job.",
-    "alt": "Four checks ask what the signed-in person may do, what a service bot may request, which organization owns the task, and which repository the Git connection can open.",
+    "caption": "A team keeps a practice handbook in a project. Someone can start a session and still lack permission to read that file.",
+    "alt": "How to check access to a project file. A team keeps a practice handbook in a project. Someone can start a session and still lack permission to read that file.",
     "source": "#devin-access",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-access": {
+        "field": "intro.features",
+        "evidence": "The sign-in method, team role, project grant and review rules each answer a different access question."
+      }
+    }
   },
   {
     "file": "diagram-outposts-network.svg",
@@ -184,29 +288,52 @@
     "credit": "All About Devin · original diagram",
     "also": [
       "devin-reference-outposts"
-    ]
+    ],
+    "placements": {
+      "devin-deployment": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "With Outposts, file edits and commands run on the customer’s worker."
+      },
+      "devin-reference-outposts": {
+        "field": "intro.features",
+        "evidence": "With a dedicated VPC, the host sets aside a private cloud network for one customer."
+      }
+    }
   },
   {
     "file": "diagram-fleet-pilot.svg",
     "lesson": "devin-fleet",
-    "caption": "Write the pass rule first. A failed pilot tells you which job to fix before more projects join.",
-    "alt": "A shared rule feeds a trial in Repo A and Repo B. Both results must pass before the next group starts. A failure sends the work back for repair.",
+    "caption": "A team can run several coding sessions across different projects. A small trial limits how many projects a mistake can affect.",
+    "alt": "Test a change on a few projects first. A team can run several coding sessions across different projects. A small trial limits how many projects a mistake can affect.",
     "source": "#devin-fleet",
     "credit": "All About Devin · original diagram",
     "also": [
       "devin-reference-workflows"
-    ]
+    ],
+    "placements": {
+      "devin-fleet": {
+        "field": "intro.what",
+        "evidence": "A group of Devin sessions can work on separate projects."
+      },
+      "devin-reference-workflows": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Give it a rule: if the pilot fails, stop before the next batch."
+      }
+    }
   },
   {
     "file": "diagram-acu-metrics.svg",
     "lesson": "devin-metrics",
-    "caption": "Include the try that needed a redo. Divide all the work by the number of accepted pull requests.",
-    "alt": "Three attempts cost 3, 2 and 5 ACUs, for 10 total. Two pull requests were accepted, so 10 divided by 2 gives 5 ACUs per accepted pull request.",
+    "caption": "Ten practice tickets used 72 units of agent work. The team accepted six changes. An open ticket still uses some of the budget.",
+    "alt": "Work units per accepted change. Ten practice tickets used 72 units of agent work. The team accepted six changes. An open ticket still uses some of the budget.",
     "source": "#devin-metrics",
     "credit": "All About Devin · original diagram",
-    "also": [
-      "devin-lab"
-    ]
+    "placements": {
+      "devin-metrics": {
+        "field": "sections.1.paragraphs.0",
+        "evidence": "Divide 72 by 6 to get 12 units per accepted change so far."
+      }
+    }
   },
   {
     "file": "diagram-mail-move-check.svg",
@@ -214,7 +341,13 @@
     "caption": "A move needs a full count, passing checks and approval.",
     "alt": "Three checks cover the mail move: count the planned boxes, test the result and find the approval.",
     "source": "#lab-devin-15",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "lab-devin-15": {
+        "field": "summary",
+        "evidence": "It needs a full count and a real approval."
+      }
+    }
   },
   {
     "file": "diagram-game-state-loop.svg",
@@ -223,9 +356,12 @@
     "alt": "Start both teams at zero. Each turn adds points and checks for ten. A lower score passes play to the next team. A winning score locks play until Restart.",
     "source": "#lab-devin-22",
     "credit": "All About Devin · original diagram",
-    "also": [
-      "lab-devin-29"
-    ]
+    "placements": {
+      "lab-devin-22": {
+        "field": "steps.3.text",
+        "evidence": "Press Roll again after the win, then Restart."
+      }
+    }
   },
   {
     "file": "diagram-undo-history-stack.svg",
@@ -233,15 +369,27 @@
     "caption": "Keep one history entry per tap, even when the same item was tapped twice.",
     "alt": "The list holds juice, toast, juice in that order. Undo removes only the last juice, leaving juice and toast. Undo is unavailable when the list is empty.",
     "source": "#lab-devin-23",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "lab-devin-23": {
+        "field": "steps.2.text",
+        "evidence": "Undo removes only the last juice and leaves 5."
+      }
+    }
   },
   {
     "file": "diagram-atomic-file-swap.svg",
     "lesson": "lab-devin-14",
-    "caption": "Pull the plug just before the swap. The saved report should still say 7.",
-    "alt": "Check both counts, write nine in a nearby temporary file, then replace the old file in one move. A stop before that move leaves seven in the old report.",
+    "caption": "A report can be damaged if a job replaces it before checking all the new rows.",
+    "alt": "Keep the last good report during an update. A report can be damaged if a job replaces it before checking all the new rows.",
     "source": "#lab-devin-14",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "lab-devin-14": {
+        "field": "summary",
+        "evidence": "Keep yesterday’s good total until you have a full new one."
+      }
+    }
   },
   {
     "file": "diagram-csv-quote-shield.svg",
@@ -249,38 +397,180 @@
     "caption": "Count the fields and check the full label. This row should have two fields.",
     "alt": "In the row m1 comma double-quote North comma West double-quote, splitting at every comma makes three pieces. A CSV reader returns m1 and North, West as two fields.",
     "source": "#lab-devin-03",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "lab-devin-03": {
+        "field": "features",
+        "evidence": "In a CSV file, quotes can wrap a comma that belongs inside a single field."
+      }
+    }
   },
   {
     "file": "diagram-devin-deepwiki.svg",
     "lesson": "devin-reference-deepwiki",
-    "caption": "Read the two linked files at the same revision. The first word is PEAR.",
-    "alt": "The wiki links the quiz to the deck. In quiz.py, index zero reads the first word. In deck.py, PEAR is first and PLUM is second.",
+    "caption": "A repository diagram shows how files in a project are connected. Open the code to check what an arrow means.",
+    "alt": "Use DeepWiki to check how two files fit together. A repository diagram shows how files in a project are connected. Open the code to check what an arrow means.",
     "source": "#devin-reference-deepwiki",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-reference-deepwiki": {
+        "field": "sections.1.paragraphs.2",
+        "evidence": "If an arrow has no link, follow the page’s source links."
+      }
+    }
   },
   {
     "file": "diagram-devin-cli-handoff.svg",
     "lesson": "devin-reference-cli",
-    "caption": "Check the branch and the last word in the file when the cloud session opens.",
-    "alt": "The branch, conversation and pending edit travel together. The local cards file ends in ELM. After adding ASH, the cloud sees three words.",
+    "caption": "A handoff continues a task on another computer. Use one small file change to check what arrived.",
+    "alt": "Move a local coding task to Devin Cloud. A handoff continues a task on another computer. Use one small file change to check what arrived.",
     "source": "#devin-reference-cli",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-reference-cli": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "The /handoff command sends the current branch, conversation and pending code changes to a cloud session."
+      }
+    }
   },
   {
     "file": "diagram-devin-apps.svg",
     "lesson": "devin-reference-apps",
-    "caption": "Use the Share panel to check the audience before you send the link.",
-    "alt": "The visitor follows the App link and signs in to Devin. The sharing rules then decide whether that person can open the App. Someone outside the allowed group cannot open it.",
+    "caption": "An internal web tool may use both sign-in and sharing rules to decide who can open it.",
+    "alt": "Check who can open an internal Devin App. An internal web tool may use both sign-in and sharing rules to decide who can open it.",
     "source": "#devin-reference-apps",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-reference-apps": {
+        "field": "sections.1.paragraphs.2",
+        "evidence": "Check who already has access in that setting."
+      }
+    }
   },
   {
     "file": "diagram-devin-scheduled.svg",
     "lesson": "devin-reference-scheduled",
-    "caption": "Compare the report with the file at the revision that session read.",
-    "alt": "Two scheduled runs read queue.csv. At the first run two rows are waiting. One row changes to done. The next run reads the new revision and counts one waiting row.",
+    "caption": "The practice file lists jobs marked waiting or done. A scheduled Devin session should count the waiting jobs at each run.",
+    "alt": "Check that a scheduled report reads fresh data. The practice file lists jobs marked waiting or done. A scheduled Devin session should count the waiting jobs at each run.",
     "source": "#devin-reference-scheduled",
-    "credit": "All About Devin · original diagram"
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-reference-scheduled": {
+        "field": "sections.2.paragraphs.0",
+        "evidence": "It cannot tell whether the report used fresh data or whether the answer was correct."
+      }
+    }
+  },
+  {
+    "file": "diagram-zero-vs-blank.svg",
+    "lesson": "lab-devin-06",
+    "source": "#lab-devin-06",
+    "credit": "All About Devin · original diagram",
+    "caption": "In this report, a dash marks a missing count. A recorded zero adds one to the number of known readings and zero to their sum.",
+    "alt": "Two sample rows. A recorded count of 0 displays as 0 and counts as one known reading. A blank or null count displays as a dash and is flagged as missing.",
+    "placements": {
+      "lab-devin-06": {
+        "field": "steps.2.text",
+        "evidence": "A recorded 0 still counts as a known reading."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-devin-api.svg",
+    "lesson": "devin-api",
+    "caption": "A session is one coding job. A tracker needs to find the same job if its first reply goes missing.",
+    "alt": "Find a coding job after a lost reply. A session is one coding job. A tracker needs to find the same job if its first reply goes missing.",
+    "source": "#devin-api",
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-api": {
+        "field": "summary",
+        "evidence": "Design a small job tracker that can recover when a reply goes missing."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-devin-first-session.svg",
+    "lesson": "devin-first-session",
+    "caption": "The team wants a small change to a help page and a way to see what changed.",
+    "alt": "Follow a first Devin edit from question to review. The team wants a small change to a help page and a way to see what changed.",
+    "source": "#devin-first-session",
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-first-session": {
+        "field": "summary",
+        "evidence": "Follow one small edit from a question about a help page to a preview you can read."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-devin-lab.svg",
+    "lesson": "devin-lab",
+    "caption": "A library report should count each event ID once, even if a ticket arrives again.",
+    "alt": "Review a fee ledger that receives a ticket twice. A library report should count each event ID once, even if a ticket arrives again.",
+    "source": "#devin-lab",
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-lab": {
+        "field": "sections.0.paragraphs.0",
+        "evidence": "A pretend library gets event A for 350 cents, event B for 200 cents, then A again for 350 cents."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-devin-reference-ask.svg",
+    "lesson": "devin-reference-ask",
+    "caption": "Ask Devin can help you read a project before you decide whether a change is needed.",
+    "alt": "Trace a rule to the code that uses it. Ask Devin can help you read a project before you decide whether a change is needed.",
+    "source": "#devin-reference-ask",
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-reference-ask": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Link to the rule and to one place that calls it.”"
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-devin-29.svg",
+    "lesson": "lab-devin-29",
+    "caption": "Two players uncover treasure on a six-tile board. Only a fresh tile counts as a move.",
+    "alt": "A used tile cannot take another turn. Two players uncover treasure on a six-tile board. Only a fresh tile counts as a move.",
+    "source": "#lab-devin-29",
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "lab-devin-29": {
+        "field": "steps.2.text",
+        "evidence": "The repeat leaves Blue’s turn in place."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-lab-devin-30.svg",
+    "lesson": "lab-devin-30",
+    "caption": "A before-and-after report tells the team which mailbox records changed.",
+    "alt": "Compare two mailbox lists by ID. A before-and-after report tells the team which mailbox records changed.",
+    "source": "#lab-devin-30",
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "lab-devin-30": {
+        "field": "steps.2.text",
+        "evidence": "The clean run shows D added, C removed, B changed from shared to user and A the same."
+      }
+    }
+  },
+  {
+    "file": "diagram-guide-devin-reference-integrations.svg",
+    "lesson": "devin-reference-integrations",
+    "caption": "A chat message or ticket can ask Devin to work on a project. Keep a link between that request and its session.",
+    "alt": "Follow a work request into a coding session. A chat message or ticket can ask Devin to work on a project. Keep a link between that request and its session.",
+    "source": "#devin-reference-integrations",
+    "credit": "All About Devin · original diagram",
+    "placements": {
+      "devin-reference-integrations": {
+        "field": "sections.1.paragraphs.1",
+        "evidence": "Match its session to the original request before sending another message."
+      }
+    }
   }
 ]

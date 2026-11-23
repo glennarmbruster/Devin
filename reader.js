@@ -149,7 +149,7 @@ function chapterIntroduction(intro) {
   const roles = [
     ['Exchange', intro.exchange],
     ['Microsoft 365', intro.m365],
-    ['Personal App', intro.developer]
+    ['Internal Automation / CLI Tools', intro.developer]
   ];
   block.append(element('h2', 'What is it?'), element('p', intro.what),
     element('h2', 'What features does it have?'), element('p', intro.features),
@@ -227,7 +227,7 @@ function labBody(lab) {
   const roleInfo = element('details', undefined, 'sources');
   roleInfo.append(element('summary', 'Applications for your work'));
   const roles = element('dl', undefined, 'role-list');
-  ['Exchange', 'Microsoft 365', 'Personal App'].forEach((role,i) => {
+  ['Exchange', 'Microsoft 365', 'Internal Automation / CLI Tools'].forEach((role,i) => {
     roles.append(element('dt',role),element('dd',lab.roles[i]));
   });
   roleInfo.append(roles);
@@ -328,7 +328,7 @@ function openLocation(moveFocus) {
       if (section.table) block.append(makeTable(section.table, section.title));
       if (section.exercise) {
         const practice = element('aside', undefined, 'practice');
-        practice.append(element('h3', 'Try it'), element('p', section.exercise.prompt));
+        practice.append(element('h3', 'Try it'), element('p', section.exercise.context), element('p', section.exercise.prompt));
         for (const [i, question] of (section.exercise.questions || []).entries()) {
           practice.append(practiceQuestion(question, chapter.id + '-' + sectionIndex + '-' + i));
         }
@@ -357,8 +357,6 @@ function openLocation(moveFocus) {
     if (!lab && !chapter.group.guide) sections.unshift(chapterIntroduction(chapter.intro),workedExample(worked.get(chapter.id),chapter.summary));
     if (!chapter.group.guide) {
       sections.unshift(launchHelp(chapter));
-      const figures = chapterPictures(chapter.id);
-      sections.splice(2,0,...figures.map(picture));
     }
     if (chapter.surface) {
       const quickSections = sections.filter(node=>node.classList.contains('section') && node.querySelector('h2') && !node.classList.contains('worked'));
@@ -380,6 +378,7 @@ function openLocation(moveFocus) {
     }
     if (terms) sections.unshift(terms);
     byId('body').replaceChildren(...sections);
+    placeChapterPictures(chapter);
     const pages = lab ? chapter.group.items : chapter.group.guide ? guideChapters : referenceChapters;
     document.querySelector('book-pager').setPage(chapter.number,pages.length,lab ? 'lab' : chapter.group.guide ? 'lesson' : 'chapter',
       number => { location.hash = pages[number-1].id; }, () => { location.hash = lab ? 'labs' : chapter.group.guide ? 'start' : 'contents'; });

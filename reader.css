@@ -121,3 +121,5 @@ html[data-online="true"] .online-reference { display: inline-block; margin-inlin
 .rollout li::marker{color:#145756;font-weight:700}
 .rollout p{margin:.3rem 0;line-height:1.5}
 @media(max-width:650px){.rollout ol{grid-template-columns:minmax(0,1fr)}}
+/* Long mail headers stay readable on a tablet. */
+.section > pre { white-space: pre-wrap; overflow-wrap: anywhere; }

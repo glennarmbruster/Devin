@@ -6,7 +6,7 @@ The same folder can be hosted at the root of a website or in a subfolder.
 ## Edit and check an edition
 
 1. Open `edition.json` to find the five groups and the date of this edition.
-   Edit the matching page in `content/`. Keep published IDs so saved links work.
+   Edit the matching page in `content/`. Keep published IDs so saved links work. Use Exchange, Microsoft 365 and Internal Automation / CLI Tools for the three work examples.
 2. For a feature or access change, reopen the official sources on that page.
    Change its availability record in `content/facts.json` and record the date
    you checked it. Keep official source links and use made-up practice data.
@@ -43,3 +43,7 @@ exercise with its own access requirements.
 Share `All-About-Devin.zip` for an editable copy, or `Read All About Devin.html`
 for the portable reader. Both contain the full book and the downloadable kit.
 Reading progress is kept by the browser on that device.
+
+### Placing a picture
+
+Read the picture and the target paragraph together. A shared picture must explain the same idea and use a case the reader has met. Record the page ID, paragraph field and a short exact excerpt in the picture’s `placements` map. The reader shows the picture beside that passage. The build flags a changed or missing excerpt for review. If a reference page needs a different example, give it its own illustration.

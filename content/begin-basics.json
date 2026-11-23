@@ -36,7 +36,7 @@
     "roles": [
       "Check a mail report against one sample row.",
       "Check an invite against the meeting note.",
-      "Test one change in a game."
+      "Compare two practice notes before sending a corrected shift notice."
     ],
     "sources": [
       [
@@ -86,7 +86,7 @@
     "roles": [
       "Keep the mail help page open beside a report.",
       "Follow a Teams guide in a second tab.",
-      "See the app and its directions at once."
+      "Keep the training project and the operator’s instructions open in separate tabs."
     ],
     "sources": [
       [
@@ -144,7 +144,7 @@
     "roles": [
       "Keep fake mail rows and their report together.",
       "Keep a sample agenda beside its notes.",
-      "Give a score app its own folder."
+      "Keep a reporting command beside a small input file it can read."
     ],
     "sources": [
       [
@@ -202,7 +202,7 @@
     "roles": [
       "Find the fake mailbox list for your report.",
       "Unpack a set of training notes.",
-      "Give players a game and its rules together."
+      "Unpack the report script and its sample CSV together so tests can find the file."
     ],
     "sources": [
       [
@@ -256,7 +256,7 @@
     "roles": [
       "Find the folder for a mail report.",
       "Find a sample file for a meeting guide.",
-      "See which files make up your game."
+      "Print the current folder before starting a command that reads local files."
     ],
     "sources": [
       [
@@ -310,7 +310,7 @@
     "roles": [
       "Check a mailbox count by hand.",
       "Check a date before sending an invite.",
-      "Test that a score changes only when it should."
+      "Check a reported total against two shift-log entries you can count yourself."
     ],
     "sources": [
       [
@@ -360,7 +360,7 @@
     "roles": [
       "Use a project for mail report files.",
       "Keep related meeting notes together.",
-      "Ask an agent to fix one broken score button."
+      "Use Ask to find a report rule and an Agent session to change that rule on a practice branch."
     ],
     "sources": [
       [
@@ -414,7 +414,7 @@
     "roles": [
       "Review a mailbox filter before saving it.",
       "Keep the right room when editing a meeting time.",
-      "Review a score fix before sharing the app."
+      "Review the old and new lines in a script before sharing the update with another shift."
     ],
     "sources": [
       [
@@ -464,7 +464,7 @@
     "roles": [
       "Use pretend mail records in a practice space.",
       "Check the selected team before opening notes.",
-      "Keep a personal game in its own workspace."
+      "Check the selected training account before opening an internal tool repository."
     ],
     "sources": [
       [
@@ -514,7 +514,7 @@
     "roles": [
       "Use a table of fake mailbox rows.",
       "Pick the right picture for a training note.",
-      "Keep game rules in text and artwork in image files."
+      "Keep run instructions in a text file and report rows in a CSV table."
     ],
     "sources": [
       [

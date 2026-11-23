@@ -41,13 +41,32 @@ def words(values):
     return isinstance(values, list) and values and all(isinstance(v, str) and v.strip() for v in values)
 
 
-# The exclusion list is a build rule, never part of the reader or its content.
-other_tools = re.compile(r'\b(?:ChatGPT|OpenAI|Claude|Anthropic|Gemini|Copilot|Grok|Perplexity|Muse|Firefly|Vibe|Antigravity|Codex)\b', re.I)
+# Whole-word fingerprints keep other product names out of the distributed source.
+excluded_words = {
+    '60965168ce762e949600281ba6d01fee136e5b6e8257b1f216f9025ed324474c',
+    '7d3194f79e645c42e4396dda38be04766810ec6a00d00aced3ffc2a0a1f1a9ef',
+    'c857d09db23e6822e3600bc06ad8d58f92ed62bc8efd81c753f77048662cb97d',
+    'c70eca6b0f88f44d81a41311647e50fda1ac454ec04ffd442b0eb4743a993131',
+    '5d72436256ada53828b51895a94bb8489e9f1ac4fe937a8024ef1594e7045ff6',
+    '3ea125d0bff386e6754b3782b300016fc79a9cf8f8669c0a5c3db64467ddb681',
+    'add92b9cde2bdbf3daaf65a0db79e9b1a7fa428b71b4d6ce38c742eb6dca0c1c',
+    '45d780f82c9247fc1142f8b60c12b6c6cd3d9f23dd836cfa6e84c498d2f83292',
+    '4016c3db3bc3c731a4148022f43ebd6d4422b77976763135b9d9afcb9b71b2c1',
+    'afac327e73694e68c02f5c62f3bc0bcf0f239744ff12921e781487a0f9b3d5d0',
+    '8368ec5f1a153787469953cac4a39bce1c1e9273175a0a39db0810d0c7d0273d',
+    'ac0a3dfd6dddb20962cecff6ee5fe65e19d3923be20e52c5ab52ff877f7e4c32',
+    '57de4cf40144bdf7d00010f2f5557a7d642c2b9705309bfade167dd313e2ca93',
+    '920510199770f4d65cb8aaa2cd12bdb2b8c37f5b3907c50a734a0e3409da2823',
+}
+
+def has_excluded_word(text):
+    words = set(re.findall(r'\w+', text.casefold()))
+    return any(sha256(word.encode()).hexdigest() in excluded_words for word in words)
 
 
 def check_sample_text(value, path):
     """Reject personal contact details or device paths accidentally pasted into book files."""
-    require(not other_tools.search(value), f'Remove unrelated product material from {path}')
+    require(not has_excluded_word(value), f'Remove unrelated product material from {path}')
     for match in re.finditer(r'[A-Za-z0-9._%+-]+@([A-Za-z0-9.-]+\.[A-Za-z]{2,})', value):
         host = match[1].lower()
         require(host.endswith(('.test', '.invalid')) or host in {'example.org','example.net','example.com'}, f'Use a made-up email address in {path}')
@@ -336,6 +355,31 @@ for fig in figures:
     require(fig['lesson'] in ids and path not in assets and words([fig['credit'], fig['caption'], fig['alt']]), f'Check picture {name}')
     related = fig.get('also', [])
     require(set(related) <= ids and len(set([fig['lesson'],*related])) == len(related) + 1, f'Unknown or duplicate figure target in {name}')
+    placements = fig.get('placements', {})
+    require(set(placements) == {fig['lesson'], *related}, 'Give every figure link a lesson passage: '+name)
+    for target, placement in placements.items():
+        field = placement.get('field', '')
+        evidence = placement.get('evidence', '')
+        require(re.fullmatch(r'(?:summary|features|intro\.(?:what|features)|sections\.\d+\.paragraphs\.\d+|steps\.\d+\.text|actions\.\d+\.(?:do|see))', field),
+                f'Choose a visible lesson passage for {name} on {target}')
+        value = page_text[target]
+        for part in field.split('.'):
+            if isinstance(value, list) and part.isdecimal() and int(part) < len(value):
+                value = value[int(part)]
+            elif isinstance(value, dict) and part in value:
+                value = value[part]
+            else:
+                value = None
+                break
+        require(isinstance(value, str) and isinstance(evidence, str) and len(evidence.strip()) >= 12 and evidence in value,
+                f'Recheck the illustration against its passage: {name} on {target}')
+    if name == 'diagram-devin-enterprise-overview.svg':
+        require(fig['lesson'] == 'devin-start' and not related, 'Keep the enterprise overview with the Devin introduction')
+    if name == 'diagram-zero-vs-blank.svg':
+        for target in placements:
+            prose = ' '.join(strings_in_content(page_text[target])).casefold()
+            require(target != 'devin-start' and re.search(r'\b(?:zero|0)\b',prose) and re.search(r'\b(?:missing|blank|null|empty|unreported)\b',prose),
+                    'The page must explain both a recorded zero and a missing value: '+target)
     if fig['source'].startswith('#'):
         require(fig['source'][1:] in ids, f'Unknown local figure source {name}')
     else:

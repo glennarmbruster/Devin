@@ -1,36 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
-  <title id="title">One skill can serve two different tickets</title>
-  <desc id="description">The same SKILL.md file describes two headings. A ticket about a label and a ticket about a score each produce a note with those headings and different evidence.</desc>
-  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
-  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">One skill can serve two different tickets</text>
-  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Keep the steps in a file. Change the facts that go into it.</text>
-  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  <rect x="35" y="171" width="238" height="146" rx="11" fill="#faf6ea" stroke="#8b571b" stroke-width="2.5" />
-  <rect x="35" y="171" width="6" height="146" rx="3" fill="#8b571b" stroke="#8b571b" stroke-width="0" />
-  <text x="51" y="204" fill="#8b571b" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">SKILL.md</text>
-  <text x="51" y="236" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Use two headings.</text>
-  <text x="51" y="263" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Cite the changed line.</text>
-  <path d="M274 247H300V185H326 M300 247V310H326" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M317 185L339 185" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M330.6 190.4L339 185L330.6 179.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M317 309L339 309" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M330.6 314.4L339 309L330.6 303.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <rect x="348" y="147" width="191" height="76" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2" />
-  <text x="362" y="178" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Ticket A</text>
-  <text x="362" y="207" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Fix a label.</text>
-  <rect x="348" y="272" width="191" height="76" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2" />
-  <text x="362" y="303" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Ticket B</text>
-  <text x="362" y="332" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Fix a score.</text>
-  <path d="M546 185L579 185" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M570.6 190.4L579 185L570.6 179.6" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M546 310L579 310" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M570.6 315.4L579 310L570.6 304.6" fill="none" stroke="#145756" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <rect x="588" y="147" width="276" height="76" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2" />
-  <text x="602" y="178" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Label note</text>
-  <text x="602" y="207" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Change + Evidence</text>
-  <rect x="588" y="272" width="276" height="76" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2" />
-  <text x="602" y="303" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Score note</text>
-  <text x="602" y="332" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Change + Evidence</text>
-  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
-  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Check that the score note quotes the score ticket. Shared steps still need fresh evidence.</text>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 449" font-family="Verdana, sans-serif">
+<title id="title">Save a repeatable task as a skill</title><desc id="desc">A skill file contains directions a helper can reuse with fresh input. Test the directions on more than one case. Write the recipe. Describe what to read, what to do and what to return. First run. Supply one practice input and check the result. Second run. Change the input. Check that the answer follows the new data.</desc>
+<rect x="2" y="2" width="956" height="445" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Save a repeatable task as a skill</text>
+<text x="28" y="79" fill="#182c2d" font-size="20">A skill file contains directions a helper can reuse with fresh input. Test</text>
+<text x="28" y="107" fill="#182c2d" font-size="20">the directions on more than one case.</text>
+<rect x="24" y="140" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 157v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="175" fill="#145756" font-size="22" font-weight="bold">Write the recipe</text>
+<text x="55" y="205" fill="#182c2d" font-size="20">Describe what to read, what to do and what to return.</text>
+<rect x="24" y="239" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 256v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="274" fill="#145756" font-size="22" font-weight="bold">First run</text>
+<text x="55" y="304" fill="#182c2d" font-size="20">Supply one practice input and check the result.</text>
+<rect x="24" y="338" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 355v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="373" fill="#145756" font-size="22" font-weight="bold">Second run</text>
+<text x="55" y="403" fill="#182c2d" font-size="20">Change the input. Check that the answer follows the new data.</text>
 </svg>

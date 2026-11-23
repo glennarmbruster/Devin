@@ -36,7 +36,7 @@
     "roles": [
       "Read a pretend mail report’s instructions.",
       "Look up how a team practice task works.",
-      "Find the start page of a small app."
+      "Ask where a training command starts and check the file link in the reply."
     ],
     "sources": [
       [
@@ -94,7 +94,7 @@
     "roles": [
       "Find the right practice mail project.",
       "Check where a shared report guide lives.",
-      "Point an app helper at the right files."
+      "Match the selected repository’s README with the one for the command you plan to update."
     ],
     "sources": [
       [
@@ -152,7 +152,7 @@
     "roles": [
       "Review one made-up mail report file.",
       "Check a change to a practice runbook.",
-      "Watch an agent build one piece of a game."
+      "Follow one small edit through the session log and open the resulting file."
     ],
     "sources": [
       [
@@ -206,7 +206,7 @@
     "roles": [
       "Review one line of a sample mail report.",
       "Explain a change to a shared tool.",
-      "Check an app bug report against the code."
+      "Test a review finding against the line in the script and a small sample input."
     ],
     "sources": [
       [

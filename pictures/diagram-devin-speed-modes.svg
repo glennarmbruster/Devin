@@ -1,31 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" role="img" aria-labelledby="title description">
-  <title id="title">Which Devin fits the job?</title>
-  <desc id="description">Three paths lead from a question about a file to Ask or DeepWiki, a quick edit to Devin CLI, and a long test to a cloud Agent with a snapshot.</desc>
-  <rect x="2" y="2" width="896" height="436" rx="17" fill="#faf6ea" stroke="#182c2d" stroke-width="3" />
-  <text x="32" y="52" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="start">Which Devin fits the job?</text>
-  <text x="33" y="86" fill="#145756" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Start with the work you need done.</text>
-  <path d="M32 107H868" fill="none" stroke="#8b571b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  <rect x="34" y="133" width="316" height="58" rx="10" fill="#faf6ea" stroke="#182c2d" stroke-width="2" />
-  <text x="49" y="169" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Where is the score kept?</text>
-  <path d="M355 162L405 162" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M396.6 167.4L405 162L396.6 156.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <rect x="414" y="133" width="452" height="58" rx="10" fill="#145756" stroke="#145756" stroke-width="2" />
-  <text x="430" y="169" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">Ask Devin / DeepWiki</text>
-  <text x="663" y="169" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Read the project index.</text>
-  <rect x="34" y="212" width="316" height="58" rx="10" fill="#faf6ea" stroke="#182c2d" stroke-width="2" />
-  <text x="49" y="248" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Can I fix one label now?</text>
-  <path d="M355 241L405 241" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M396.6 246.4L405 241L396.6 235.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <rect x="414" y="212" width="452" height="58" rx="10" fill="#145756" stroke="#145756" stroke-width="2" />
-  <text x="430" y="248" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">Devin CLI</text>
-  <text x="663" y="248" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Edit in your local folder.</text>
-  <rect x="34" y="291" width="316" height="58" rx="10" fill="#faf6ea" stroke="#182c2d" stroke-width="2" />
-  <text x="49" y="327" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start">Run tests while I’m away?</text>
-  <path d="M355 320L405 320" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M396.6 325.4L405 320L396.6 314.6" fill="none" stroke="#8b571b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-  <rect x="414" y="291" width="452" height="58" rx="10" fill="#145756" stroke="#145756" stroke-width="2" />
-  <text x="430" y="327" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">Cloud Agent</text>
-  <text x="663" y="327" fill="#faf6ea" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Use a ready snapshot.</text>
-  <path d="M32 380H868" fill="none" stroke="#145756" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
-  <text x="34" y="414" fill="#182c2d" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">A lookup can take seconds. Use /handoff to send a longer CLI job to the cloud.</text>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 449" font-family="Verdana, sans-serif">
+<title id="title">Choose a Devin mode for the job</title><desc id="desc">Choose based on whether you need to read files, edit them locally or run tests in the cloud. Read a project. Use Ask or DeepWiki to find the source of a rule. Edit locally. Use the command-line tool, or CLI, in your project folder. Work in the cloud. Start an Agent session. A saved snapshot can provide the tools the tests need.</desc>
+<rect x="2" y="2" width="956" height="445" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Choose a Devin mode for the job</text>
+<text x="28" y="79" fill="#182c2d" font-size="20">Choose based on whether you need to read files, edit them locally or run</text>
+<text x="28" y="107" fill="#182c2d" font-size="20">tests in the cloud.</text>
+<rect x="24" y="140" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 157v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="175" fill="#145756" font-size="22" font-weight="bold">Read a project</text>
+<text x="55" y="205" fill="#182c2d" font-size="20">Use Ask or DeepWiki to find the source of a rule.</text>
+<rect x="24" y="239" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 256v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="274" fill="#145756" font-size="22" font-weight="bold">Edit locally</text>
+<text x="55" y="304" fill="#182c2d" font-size="20">Use the command-line tool, or CLI, in your project folder.</text>
+<rect x="24" y="338" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 355v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="373" fill="#145756" font-size="22" font-weight="bold">Work in the cloud</text>
+<text x="55" y="403" fill="#182c2d" font-size="20">Start an Agent session. A saved snapshot can provide the tools the tests need.</text>
 </svg>

@@ -8,7 +8,7 @@
       "features": "Ask reads and explains. Agent can change practice files and run tests. A session keeps the request, the steps and the result together.",
       "exchange": "Start with a report that reads made-up mailbox rows from a file.",
       "m365": "Pick a practice workspace before asking for an inventory summary.",
-      "developer": "Give Devin a small app folder and one visible success condition.",
+      "developer": "Ask which line of the README runs the report tests. Request an edit only if the command needs to change.",
       "sources": [
         [
           "Your first Devin session",
@@ -32,7 +32,8 @@
       {
         "title": "Give it one job",
         "paragraphs": [
-          "Open the link your team uses to sign in to Devin. Choose your practice project and start Ask. Try “Which file shows the total? Point to the line.” Open the file it names. If all you need is the answer, you are done. Switch to Agent when you want a change you can test."
+          "Open the project your team uses for practice. Give Devin the project and one request. If you want to understand the files, use Ask Devin. Try “Which command tests the report? Show me the line in the README.” Open the file link and check the answer.",
+          "If you need an edit, start an Agent session. Ask it to make one change on a branch, run the tests and open a draft pull request. A draft pull request lets a teammate review the proposed change before it goes into the shared project."
         ],
         "sources": [
           [
@@ -52,7 +53,7 @@
       {
         "title": "Learn six words as you use them",
         "paragraphs": [
-          "Imagine a game with one broken button. Follow it from its project folder to a proposed fix."
+          "Imagine your team owns a command that prints a weekly report. Follow one proposed fix from its project folder to review."
         ],
         "sources": [
           [
@@ -76,7 +77,7 @@
           "rows": [
             [
               "Repository or repo",
-              "The project files plus a history of their edits. Pick the folder for the game."
+              "The report files and the history of their edits."
             ],
             [
               "Session",
@@ -84,7 +85,7 @@
             ],
             [
               "Environment",
-              "The computer and tools that run the game."
+              "The computer and tools used to run the report and its tests."
             ],
             [
               "Branch",
@@ -118,11 +119,9 @@
         ]
       },
       {
-        "title": "Give Devin a scoreboard bug it can fix",
+        "title": "Give the agent a change you can check",
         "paragraphs": [
-          "Imagine your team uses a trivia scoreboard. In round 1, Blue gives a wrong answer and earns 0 points. The scorekeeper enters 0, but the scoreboard shows an empty box. That is the bug.",
-          "In round 2, the scorekeeper leaves the box empty. We don’t know whether Blue played or skipped that turn. Only the scorekeeper can tell us. In round 3, Blue earns 5 points.",
-          "Give Devin Agent this request: “Fix the scoreboard so it shows the number I enter, even when I enter 0. Leave the box empty if I haven’t entered a score.” Test the three rounds in order. You should see 0, an empty box, then 5."
+          "The report lists two open tickets, but its heading says “Closed tickets.” Ask the agent to fix the heading and run the report on the practice file. Check the draft pull request. The heading should say “Open tickets,” and the same two ticket IDs should still appear."
         ],
         "sources": [
           [
@@ -139,10 +138,11 @@
           ]
         ],
         "exercise": {
-          "prompt": "You open the scoreboard and see an empty box for round 2. Can you tell whether Blue skipped that turn?",
+          "prompt": "Someone asks you to approve the heading fix. What would you check first?",
           "answer": [
-            "No. All you know is that nobody entered a score. Ask the scorekeeper what happened. If you want the scoreboard to track skipped turns, give the scorekeeper a separate “Skipped” option."
-          ]
+            "Read the changed line, then open the sample report. Its heading should say “Open tickets.” Compare the two IDs with the practice file before you approve the edit."
+          ],
+          "context": "The report is about open tickets. Its heading should describe the rows you can actually see."
         }
       }
     ],
@@ -166,7 +166,7 @@
       "features": "Ask Devin searches saved code. DeepWiki explains how the parts fit. Devin CLI works in a folder on your computer. A cloud Agent can keep working after you leave.",
       "exchange": "Reuse a prepared report folder when timing repeated mail tests.",
       "m365": "Compare warm and cold runs with the same sample workbook export.",
-      "developer": "Record setup time separately from the time spent editing your app.",
+      "developer": "Use Ask to find a command, the CLI to try a local fix, and a cloud session for a longer test run.",
       "sources": [
         [
           "Ask Devin about project files",
@@ -352,7 +352,8 @@
             "Ask Devin. Ask can look up the line in the saved project. Open the line it cites and check it yourself.",
             "Devin CLI. Devin CLI edits the copy on your computer. You can open that same copy in your browser after each change.",
             "Agent with a ready snapshot. A cloud Agent keeps working on its own computer. The snapshot has the tools, and the test output gives you something to check later."
-          ]
+          ],
+          "context": "The three requests need different results. One person needs an explanation, while another needs working files."
         },
         "sources": [
           [
@@ -389,7 +390,7 @@
       "features": "Devin can link to a file, propose an edit and report a test. A draft pull request lets another person check its work.",
       "exchange": "Use one sample mail report to learn where the plan and test output appear.",
       "m365": "Keep the practice inventory task inside its chosen repository.",
-      "developer": "Follow the first session from initial request to the file you can open.",
+      "developer": "Follow a help-text change from the request through to the preview a command-line user would read.",
       "sources": [
         [
           "Starting a session",
@@ -465,7 +466,8 @@
           "prompt": "The new page says “You can renew once.” Does it pass?",
           "answer": [
             "It leaves out the waiting list. Ask for “You may renew once if nobody is waiting.” Open the latest preview and check its full sentence."
-          ]
+          ],
+          "context": "A borrower reads the new renewal notice. Checking its wording against the approved rule helps prevent a false promise."
         }
       }
     ],
@@ -488,7 +490,7 @@
       "features": "Setup can install the tools, fetch project packages and run a check. A log shows where each part worked or failed.",
       "exchange": "Confirm the practice machine can open the mail CSV and run its test.",
       "m365": "Record the tools that a repeatable document export needs.",
-      "developer": "Start from a clean workspace and prove its setup can launch your app.",
+      "developer": "Start a fresh worker and run the tool’s version check before giving it an unattended job.",
       "sources": [
         [
           "Building and selecting snapshots",
@@ -536,6 +538,7 @@
       {
         "title": "Read the first failure",
         "paragraphs": [
+          "A practice project should pass its test before any files change. One line from the first failure can help you tell missing setup from a problem in the code.",
           "Try a known passing test before you ask Devin to edit any files. Save the version, folder and first error. After a repair, open a second new session and try again."
         ],
         "sources": [
@@ -593,7 +596,7 @@
       "features": "Progress shows the steps taken. Side Chat can help you ask about the current session while work is still under way.",
       "exchange": "Keep one mailbox-report change in one session until its test passes.",
       "m365": "Resume an inventory-format edit with its earlier decisions in view.",
-      "developer": "Use a second request to change an existing feature without rebuilding it.",
+      "developer": "Pause after a small script edit and inspect the test output before widening the task.",
       "sources": [
         [
           "Ask and plan a handoff",
@@ -679,7 +682,7 @@
       "features": "Devin can show changed lines, report test results and, on supported projects, record a short run of the app.",
       "exchange": "Use a mailbox exactly at the cutoff to review a quota fix.",
       "m365": "Compare a report change with the acceptance rule in the ticket.",
-      "developer": "Try the case immediately beside the one a patch was meant to fix.",
+      "developer": "Try the exact input named in a review finding, then check one neighboring value.",
       "sources": [
         [
           "Devin Review",
@@ -756,7 +759,7 @@
       "features": "Skills can live under Customize or with project files. You can name a skill in a session and check what it actually did.",
       "exchange": "Write a reusable procedure for checking a report with an empty mailbox count.",
       "m365": "Reuse the same review steps on the next practice inventory export.",
-      "developer": "Run a saved build recipe against a different sample project.",
+      "developer": "Save the team’s report checks in a skill file so the next shift can repeat them on fresh input.",
       "sources": [
         [
           "Creating and invoking skills",
@@ -849,7 +852,7 @@
       "features": "A new ticket can start a session. A later comment can update the same session. Some tools can show the result back on the ticket.",
       "exchange": "Use a practice ticket to track a requested mail-report fix.",
       "m365": "Match a repeated project notification to the session it already started.",
-      "developer": "Test that a retried app ticket points to a single coding job.",
+      "developer": "Resend a sample ticket and verify that the automation links to the existing coding job.",
       "sources": [
         [
           "Jira integration options",
@@ -921,7 +924,8 @@
           "prompt": "A ticket creation notice arrives twice. A later comment corrects the date. How many sessions should you have?",
           "answer": [
             "One. The repeat names an existing job. The corrected date belongs in that job."
-          ]
+          ],
+          "context": "One ticket can send more than one notice. Follow the ticket number so a repeat cannot start a second job."
         }
       }
     ],
@@ -944,7 +948,7 @@
       "features": "The sign-in method, team role, project grant and review rules each answer a different access question.",
       "exchange": "Compare who may read a sample mail report with who may edit its script.",
       "m365": "Review the role that permits a practice workspace change.",
-      "developer": "Try the app-change workflow with the smallest useful project permission.",
+      "developer": "Give a reporting script read access to one training project and check which files it can open.",
       "sources": [
         [
           "Organizations and repositories",
@@ -1072,7 +1076,7 @@
       "features": "A profile sets rules for the network and tools a session can use. The rules for making a snapshot can differ from the rules for a running session.",
       "exchange": "Locate the practice machine where a mail script reads its inputs.",
       "m365": "Check where inventory files are available before handing a task to Devin.",
-      "developer": "Confirm which environment runs a test before trusting a local-only result.",
+      "developer": "Identify the worker that runs an internal script and check whether it can reach its test files.",
       "sources": [
         [
           "Enterprise deployment options",
@@ -1166,7 +1170,7 @@
       "features": "The API has separate calls to create a session, read its progress and send another message. Your account needs permission for each action.",
       "exchange": "Track a mock mail-report job using the ID returned when it starts.",
       "m365": "Keep the inventory job ID beside its last known state.",
-      "developer": "Poll one mock session until it finishes and count how often it was started.",
+      "developer": "Track a practice job by session ID so a lost reply does not start a second job.",
       "sources": [
         [
           "API identities",
@@ -1263,7 +1267,7 @@
       "features": "One coordinator can hand off jobs, collect tests and decide when the next group is ready. Dynamic Workflows can put those stages in a script.",
       "exchange": "Check the same report-label change in two mock mail projects.",
       "m365": "Keep one test result per inventory project in a shared rollout.",
-      "developer": "Record which app still needs a test before declaring a group release ready.",
+      "developer": "Try a command-line change in one project and inspect its test results before rolling it out.",
       "sources": [
         [
           "Coordinating sessions",
@@ -1331,7 +1335,8 @@
           "prompt": "Two of eight reports turn a blank date into January 1, 1970. The early tests all passed. What now?",
           "answer": [
             "Pause the next group. Add the blank case to the shared test. Check all eight reports and any copies already in use before starting more work."
-          ]
+          ],
+          "context": "Several reports use the same date rule. A small trial can reveal a bad date before the change reaches every report."
         }
       }
     ],
@@ -1354,7 +1359,7 @@
       "features": "Usage reports show the units spent. Review records show which changes were accepted. An audit log records changes to settings and access.",
       "exchange": "Compare the cost of two attempts that produced one accepted report fix.",
       "m365": "Count accepted inventory changes by their distinct review IDs.",
-      "developer": "Divide practice credits spent by the number of changes you actually kept.",
+      "developer": "Count the work spent on retries when estimating the cost of one accepted script change.",
       "sources": [
         [
           "Enterprise billing and budgets",
@@ -1450,9 +1455,9 @@
     "intro": {
       "what": "This is a paper-and-pencil way to practice being the reviewer. You can do all three cases without connecting to a service.",
       "features": "Write a clear brief, point out missing test evidence and use numbers to decide what to try next.",
-      "exchange": "Trace a read-only report from its test fixture through review and rerun.",
+      "exchange": "Trace a read-only report from the sample input to the reviewed result, then run it again.",
       "m365": "Hand another person the evidence needed to repeat an inventory test.",
-      "developer": "Exercise a repeated ticket against a saved ledger before shipping it.",
+      "developer": "Run a duplicate ticket through the fee ledger and check that the second delivery adds nothing.",
       "sources": [
         [
           "Choosing work for Devin",
@@ -1489,7 +1494,8 @@
           "answer": [
             "Ask for the old $9.00 and the fixed $5.50. Repeat A again. The fixed total should stay $5.50. Two different IDs for equal fees must both count.",
             "Ask for the edited lines and the test run. If A comes back with a different fee, ask the owner to decide the rule."
-          ]
+          ],
+          "context": "A borrower could get charged twice if a fee notice arrives again. Use the event labels to tell a new charge from a repeat."
         }
       },
       {
@@ -1516,7 +1522,8 @@
           "answer": [
             "The small check passed. The full export still needs testing. Record the file version, command and first error.",
             "Set up the sample database on a clean work computer. Run the old and edited versions there. Open the output file and check its contents."
-          ]
+          ],
+          "context": "A reviewer wants to know if the whole export works. A small passing test tells them only part of the story."
         }
       },
       {
@@ -1543,7 +1550,8 @@
           "answer": [
             "Six out of ten is 60%. Divide 48 by 6 for 8 units per accepted fix. Divide 90 by 6 for 15 minutes of review per accepted fix.",
             "The 90 minutes cover only the six accepted fixes. Track time on every job next time. Fix the repeat and the blocked setup before you grow the trial."
-          ]
+          ],
+          "context": "A team has run a small trial. It wants to know how much work was accepted and what each usable result cost."
         }
       }
     ],

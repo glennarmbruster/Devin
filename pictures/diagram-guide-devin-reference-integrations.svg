@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 449" font-family="Verdana, sans-serif">
+<title id="title">Follow a work request into a coding session</title><desc id="desc">A chat message or ticket can ask Devin to work on a project. Keep a link between that request and its session. Request. Send one fictional task from the approved practice channel. Trace. Find the matching session and look at its project and task. Follow up. Put the reply in the original thread so the team can find the result.</desc>
+<rect x="2" y="2" width="956" height="445" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Follow a work request into a coding session</text>
+<text x="28" y="79" fill="#182c2d" font-size="20">A chat message or ticket can ask Devin to work on a project. Keep a link</text>
+<text x="28" y="107" fill="#182c2d" font-size="20">between that request and its session.</text>
+<rect x="24" y="140" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 157v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="175" fill="#145756" font-size="22" font-weight="bold">Request</text>
+<text x="55" y="205" fill="#182c2d" font-size="20">Send one fictional task from the approved practice channel.</text>
+<rect x="24" y="239" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 256v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="274" fill="#145756" font-size="22" font-weight="bold">Trace</text>
+<text x="55" y="304" fill="#182c2d" font-size="20">Find the matching session and look at its project and task.</text>
+<rect x="24" y="338" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 355v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="373" fill="#145756" font-size="22" font-weight="bold">Follow up</text>
+<text x="55" y="403" fill="#182c2d" font-size="20">Put the reply in the original thread so the team can find the result.</text>
+</svg>

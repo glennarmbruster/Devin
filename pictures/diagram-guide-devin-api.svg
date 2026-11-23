@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 449" font-family="Verdana, sans-serif">
+<title id="title">Find a coding job after a lost reply</title><desc id="desc">A session is one coding job. A tracker needs to find the same job if its first reply goes missing. Before sending. Save one record for the ticket and revision. After a reply. Keep the session ID with that record. After a timeout. Look for the existing session before starting another.</desc>
+<rect x="2" y="2" width="956" height="445" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Find a coding job after a lost reply</text>
+<text x="28" y="79" fill="#182c2d" font-size="20">A session is one coding job. A tracker needs to find the same job if its</text>
+<text x="28" y="107" fill="#182c2d" font-size="20">first reply goes missing.</text>
+<rect x="24" y="140" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 157v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="175" fill="#145756" font-size="22" font-weight="bold">Before sending</text>
+<text x="55" y="205" fill="#182c2d" font-size="20">Save one record for the ticket and revision.</text>
+<rect x="24" y="239" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 256v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="274" fill="#145756" font-size="22" font-weight="bold">After a reply</text>
+<text x="55" y="304" fill="#182c2d" font-size="20">Keep the session ID with that record.</text>
+<rect x="24" y="338" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 355v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="373" fill="#145756" font-size="22" font-weight="bold">After a timeout</text>
+<text x="55" y="403" fill="#182c2d" font-size="20">Look for the existing session before starting another.</text>
+</svg>

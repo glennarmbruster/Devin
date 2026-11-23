@@ -9,7 +9,7 @@
     "roles": [
       "Make a read-only mailbox list.",
       "Share a report someone else can test.",
-      "Build a small tool with a known answer."
+      "Run the inventory command on the sample CSV and compare the output with the expected mailbox list."
     ],
     "prompt": "Plan Get-MailboxInventory.ps1 for PowerShell 7. In practice mode use -InputCsv. In live mode use -Live in an already signed-in session. Both need -OutputCsv for a new file. Read only user and shared mailboxes. Keep DisplayName, PrimarySmtpAddress and RecipientTypeDetails, in that order. Sort by the main mail address. Preserve commas and accents. With no matches, write only the header. Stop for a blank or repeated address, an existing output, or a failed read. Keep any old file safe. In live mode use only Get-EXOMailbox -RecipientTypeDetails UserMailbox,SharedMailbox -ResultSize Unlimited -ErrorAction Stop. Show how each rule will be tested.",
     "steps": [
@@ -102,7 +102,7 @@
     "roles": [
       "Check a mail usage limit.",
       "Read a warning rule in a sheet.",
-      "Test a game score limit."
+      "Check the values just under, at and over a reporting threshold."
     ],
     "prompt": "The sample file is quota.py. Predict the label for 79, 80 and 81. Run it with Python and show the three answers. Point to the piece of code that decides what happens at 80. Keep the original rule.",
     "steps": [
@@ -157,7 +157,7 @@
     "roles": [
       "Read a comma inside a mailbox label.",
       "Import names from a practice table.",
-      "Read puzzle titles that contain commas."
+      "Read an asset label with a comma and verify that it stays in one CSV column."
     ],
     "prompt": "Build the two sample files. Run the starter once and print each row’s length. Replace its simple comma split with Python’s built-in csv reader. Test the full label and the number of fields.",
     "steps": [
@@ -212,7 +212,7 @@
     "roles": [
       "Make a portable mail report.",
       "Hand a small report folder to a teammate.",
-      "Move a game and its level file together."
+      "Run an internal report from a second folder to check how it finds its input."
     ],
     "prompt": "In cleanlab make rows.csv and report.py. Read rows.csv from the folder that holds the script. Print the sum of the counts. Give me a command to run the report and the short list of files it needs.",
     "steps": [
@@ -271,7 +271,7 @@
     "roles": [
       "Count each mailbox ID once.",
       "Fix a group list.",
-      "Keep extra spaces out of a game lookup."
+      "Test a lookup with extra spaces before trusting a proposed repair."
     ],
     "prompt": "The starter file is candidate.py. Create tests from the rule: ignore case and outside spaces, skip blank IDs, return each clean ID once in order. Run the broken version. Fix only the cleanup and run the tests again.",
     "steps": [
@@ -331,7 +331,7 @@
     "roles": [
       "Check mailbox item counts.",
       "Share a simple review recipe.",
-      "Hand over a game score validator."
+      "Give the next shift a repeatable check for zero, missing and invalid counts."
     ],
     "prompt": "Make training/REVIEW.md. It should explain how to read ID and Count, keep zero and other whole numbers greater than zero, and flag other values. Report valid row count, sum and the IDs that need a look.",
     "steps": [
@@ -348,7 +348,7 @@
       },
       {
         "title": "Check the first result",
-        "text": "Compare the result with this hand check. Rows a and b are valid, even though b is zero. Their sum is 3. Row c needs a look.",
+        "text": "Compare the result with this hand check. Rows a and b are valid, even though b is zero. Their sum is 3. Row c needs a look. For a missing-count test, leave the Count cell empty. A recorded 0 still counts as a known reading. An empty cell belongs in the list to check.",
         "help": "Cross out negative, blank and broken counts. Include zero in the row count and write zero in the sum. Compare your paper rule with the recipe."
       },
       {
@@ -387,7 +387,7 @@
     "roles": [
       "Remember the last count in a practice report.",
       "Keep a local counter between visits.",
-      "Build a replayable scorecard."
+      "Refresh a queue dashboard and check that the last recorded count survives."
     ],
     "prompt": "Build a one-page scorecard with a total, a number field and Add. Allow negative scores. Save the total in this browser with localStorage. Leave a blank entry out and show a hint. Use plain HTML and JavaScript. Show a browser test.",
     "steps": [
@@ -443,7 +443,7 @@
     "roles": [
       "Deduplicate mail support tickets.",
       "Track repeat requests.",
-      "Prevent duplicate game rewards."
+      "Keep a second delivery of an issue from starting another automation run."
     ],
     "prompt": "Build a local Python and SQLite task list. SQLite is a small database in one file. Use issue and revision together to identify a task. If a delivery repeats or another delivery has the same pair, reuse the task. Print the decision for each row.",
     "steps": [
@@ -491,14 +491,14 @@
   {
     "id": "lab-devin-09",
     "title": "Find a missing and an extra permission",
-    "summary": "Compare the approved list with what the test report actually found. Check both directions.",
+    "summary": "A reviewer needs to compare the access the team approved with the access it actually found. Compare the approved list with what the test report actually found. Check both directions.",
     "level": "Advanced",
     "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
     "features": "If you check only for extra keys, you may miss a key someone should have received.",
     "roles": [
       "Review a sample mailbox access list.",
       "Compare group grants with an approved sheet.",
-      "Check which game roles can open each area."
+      "Compare expected and actual roles to find a missing grant and an extra one."
     ],
     "prompt": "List observed pairs missing from approved, then approved pairs missing from observed. Also flag any repeated input row. Keep case as written. Read these two lists only.",
     "steps": [
@@ -562,7 +562,7 @@
     "roles": [
       "Measure work on a sample report fix.",
       "Compare the cost of two practice jobs.",
-      "Track time spent on a game patch."
+      "Measure the cost of one accepted script fix, including the failed attempts."
     ],
     "prompt": "Add all the pretend units in the rows. Count each accepted pull request ID once. A pull request is a change someone reviews. Divide total units by accepted changes. List the IDs behind your count.",
     "steps": [
@@ -617,7 +617,7 @@
     "roles": [
       "Sort mail events.",
       "Align times in a shared log.",
-      "Compare game actions across devices."
+      "Record time zones so two runs at the same clock time can be told apart."
     ],
     "prompt": "Convert the four sample times to UTC using Python. Sort the times you can place. Flag missing offsets. Count events from the start time up to, but excluding, the end time. Show the ID for each event you count.",
     "steps": [
@@ -672,7 +672,7 @@
     "roles": [
       "Recover a sample report job.",
       "Check a repeated team request.",
-      "Recover after a game save reply goes missing."
+      "Find an existing report job after the caller loses its first reply."
     ],
     "prompt": "Build a local pretend service and a client. Store T9 with S1, then lose the reply. Save a note saying the result is unknown. On restart, look up T9. If exactly one session exists, use it. With two matches, ask for a review. Print how many creates actually ran.",
     "steps": [
@@ -732,7 +732,7 @@
     "roles": [
       "Read two versions of a mailbox export.",
       "Move an old sheet to new column names.",
-      "Keep an old game save readable."
+      "Read a report written with an older field name during a format change."
     ],
     "prompt": "Use two practice folders called producer and consumer. One writes a JSON record and the other reads it. Accept count or total. If both are present, require the numbers to match. Test old and new records and show the safest update order.",
     "steps": [
@@ -791,7 +791,7 @@
     "roles": [
       "Protect a mail size report.",
       "Keep a shared summary complete.",
-      "Save a level without losing the last good copy."
+      "Keep the last good report when a new export stops partway through."
     ],
     "prompt": "Start current.json at total 7. Require North and South once each with whole counts of zero or more. Write a new file on the side. Replace the good file only after the input and the new file are complete. Test a forced stop just before the swap.",
     "steps": [
@@ -850,7 +850,7 @@
     "roles": [
       "Check a practice mail move.",
       "Prepare a rollout decision.",
-      "Decide when a new game build is ready."
+      "Gate an internal rollout on both test results and an owner’s recorded approval."
     ],
     "prompt": "Make a local report that requires each listed group exactly once. Completed must be between zero and attempted. Require 95% finished overall plus a clear owner approval. Show which sample row proves each check. Make tests and a short README.",
     "steps": [
@@ -909,7 +909,7 @@
     "roles": [
       "Count sample mailbox pairs.",
       "Count items during a group drill.",
-      "Build a simple clicker."
+      "Test a counter button for a work queue and verify its reset behavior."
     ],
     "prompt": "In my practice project build a single index.html. Show the number, Count by two and Reset. Use real buttons that work by click or keyboard. Ask before changing other files. Record a browser test.",
     "steps": [
@@ -961,7 +961,7 @@
     "roles": [
       "Look up a fake mailbox by ID.",
       "Find a sample asset tag.",
-      "Build a lookup panel for game items."
+      "Look up an asset tag and make an unknown tag easy for an operator to spot."
     ],
     "prompt": "Build a small offline HTML tag finder. Add a field, Find and Clear. Ignore outside spaces and letter case; require a full code. Show one item or Unknown tag. Give me the file and browser test evidence.",
     "steps": [
@@ -1012,7 +1012,7 @@
     "roles": [
       "Review fake mail subjects.",
       "Check labels in a practice form.",
-      "Help a player name a saved game."
+      "Validate the subject line a notification command is about to send."
     ],
     "prompt": "Build an HTML checker with a text box for one subject and Check. Trim the ends. An empty result says Missing. Under five characters says Too short. Otherwise say Ready. Show the measured length and a Reset button.",
     "steps": [
@@ -1063,7 +1063,7 @@
     "roles": [
       "Quiz a mail trainee on a checklist.",
       "Practice which files belong in a kit.",
-      "Play a short packing game."
+      "Use a short knowledge check to rehearse which materials a field technician should bring."
     ],
     "prompt": "Build a one-page quiz with three labeled choices, Check answers and Try again. Award one point per correct choice picked and subtract one for each wrong pick, with a minimum of zero. Show which answers to review.",
     "steps": [
@@ -1114,7 +1114,7 @@
     "roles": [
       "Write a short mail banner.",
       "Set a size limit for a form response.",
-      "Add short notes to a game."
+      "Warn an operator before a shift note exceeds a ticket field’s length limit."
     ],
     "prompt": "Make an HTML note card with a text field and a count of characters left. Enable Save up to the limit and disable it when the length exceeds the limit or for a blank note. Show the saved note in a separate area.",
     "steps": [
@@ -1158,14 +1158,14 @@
   {
     "id": "lab-devin-21",
     "title": "Make a card draw without repeats",
-    "summary": "Draw every card from a small deck once. Shuffle only when a new round begins.",
+    "summary": "A draw should produce each card once before a fresh deck starts. Draw every card from a small deck once. Shuffle only when a new round begins.",
     "level": "Starter",
     "requires": "Open Devin with access to an approved practice repository. A repository is the project folder with its saved history. Use a separate practice branch, a copy where you can try changes.",
     "features": "Pulling a card out of the pile prevents it appearing twice before the pile is rebuilt.",
     "roles": [
       "Pick practice mail checks without repeats.",
       "Choose training prompts at random.",
-      "Build a reusable card deck."
+      "Draw sample records for inspection without selecting a record twice."
     ],
     "prompt": "Build an HTML app with Draw and New deck. Use the fixed order in test mode. In regular play shuffle once per new deck. Remove each drawn card and show how many are left. Stop at an empty deck.",
     "steps": [
@@ -1216,7 +1216,7 @@
     "roles": [
       "Test a mail drill target.",
       "Track two teams through an exercise.",
-      "Play a dice race to ten."
+      "Test when a batch reaches its cutoff and stops accepting further work."
     ],
     "prompt": "Build an HTML game with Roll, current team, scores, winner and Restart. Switch teams after each valid roll. Use sample rolls in test mode and a six-sided die in play. Lock Roll after a win.",
     "steps": [
@@ -1268,7 +1268,7 @@
     "roles": [
       "Undo the last sample mail selection.",
       "Review edits to a supply list.",
-      "Give a game a last-move undo."
+      "Undo the latest dispatch choice even when two successive choices were identical."
     ],
     "prompt": "Build an HTML menu with one button per item, a visible order list, total and Undo last. Treat repeated items as separate choices. Disable Undo for an empty order.",
     "steps": [
@@ -1319,7 +1319,7 @@
     "roles": [
       "Read pages of sample mailbox results.",
       "Gather all pages of a practice file list.",
-      "Load a long puzzle catalog."
+      "Follow the next-page link in a report even when the current page has no rows."
     ],
     "prompt": "Build a local report reader using just these fake pages. Follow the next pointer even when a page has no items. Stop at no next page. Track pages already read and flag a repeated pointer. Add tests for both paths.",
     "steps": [
@@ -1375,7 +1375,7 @@
     "roles": [
       "Check small changes to a sample mail label.",
       "Validate a short list of approved terms.",
-      "Play a word ladder."
+      "Test a label checker that permits exactly one character to change per edit."
     ],
     "prompt": "Build one HTML word game with a text field, current word, move history and Restart. Require the same word length, exactly one changed letter and a word from the allowed list. Ignore outside spaces and case.",
     "steps": [
@@ -1427,7 +1427,7 @@
     "roles": [
       "Guide a report from input to review.",
       "Track tasks with prerequisites.",
-      "Make a quest that unlocks in order."
+      "Build a handoff checklist that unlocks a step only after its prerequisite is complete."
     ],
     "prompt": "Build a local browser checklist. Each task has a checkbox, a list of earlier tasks and a reason if locked. Start with only Read input available. If an earlier task is unchecked, clear later completed steps that depend on it. Display the number of finished steps out of three after every change. Display the number of finished steps out of three after every change.",
     "steps": [
@@ -1478,7 +1478,7 @@
     "roles": [
       "Compare saved practice report files.",
       "Find repeats in a made-up document kit.",
-      "Check for copied puzzle files."
+      "Compare a list of file records before flagging items as duplicates."
     ],
     "prompt": "Make a local Python tool with three tiny sample files. Group equal file contents. Print file names in each group. Read files only. Make no changes to the sample folder. Add a test proving equal size alone is not a match.",
     "steps": [
@@ -1529,7 +1529,7 @@
     "roles": [
       "Sort sample queues with equal counts.",
       "Rank team practice totals fairly.",
-      "Build a board with joint winners."
+      "Rank queues by count and show ties without giving one team false priority."
     ],
     "prompt": "Build an offline HTML board that sorts high to low, shows ties and lists tied labels alphabetically. Add a score input per team and a reset. Label joint leaders. Save scores on this device.",
     "steps": [
@@ -1580,7 +1580,7 @@
     "roles": [
       "Use a fixed sample to replay a mail incident.",
       "Design a reproducible two-team drill.",
-      "Ship a complete local treasure game."
+      "Test a six-item review board so reopening a checked item cannot count it again."
     ],
     "prompt": "Build a browser game with six covered buttons, a visible turn, totals, replay and a short help page. In test mode keep this grid fixed. A used tile cannot consume another turn. End after six legal picks. Include tests and a README for a fresh reader.",
     "steps": [
@@ -1631,7 +1631,7 @@
     "roles": [
       "Review a fake mailbox type change.",
       "Compare two saved inventory lists.",
-      "Build a tool that shows exactly what changed."
+      "Build a read-only command that reports added, removed and changed mailbox records."
     ],
     "prompt": "Build a local HTML app with two CSV inputs, Compare, a visible check table and Download report. Label Added, Removed, Type changed and Same. Validate each file for unique nonblank IDs and known types before updating. Include samples, README, and a test for a bad second file. Use no mail connection.",
     "steps": [

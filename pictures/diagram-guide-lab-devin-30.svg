@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 960 421" font-family="Verdana, sans-serif">
+<title id="title">Compare two mailbox lists by ID</title><desc id="desc">A before-and-after report tells the team which mailbox records changed. Only in the new list. D was added. Only in the old list: C was removed. In both lists. B changed from shared to user. A kept the same type. Verify. Report each ID once. Reject a bad file before replacing a good report.</desc>
+<rect x="2" y="2" width="956" height="417" rx="15" fill="#faf6ea" stroke="#182c2d" stroke-width="3"/>
+<text x="28" y="43" fill="#145756" font-size="29" font-weight="bold">Compare two mailbox lists by ID</text>
+<text x="28" y="79" fill="#182c2d" font-size="20">A before-and-after report tells the team which mailbox records changed.</text>
+<rect x="24" y="112" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 129v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="147" fill="#145756" font-size="22" font-weight="bold">Only in the new list</text>
+<text x="55" y="177" fill="#182c2d" font-size="20">D was added. Only in the old list: C was removed.</text>
+<rect x="24" y="211" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 228v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="246" fill="#145756" font-size="22" font-weight="bold">In both lists</text>
+<text x="55" y="276" fill="#182c2d" font-size="20">B changed from shared to user. A kept the same type.</text>
+<rect x="24" y="310" width="912" height="87" rx="10" fill="#faf6ea" stroke="#145756" stroke-width="2"/>
+<path d="M40 327v21" stroke="#8b571b" stroke-width="5"/>
+<text x="55" y="345" fill="#145756" font-size="22" font-weight="bold">Verify</text>
+<text x="55" y="375" fill="#182c2d" font-size="20">Report each ID once. Reject a bad file before replacing a good report.</text>
+</svg>
